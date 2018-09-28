@@ -1,0 +1,314 @@
+{
+ "address": "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc",
+ "address_index": 14886911,
+ "background-color": "#FFF",
+ "description": "The Zer0net starts here! Our 0PEN community empowers all of us to \"Trust In EVERYone Over AnyONE\u2122\"",
+ "favicon": "img/favicon.png",
+ "files": {
+  "LICENSE": {
+   "sha512": "772987556efbdb6ceba6af1b23597c76f2db3bf5d1a0b74f158046134954db0e",
+   "size": 1062
+  },
+  "README.md": {
+   "sha512": "fc01fc2c2f016a1caf1ba026c4ac827d027eedc5e5183b05d99090e2c6cf255f",
+   "size": 9
+  },
+  "components/header.html": {
+   "sha512": "549749e16cf681d4bce7d536c481f479fff09aa83d826176a8162a7c84c39f17",
+   "size": 8726
+  },
+  "css/p0rtal.css": {
+   "sha512": "0423f7f37a6edcb4c7b95c6407de98837d055f4d839d6076dabd61d58f8f9436",
+   "size": 1012301
+  },
+  "img/apple-touch-icon-precomposed.png": {
+   "sha512": "6af8aa94a8d12586e75feace10355658c43bf697763c19cbfbb363159f1c3fab",
+   "size": 42887
+  },
+  "img/favicon.png": {
+   "sha512": "6d747e238cc2b3923b6529d2355a4a77607d13649dee22dc52b6ab1014ab75af",
+   "size": 2502
+  },
+  "img/icon.png": {
+   "sha512": "ccbead08b4e73dc7acda2814888eb713cc24472257c7bd0bf6684d5cf89d65be",
+   "size": 197295
+  },
+  "img/icon1.svg": {
+   "sha512": "cabeea7f3761ec0d43867a95abe913e74340f0212da2afbfd0d5eb480b772755",
+   "size": 2800
+  },
+  "img/icon2.svg": {
+   "sha512": "11a75650929a60f70bfdefb28d60defa95a292293a59e0fafb819248a2080ae9",
+   "size": 8033
+  },
+  "img/img0.jpg": {
+   "sha512": "2df37cd4461d68702b899ed20154aa0aa049fbe83807749f5dfeb2bfed277759",
+   "size": 23895
+  },
+  "img/img1.jpg": {
+   "sha512": "e9694e722fcdc1a9d6d2ffa756807edb85d35b40527de27bfa348d3f48865508",
+   "size": 6632
+  },
+  "img/img10.jpg": {
+   "sha512": "32c390335bc6f39f35360491e4fb13fa6573df274987589d5becce73272f6f87",
+   "size": 7584
+  },
+  "img/img11.jpg": {
+   "sha512": "f3777390d3cd93abcac7d443da40a2e0bf72ac8c751e6c66c23a77c58cd4f164",
+   "size": 7537
+  },
+  "img/img12.jpg": {
+   "sha512": "a140a8152dca223f34ffcc7c9083e5008d148ae79e9f25a6be25783016e46f19",
+   "size": 7995
+  },
+  "img/img13.jpg": {
+   "sha512": "67ce60113cbf094ef77e7434a7272f36fece317e6eca6f1b3aef7cf16388ec7e",
+   "size": 5503
+  },
+  "img/img14.jpg": {
+   "sha512": "3ed475a0d95fafc4b581d3c90e6dc400f0d978cbea99b0d70c02f2f40f2cd02f",
+   "size": 7996
+  },
+  "img/img15.jpg": {
+   "sha512": "8a52c2dbc820b8da508fbfc4356c715771b217f5ea7b5df375fd0868bffdb809",
+   "size": 6829
+  },
+  "img/img16.jpg": {
+   "sha512": "74f94cfd158dcaa6dc79763dc22df2b6166ec1881a7f93aa7ecbf33b97f48ef7",
+   "size": 6484
+  },
+  "img/img17.jpg": {
+   "sha512": "14a061e070ee6f8604ee917073a6a3ab9cc1de14f9eb56c6d1c9d7a6bdd57a77",
+   "size": 11113
+  },
+  "img/img18.jpg": {
+   "sha512": "930518452feea8a013293755d902c515d31585a7e1eb35631cf67ebc6ae8bdc5",
+   "size": 12969
+  },
+  "img/img19.jpg": {
+   "sha512": "1c75a9059b99c2cafe768889cc25bda2dc6452c225463d922757850f18f8296d",
+   "size": 16057
+  },
+  "img/img2.jpg": {
+   "sha512": "5af689fe85d8eb405c928e4efbf6239ad9f4393a59dd7e928a8f1940f61b02f1",
+   "size": 5428
+  },
+  "img/img20.jpg": {
+   "sha512": "05c815dbfb36f832bc1a97651a38da2c03d5da4bae357cf17a21c33402163596",
+   "size": 12213
+  },
+  "img/img21.jpg": {
+   "sha512": "14628118814b68de57044779e9aa71fba5f7659c6a08c7becdf66ddfbe874bbb",
+   "size": 9053
+  },
+  "img/img22.jpg": {
+   "sha512": "b596b19e046ec1689214f2f6a821b6f3768520d4e91cb8c5a8ba26cd5ba6c273",
+   "size": 11084
+  },
+  "img/img23.jpg": {
+   "sha512": "38a3533f343fa73031640acb6557894a8011170cd49210b80f65c9fe0fe17a4d",
+   "size": 12832
+  },
+  "img/img24.jpg": {
+   "sha512": "d79dc5a41d9c340b581214f8d0d0603167607ea6d6eb2838f484e65263020d19",
+   "size": 9937
+  },
+  "img/img25.jpg": {
+   "sha512": "db29fcaf4087064be430ea784d2e241de9cd30987e35574fd628099c3e6c1e7b",
+   "size": 5750
+  },
+  "img/img26.jpg": {
+   "sha512": "7b0fd4384ab55b2c50b53c3e37236450020262ba80470830b773e0f6bb5b4d42",
+   "size": 5278
+  },
+  "img/img27.jpg": {
+   "sha512": "d23db4cb9e527448afc03ef2987b52133cba22ff60e34693c8883a594ad883ef",
+   "size": 13312
+  },
+  "img/img28.jpg": {
+   "sha512": "fb97f88982e591d2c646f27a673b66867b0f5c54e8c11e293f0498f358a26322",
+   "size": 5025
+  },
+  "img/img29.jpg": {
+   "sha512": "eefc72b428cd70bf85d1d13375eb4be19a9bf5bc8e0e037762aa0ebc639de790",
+   "size": 6649
+  },
+  "img/img3.jpg": {
+   "sha512": "8b0a527b38808e342ba38b15645bf3691d166a66056006a437e16f79bf13107c",
+   "size": 5011
+  },
+  "img/img30.jpg": {
+   "sha512": "65f5e85312eb983754f1cc8df7a1eeaddde8034b77c7f0c103b370e29b507220",
+   "size": 5553
+  },
+  "img/img31.jpg": {
+   "sha512": "468d48e9f59e41119ee5afe4d5c5702a0a4ff1076ca3453c0e7d67f1a58660b4",
+   "size": 5939
+  },
+  "img/img32.jpg": {
+   "sha512": "887b73e43ae4f10488efa107b0404eb59db4c3e968cd41e958ed2a440ba1d9af",
+   "size": 4536
+  },
+  "img/img4.jpg": {
+   "sha512": "e4ed1c79819aa9189866be71c289db972a1469bd0f79032e13d1f76e12484ee7",
+   "size": 6386
+  },
+  "img/img5.jpg": {
+   "sha512": "8351b92d8f3ea71b60eb08f908e43fe1efb982761ef92b7cad381f12656cc4e7",
+   "size": 7051
+  },
+  "img/img6.jpg": {
+   "sha512": "c05eb36b09498b0e852df782d42659e02540509635c4e11c8e9c56249ad254e0",
+   "size": 6494
+  },
+  "img/img7.jpg": {
+   "sha512": "d89378aae1e527af146d6eec0497a6df8eb8343fdfae4c316625f3ce271c8db5",
+   "size": 5906
+  },
+  "img/img8.jpg": {
+   "sha512": "853db144aa62ec592d9cadd7d02d3d168e9d9338c8a01f1cc92e6b786c1f25f8",
+   "size": 7417
+  },
+  "img/img9.jpg": {
+   "sha512": "4309ff7efb4dc02388b8acc8d8818e11e1428a755f20a784aec54ccee2edabb4",
+   "size": 7770
+  },
+  "index.html": {
+   "sha512": "74eead527f017f2f4989818e02f284626cce9180771d027b85b58cff1bf53356",
+   "size": 25500
+  },
+  "js/ResizeSensor.js": {
+   "sha512": "cfb30893bafcd4f455030d1444cead91b34688803da6176363bccb9913f7c2e6",
+   "size": 7116
+  },
+  "js/ZeroFrame.js": {
+   "sha512": "42125c7aa72496455e044e3fd940e0f05db86824c781381edb7a70f71a5f0882",
+   "size": 3370
+  },
+  "js/chart.chartist.js": {
+   "sha512": "f33dc0cddeabc4b62f552b8f498537b335aa34f2252630ca5bba62ca6613ec89",
+   "size": 6552
+  },
+  "js/chart.chartjs.js": {
+   "sha512": "5d748dea3a66270d76f2fc9d66a03209f163cd44288d56bbc436c89ecafc76ea",
+   "size": 11250
+  },
+  "js/chart.echarts.js": {
+   "sha512": "9098f14860703a51c316e82deb932e4aedb5524d537b3730537a50fa87f2660b",
+   "size": 13037
+  },
+  "js/chart.flot.js": {
+   "sha512": "0e57668db0beb1f772f6a08b950fe592547250739bbaad65e2a028ceae21d0d3",
+   "size": 13489
+  },
+  "js/chart.morris.js": {
+   "sha512": "54c36fbb1accbf26f53bce99de97b214218c1302ca873be50cbf3e0b9fa9cacb",
+   "size": 4723
+  },
+  "js/chart.peity.js": {
+   "sha512": "c62deea6ab9c0749dd168f78fac4603ae6f39a9f44dee3d0aebdbd91536dde7c",
+   "size": 294
+  },
+  "js/chart.rickshaw.js": {
+   "sha512": "8df39b1f625b7a010d1e8a976ce4d83bbade4cc72cb55d7c3ade63847e7e3193",
+   "size": 11283
+  },
+  "js/chart.sparkline.js": {
+   "sha512": "1793753aaf761a9e3b8529b27276daf55757283c1eead2afe6c0a0be4abacaec",
+   "size": 2110
+  },
+  "js/dashboard.js": {
+   "sha512": "31104fef267758e646ff5fa00e23266d2491de849558831116c18428954f7547",
+   "size": 2755
+  },
+  "js/jquery.vmap.sampledata.js": {
+   "sha512": "a732159abcdfb6ebc5f80d8d7303c3e3da71716004190a6746fffca98be8bf74",
+   "size": 2386
+  },
+  "js/map.apple.js": {
+   "sha512": "889c27d430613a445f9bf66134f5b0727df7cce92300a8c68f03a7e135eb0966",
+   "size": 2280
+  },
+  "js/map.bluewater.js": {
+   "sha512": "121d189a194f53612cace71b1e0ff7936282a1742b75f451ade412d7783c4f82",
+   "size": 1452
+  },
+  "js/map.mapbox.js": {
+   "sha512": "c08f1e2bc047e21642c630b9f45ca73b7c525eeef27c89fac43e6ed29a2ed43f",
+   "size": 2023
+  },
+  "js/map.shadesofgray.js": {
+   "sha512": "6d8575794addac5cffcc6073eafc3681a91c4f625878434af6b1471a48d47ee1",
+   "size": 2563
+  },
+  "js/map.shiftworker.js": {
+   "sha512": "3c2e526543e9fafd20b17cb6213f76db0596c0c913d899412eb30bd29bf19bc2",
+   "size": 5263
+  },
+  "js/p0rtal.js": {
+   "sha512": "f22a728265747bc75b878af5c027edd2bbcc19cbd41988042e21b82ecab5b845",
+   "size": 1024
+  },
+  "js/vue.min.js": {
+   "sha512": "134c1ca16dc14affd9be9ad1e6a667b10fff4c01ce49aab902f4567ee4afc2aa",
+   "size": 86452
+  },
+  "js/widgets.js": {
+   "sha512": "879df78d3b6a5d772386c0537c75505d6cd58cfbe86f346b517a0d44b37b1b91",
+   "size": 4192
+  },
+  "pages/billing.html": {
+   "sha512": "043a1bedea871da9937b8c568691f619e297008532c7f40341b8b536f21ab6f3",
+   "size": 25029
+  },
+  "pages/contacts.html": {
+   "sha512": "920c9dc96652060658aa9129af4bf90a92ec8305a4aeb95b0cf5129b64ca5f5d",
+   "size": 35900
+  },
+  "pages/events.html": {
+   "sha512": "c4c5873c6086409ab30ccad3e1ae3d185da1034f204d4272d32d772bcce22a64",
+   "size": 20162
+  },
+  "pages/files.html": {
+   "sha512": "595db6b67430f07bf95e68578ae70e37a5ce24d275e8e010f4a2f7c4dc62f790",
+   "size": 29730
+  },
+  "pages/life.html": {
+   "sha512": "72a3b9ab5221abb9a55ffc9143b8e0162dd9175edfc06baeb556c9a7175ec9ec",
+   "size": 29614
+  },
+  "pages/messages.html": {
+   "sha512": "cbe995074119158161efadfa51638ecb4f289524cd05280852090348dc84d2a0",
+   "size": 12555
+  },
+  "pages/pricing.html": {
+   "sha512": "53bd92688fc54a3c965aa3c0b8f9f05fb04f60b3a078351ac618f239180bba66",
+   "size": 21636
+  },
+  "pages/profile.html": {
+   "sha512": "61ff1d5ca0387e71b9dd1299adfcfa28565ade00a0f2c04030d09f3a8eae4638",
+   "size": 25390
+  },
+  "pages/signin.html": {
+   "sha512": "1b4caae9d6a5028b126c4d674ebe5d3f793c9e5872893a1226f2b749c0225c9c",
+   "size": 2747
+  },
+  "pages/signup.html": {
+   "sha512": "ccfeb00cbfdbbbb824c557a1edcf74281aa1a51b0b744b40dd3bc14a5383dad9",
+   "size": 3325
+  }
+ },
+ "ignore": "(\\.git|lib|templates)",
+ "inner_path": "content.json",
+ "modified": 1537897801,
+ "postmessage_nonce_security": true,
+ "signers_sign": "Gz2wnMFO/692AfiPordVsqtNwmGJq2/poqO8U5TPzd7/U475FL86l+H6t0/an7jt6LWNIRrFN5XVD+MxP6TXyss=",
+ "signs": {
+  "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc": "HLcPPReU0RFi3sdDcjoks/Zu2KQxmcHVdno3Vo/Zg0v3QGHJqKztx0wYxuWYJ8ZAI5v5B81q6eNhDQygsi9Aekc="
+ },
+ "signs_required": 1,
+ "title": "P0rtal",
+ "translate": ["js/all.js"],
+ "viewport": "width=device-width, initial-scale=1.0",
+ "zeronet_version": "0.6.3"
+}
