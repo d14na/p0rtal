@@ -1,8 +1,8 @@
 env:
-  browser: true
+    browser: true
 parserOptions:
-  ecmaVersion: 8
+    ecmaVersion: 8
 rules:
-  indent:
-    - error
-    - 4
+    indent:
+        - error
+        - 4
