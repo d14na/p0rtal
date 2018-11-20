@@ -10,20 +10,76 @@
    "size": 1062
   },
   "README.md": {
-   "sha512": "fc01fc2c2f016a1caf1ba026c4ac827d027eedc5e5183b05d99090e2c6cf255f",
+   "sha512": "c0b6fe6175ff6fc03de346eea5bc266d003bc7e4929f5d86b6bc04041c75c9a6",
    "size": 9
   },
+  "components/carousel.html": {
+   "sha512": "9deab68febf879fd23e7a84d8d92a17789c069ed53c4000f51751e8c68a551ff",
+   "size": 3533
+  },
+  "components/feedback.html": {
+   "sha512": "a6527664031d7b72383d25af057eec079f9f952fc1af0b03d8341109e7aa1d07",
+   "size": 354
+  },
+  "components/footer.html": {
+   "sha512": "f3279642d36f12558a166713f672dc41153adc202dea65657ca8c71d0837956a",
+   "size": 1997
+  },
   "components/header.html": {
-   "sha512": "549749e16cf681d4bce7d536c481f479fff09aa83d826176a8162a7c84c39f17",
-   "size": 8726
+   "sha512": "ddf33b7eb914552e93380f9ee1b3342d2faba1c899f8a5731db0087954fcd18d",
+   "size": 7486
+  },
+  "components/navbar.html": {
+   "sha512": "6bc5c2aec51b077d792b8f5dffe0d1337fdf082408fe35ab38e37eae7a1054a5",
+   "size": 11608
+  },
+  "components/new-topic.html": {
+   "sha512": "f776ba411214760ddbe1fcd9a5ea357cbceb0bee4196c6e5137cb08db9ef0932",
+   "size": 967
+  },
+  "components/recent-messages.html": {
+   "sha512": "1b645072e519e08e491c44e2f0931753842f1377fce5146de9b8c80465e2c20d",
+   "size": 1689
+  },
+  "components/sponsor.html": {
+   "sha512": "c90f396c3bbe1356e5f3edd723d94af9e6c4746ab512fc3d3a495e32fa6a0374",
+   "size": 728
+  },
+  "components/trending-stories.html": {
+   "sha512": "d8e28b8087eddee353bdac58ffd1d8c69d11086d5d27f8afea4d4fd877b0e6c5",
+   "size": 1231
+  },
+  "components/zeroeffect.html": {
+   "sha512": "bdf65a1be21513d2f01d7cb0e9ade28b3336c2a8f23ee5ed70778d6812d2483b",
+   "size": 332
+  },
+  "components/zerolife.html": {
+   "sha512": "95d16708e108d83369e6692614aab63bb18126eeb963866b421a0d01940bc90b",
+   "size": 1376
+  },
+  "components/zerolit.html": {
+   "sha512": "0cb2a378dec33c1815162971a1375412d4061d65e5888303cd51be568b802a49",
+   "size": 2114
+  },
+  "components/zerotasks.html": {
+   "sha512": "56470d669787f70c04c40d613927359293b43db13ffe0df9a05f96ed922550e6",
+   "size": 1079
   },
   "css/p0rtal.css": {
-   "sha512": "0423f7f37a6edcb4c7b95c6407de98837d055f4d839d6076dabd61d58f8f9436",
-   "size": 1012301
+   "sha512": "ace420d4db2e96628c5133a781163f913371ff2c38837c0f431efd7f0154723b",
+   "size": 1012789
   },
   "img/apple-touch-icon-precomposed.png": {
    "sha512": "6af8aa94a8d12586e75feace10355658c43bf697763c19cbfbb363159f1c3fab",
    "size": 42887
+  },
+  "img/dmca-protected-logo.png": {
+   "sha512": "8d0a2d0fd806d5870ccbaa41db6857c3611c3f72e3c11172e2bc62a3772dce83",
+   "size": 9160
+  },
+  "img/favicon.ico": {
+   "sha512": "5ab88957db99ab8210a9d34e4027b21428c9eec292dffaa008885bddb08f7a4b",
+   "size": 4286
   },
   "img/favicon.png": {
    "sha512": "6d747e238cc2b3923b6529d2355a4a77607d13649dee22dc52b6ab1014ab75af",
@@ -173,13 +229,21 @@
    "sha512": "4309ff7efb4dc02388b8acc8d8818e11e1428a755f20a784aec54ccee2edabb4",
    "size": 7770
   },
+  "img/zerogold.png": {
+   "sha512": "f784aecbc44b6863ad4fdb1c3146468b6d7232714fbbc30f2734dab5d174e0d4",
+   "size": 18474
+  },
   "index.html": {
-   "sha512": "74eead527f017f2f4989818e02f284626cce9180771d027b85b58cff1bf53356",
-   "size": 25500
+   "sha512": "901098a2abdf8502ea20b15b60f552f77760a5bc8e740f1ff37adcffa93c1c18",
+   "size": 6216
   },
   "js/ResizeSensor.js": {
-   "sha512": "cfb30893bafcd4f455030d1444cead91b34688803da6176363bccb9913f7c2e6",
-   "size": 7116
+   "sha512": "ff124de5f308e3572e10a67979a0eb86e08a662457cf72c882767e22b492a1a6",
+   "size": 10093
+  },
+  "js/ZeroApi.js": {
+   "sha512": "4e8b503a79926ac201af8b8f22c14d7e50121b20b1a490c1e8a2d9a38928065d",
+   "size": 6440
   },
   "js/ZeroFrame.js": {
    "sha512": "42125c7aa72496455e044e3fd940e0f05db86824c781381edb7a70f71a5f0882",
@@ -217,97 +281,81 @@
    "sha512": "1793753aaf761a9e3b8529b27276daf55757283c1eead2afe6c0a0be4abacaec",
    "size": 2110
   },
-  "js/dashboard.js": {
-   "sha512": "31104fef267758e646ff5fa00e23266d2491de849558831116c18428954f7547",
-   "size": 2755
-  },
-  "js/jquery.vmap.sampledata.js": {
-   "sha512": "a732159abcdfb6ebc5f80d8d7303c3e3da71716004190a6746fffca98be8bf74",
-   "size": 2386
-  },
-  "js/map.apple.js": {
-   "sha512": "889c27d430613a445f9bf66134f5b0727df7cce92300a8c68f03a7e135eb0966",
-   "size": 2280
-  },
-  "js/map.bluewater.js": {
-   "sha512": "121d189a194f53612cace71b1e0ff7936282a1742b75f451ade412d7783c4f82",
-   "size": 1452
-  },
-  "js/map.mapbox.js": {
-   "sha512": "c08f1e2bc047e21642c630b9f45ca73b7c525eeef27c89fac43e6ed29a2ed43f",
-   "size": 2023
-  },
-  "js/map.shadesofgray.js": {
-   "sha512": "6d8575794addac5cffcc6073eafc3681a91c4f625878434af6b1471a48d47ee1",
-   "size": 2563
-  },
-  "js/map.shiftworker.js": {
-   "sha512": "3c2e526543e9fafd20b17cb6213f76db0596c0c913d899412eb30bd29bf19bc2",
-   "size": 5263
+  "js/p0rtal-home.js": {
+   "sha512": "caf4a321c5dc4d1e04ec063051aa63bf30fa6ea9e72993c68f7eec9d298e9306",
+   "size": 3312
   },
   "js/p0rtal.js": {
-   "sha512": "f22a728265747bc75b878af5c027edd2bbcc19cbd41988042e21b82ecab5b845",
-   "size": 1024
+   "sha512": "6e27ce29bd70e7e8b6e5222c9a1d8260e1facfbfa4e39d2d59789b649abae1cc",
+   "size": 10426
   },
   "js/vue.min.js": {
    "sha512": "134c1ca16dc14affd9be9ad1e6a667b10fff4c01ce49aab902f4567ee4afc2aa",
    "size": 86452
   },
   "js/widgets.js": {
-   "sha512": "879df78d3b6a5d772386c0537c75505d6cd58cfbe86f346b517a0d44b37b1b91",
-   "size": 4192
+   "sha512": "e1e5a0c483f750a7d85af3f800caeb64fbf302a888a6b150e6a4a5ab329478b4",
+   "size": 4474
   },
   "pages/billing.html": {
-   "sha512": "043a1bedea871da9937b8c568691f619e297008532c7f40341b8b536f21ab6f3",
-   "size": 25029
+   "sha512": "dec5ed527de6c590425e916a15820735268d1b87a4a9627889d5eebd1820ac4f",
+   "size": 8318
+  },
+  "pages/builder.html": {
+   "sha512": "750cd8574691ded8fb22eb26b6c131592f43ef7728d4625d33437c453d63e958",
+   "size": 5276
   },
   "pages/contacts.html": {
-   "sha512": "920c9dc96652060658aa9129af4bf90a92ec8305a4aeb95b0cf5129b64ca5f5d",
-   "size": 35900
+   "sha512": "1bc8b6eb20239b3e6f587f7a15d59ea52c8f235404c7bcc9cd99251ddbb14158",
+   "size": 20786
+  },
+  "pages/dmca.html": {
+   "sha512": "8ea3df00a8140f1a2dbefbbb456bc3f80602d15b9933cf7fb6cafa4d25a7b1f9",
+   "size": 9837
   },
   "pages/events.html": {
-   "sha512": "c4c5873c6086409ab30ccad3e1ae3d185da1034f204d4272d32d772bcce22a64",
-   "size": 20162
+   "sha512": "8d77b86d605bb730bd836e33a97d388daf61e36517e611e24c73a4e219040786",
+   "size": 2482
   },
   "pages/files.html": {
-   "sha512": "595db6b67430f07bf95e68578ae70e37a5ce24d275e8e010f4a2f7c4dc62f790",
-   "size": 29730
+   "sha512": "37681571ba53362e267b1067ae2d9b206ac997158210ee511ac9cbb80379d2d3",
+   "size": 12354
   },
   "pages/life.html": {
-   "sha512": "72a3b9ab5221abb9a55ffc9143b8e0162dd9175edfc06baeb556c9a7175ec9ec",
-   "size": 29614
+   "sha512": "a38d690bb9fe51c929e111e87851407b0c8e4a00a27318eb87b65dcfc1d3dcb0",
+   "size": 12568
   },
   "pages/messages.html": {
-   "sha512": "cbe995074119158161efadfa51638ecb4f289524cd05280852090348dc84d2a0",
-   "size": 12555
+   "sha512": "9518b271a29da70ce0ded09afb4f54198f4f55b3083beb8d40ace5e16f508a35",
+   "size": 13379
   },
   "pages/pricing.html": {
-   "sha512": "53bd92688fc54a3c965aa3c0b8f9f05fb04f60b3a078351ac618f239180bba66",
-   "size": 21636
+   "sha512": "0db0cbd187110d203c3ef5a11fa4580f6e80c5a44be504d8dcb294a29d590b00",
+   "size": 4909
   },
   "pages/profile.html": {
-   "sha512": "61ff1d5ca0387e71b9dd1299adfcfa28565ade00a0f2c04030d09f3a8eae4638",
-   "size": 25390
+   "sha512": "a4d419657911ac7ab33a411d752b61cc771a095f39b61e13e7e9e024dcff2f4d",
+   "size": 16374
   },
   "pages/signin.html": {
-   "sha512": "1b4caae9d6a5028b126c4d674ebe5d3f793c9e5872893a1226f2b749c0225c9c",
-   "size": 2747
+   "sha512": "7a066b80b928060e5efd1830c922d461705dbfaee58d499e86bdb29bb624659e",
+   "size": 3255
   },
   "pages/signup.html": {
-   "sha512": "ccfeb00cbfdbbbb824c557a1edcf74281aa1a51b0b744b40dd3bc14a5383dad9",
-   "size": 3325
+   "sha512": "0c38729dc9e533d59aedecc3b1b771a6d69e05ce7a1d730755b37b9df522f854",
+   "size": 3405
   }
  },
  "ignore": "(\\.git|lib|templates)",
  "inner_path": "content.json",
- "modified": 1537897801,
+ "modified": 1541084310,
  "postmessage_nonce_security": true,
  "signers_sign": "Gz2wnMFO/692AfiPordVsqtNwmGJq2/poqO8U5TPzd7/U475FL86l+H6t0/an7jt6LWNIRrFN5XVD+MxP6TXyss=",
  "signs": {
-  "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc": "HLcPPReU0RFi3sdDcjoks/Zu2KQxmcHVdno3Vo/Zg0v3QGHJqKztx0wYxuWYJ8ZAI5v5B81q6eNhDQygsi9Aekc="
+  "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc": "G6XP/ifskyFbpnU+bAn8Kd1iaRO6YS3squ1zRW9BYc/2B6T/VCMPFAzNrRypDUPIvhBAPwxhFj2X/6Yr/eOOugc="
  },
  "signs_required": 1,
- "title": "P0rtal",
+ "title": "p0rtal",
  "translate": ["js/all.js"],
  "viewport": "width=device-width, initial-scale=1.0",
  "zeronet_version": "0.6.3"

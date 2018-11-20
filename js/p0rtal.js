@@ -23,7 +23,7 @@ class ZeroApp extends ZeroApi {
         super.onOpen()
 
         /* Request server info. */
-        const serverInfo = await this.cmd('serverInfo', {})
+        serverInfo = await this.cmd('serverInfo', {})
         // console.info('Server Info', serverInfo)
 
         /* Initialize client version. */
@@ -48,7 +48,7 @@ class ZeroApp extends ZeroApi {
         const plugins = serverInfo.plugins
 
         /* Request site info. */
-        const siteInfo = await this.cmd('siteInfo', {})
+        siteInfo = await this.cmd('siteInfo', {})
         // console.info('Site Info', siteInfo)
 
         /* Initialize # of peers. */
@@ -60,24 +60,6 @@ class ZeroApp extends ZeroApi {
         /* Initialize settings. */
         const settings = siteInfo.settings
         // console.info('Site Settings', settings)
-
-        /* Validate the ADMIN permission. */
-        if (!settings || settings.permissions.indexOf('ADMIN') === -1) {
-            /* Initialize request button. */
-            $('.btnAdminRequest').click(() => {
-                /* Request ADMIN permission. */
-                App.cmd('wrapperPermissionAdd', ['ADMIN'], () => {
-                    /* Reload the page (from cache). */
-                    window.location.reload(false)
-                })
-            })
-
-            /* Show ADMIN permission modal. */
-            $('#modalAdminPermission').modal({
-                backdrop: 'static',
-                keyboard: false
-            })
-        }
     }
 
     /**
@@ -86,10 +68,10 @@ class ZeroApp extends ZeroApi {
      * Messages received in real-time are managed here.
      * (It can be used to login the user once he selects a certificate.)
      */
-    onEvent(_cmd, _message) {
-        console.log('Received incoming routed message', _cmd, _message)
+    onEvent(_event, _message) {
+        console.log(`Received incoming [ ${_event} ] event message`, _message)
 
-        // if (_cmd === 'setSiteInfo') {
+        // if (_event === 'setSiteInfo') {
         //     /* Set site info. */
         //     this.siteInfo = _message.params
         //
@@ -248,6 +230,10 @@ class ZeroApp extends ZeroApi {
     }
 }
 
+/* Initialize globals. */
+let serverInfo = null
+let siteInfo = null
+
 /* Initialize app. */
 const App = new ZeroApp()
 
@@ -298,6 +284,12 @@ $(async function() {
     let body = null
 
     /* Load header. */
+    // NOTE Currently ONLY available via Web Gateway, 0Explorer will be added soon.
+
+    var url = (window.location != window.parent.location)
+        ? document.referrer
+        : document.location.href
+    console.log('URL', url, document.referrer, document.location.href)
     body = await App.cmd('fileGet', 'components/header.html')
     $('#header').html(body)
 
@@ -308,6 +300,38 @@ $(async function() {
     /* Load footer. */
     body = await App.cmd('fileGet', 'components/footer.html')
     $('#footer').html(body)
+
+    /* Initialize settings. */
+    let settings = null
+
+    /* Set settings. */
+    settings = siteInfo.settings
+    // console.info('Site Settings', settings)
+
+    if (!settings) {
+        /* Wait for site info. */
+        siteInfo = await this.cmd('siteInfo', {})
+
+        /* Set settings. */
+        settings = siteInfo.settings
+    }
+
+    /* Validate the ADMIN permission. */
+    if (!settings || settings.permissions.indexOf('ADMIN') === -1) {
+        /* Initialize request button. */
+        $('.btnAdminRequest').click(() => {
+            /* Request ADMIN permission. */
+            App.cmd('wrapperPermissionAdd', ['ADMIN'], () => {
+                /* Reload the page (from cache). */
+                window.location.reload(false)
+            })
+        })
+        /* Show ADMIN permission modal. */
+        $('#modalAdminPermission').modal({
+            backdrop: 'static',
+            keyboard: false
+        })
+    }
 
     /* Verify NO parent window! */
     // if (window.self === window.top) {
@@ -320,7 +344,7 @@ $(async function() {
     //         alert('Desktop notifications not available in your browser. Try Chromium.');
     //     }
     // } else {
-    //     console.log('P0rtal is contained within another window')
+    //     console.log('p0rtal is contained within another window')
     // }
 
 })
