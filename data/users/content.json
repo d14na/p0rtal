@@ -17,17 +17,17 @@
   "permission_rules": {
    ".*@kaffie.bit": {
     "files_allowed": "data.json",
-    "files_allowed_optional": ".+\\.(gif,jpg,mp4|ogg|png,webm)(.piecemap.msgpack)?",
+    "files_allowed_optional": ".+\\.(gif,jpg,png,mp4|ogg|webm)(.piecemap.msgpack)?",
     "max_size": 300000
    },
    ".*@kxoid.bit": {
     "files_allowed": "data.json",
-    "files_allowed_optional": ".+\\.(gif,jpg,mp4|ogg|png,webm)(.piecemap.msgpack)?",
+    "files_allowed_optional": ".+\\.(gif,jpg,png,mp4|ogg|webm)(.piecemap.msgpack)?",
     "max_size": 300000
    },
    ".*@nametag.bit": {
     "files_allowed": "data.json",
-    "files_allowed_optional": ".+\\.(gif,jpg,mp4|ogg|png,webm)(.piecemap.msgpack)?",
+    "files_allowed_optional": ".+\\.(gif,jpg,png,mp4|ogg|webm)(.piecemap.msgpack)?",
     "max_size": 600000
    },
    ".*@zeroid.bit": {
@@ -39,8 +39,7 @@
   },
   "permissions": {
       "bad@nametag.bit": false,
-      "d14na@nametag.bit": {"max_size": 10000000},
-      "nofish@nametag.bit": {"max_size": 1200000}
+      "d14na@nametag.bit": {"max_size": 10000000}
   }
  }
 }
