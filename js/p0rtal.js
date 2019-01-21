@@ -228,6 +228,10 @@ class ZeroApp extends ZeroApi {
 
         return false
     }
+
+    toggleIdentity() {
+        alert('open it!')
+    }
 }
 
 /* Initialize globals. */
@@ -318,19 +322,21 @@ $(async function() {
 
     /* Validate the ADMIN permission. */
     if (!settings || settings.permissions.indexOf('ADMIN') === -1) {
+alert('fix ADMIN request')
         /* Initialize request button. */
-        $('.btnAdminRequest').click(() => {
-            /* Request ADMIN permission. */
-            App.cmd('wrapperPermissionAdd', ['ADMIN'], () => {
-                /* Reload the page (from cache). */
-                window.location.reload(false)
-            })
-        })
+        // $('.btnAdminRequest').click(() => {
+        //     /* Request ADMIN permission. */
+        //     App.cmd('wrapperPermissionAdd', ['ADMIN'], () => {
+        //         /* Reload the page (from cache). */
+        //         window.location.reload(false)
+        //     })
+        // })
+
         /* Show ADMIN permission modal. */
-        $('#modalAdminPermission').modal({
-            backdrop: 'static',
-            keyboard: false
-        })
+        // $('#modalAdminPermission').modal({
+        //     backdrop: 'static',
+        //     keyboard: false
+        // })
     }
 
     /* Verify NO parent window! */
@@ -347,4 +353,23 @@ $(async function() {
     //     console.log('p0rtal is contained within another window')
     // }
 
+    // $('.slider-exit').click(() => {
+    //     alert('open id')
+    // })
+
+    $('.slim-logo').on('click', function(e) {
+        e.preventDefault()
+        // leftMenu.activate()
+        topMenu.activate()
+    })
+
+    $('.logged-user').on('click', function(e) {
+        // e.preventDefault()
+        rightMenu.activate()
+    })
+
+    $('.snackbar').on('click', function(e) {
+        // e.preventDefault()
+        bottomMenu.activate()
+    })
 })

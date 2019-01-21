@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Zer0net p0rtal</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Zer0net Starts Here!™">
+    <meta name="author" content="D14na">
+
+    <!-- Base tag, for relative links -->
+    <base href="/p0rtal.bit/" />
+
+    <!-- Favicon -->
+    <!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png">
+
+    <!-- vendor css -->
+    <link href="//cdn.0net.io/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdn.0net.io/libs/Ionicons/4.2.1/css/ionicons.min.css" rel="stylesheet">
+    <link href="//cdn.0net.io/libs/fullcalendar/3.8.2/css/fullcalendar.css" rel="stylesheet">
+
+    <!-- Slim CSS -->
+    <link rel="stylesheet" href="css/p0rtal.css">
+</head>
+
+<body>
+
+<div id="header">
+    <!-- placeholder for header -->
+</div>
+
+<div id="navbar">
+    <!-- placeholder for navbar -->
+</div>
+
+<div class="slim-mainpanel">
+    <div class="container">
+        <div class="slim-pageheader">
+            <ol class="breadcrumb slim-breadcrumb">
+                <li class="breadcrumb-item"><a href="">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Event Calendar</li>
+            </ol>
+
+            <h6 class="slim-pagetitle">Event Calendar</h6>
+        </div>
+
+        <div class="card pd-25">
+            <div id="fullCalendar"></div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <!-- placeholder for footer -->
+</div>
+
+<script src="//cdn.0net.io/libs/jquery/3.3.1/js/jquery.min.js"></script>
+<script src="//cdn.0net.io/libs/popper.js/1.12.9/js/popper.js"></script>
+<script src="//cdn.0net.io/libs/bootstrap/4.0.0/js/bootstrap.js"></script>
+<script src="//cdn.0net.io/libs/moment/2.22.2/js/moment.min.js"></script>
+<script src="//cdn.0net.io/libs/fullcalendar/3.8.2/js/fullcalendar.js"></script>
+
+<script src="js/ResizeSensor.js"></script>
+<script src="js/ZeroApi.js"></script>
+<script src="js/p0rtal.js"></script>
+
+<script>
+$(function() {
+    'use strict';
+
+    $('#fullCalendar').fullCalendar({
+        header: {
+            left: 'prev',
+            center: 'title',
+            right: 'today next'
+        }
+    })
+})
+</script>
+
+</body>
+</html>
