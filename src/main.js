@@ -6,6 +6,9 @@ import App from './App.vue'
 import Stage from './Stage.vue'
 import Identity from './Identity.vue'
 
+/* Import plugins. */
+import "./plugins/bugsnag"
+
 /* Import application framework. */
 import router from './router'
 import store from './store'

@@ -2,7 +2,7 @@
 import Vue from 'vue'
 
 /* Import main stylesheet. */
-import p0rtalStyle from '@/css/p0rtal.css'
+import '@/css/p0rtal.css'
 
 /* Import FontAwesome. */
 import { library } from '@fortawesome/fontawesome-svg-core'
