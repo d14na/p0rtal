@@ -19,36 +19,16 @@
             <div class="row row-xs">
                 <div class="col-md-6 col-lg-3 order-lg-1">
                     <ZeroEffect />
-
-                    <div id="zerolife">
-                        <!-- placeholder for zerolife -->
-                    </div>
-
-                    <div id="zerotasks">
-                        <!-- placeholder for zerotasks -->
-                    </div>
-
-                    <div id="recent-messages">
-                        <!-- placeholder for recent-messages -->
-                    </div>
+                    <ZeroLife />
+                    <ZeroTasks />
+                    <RecentMessages />
                 </div>
 
                 <div class="col-md-6 col-lg-3 mg-t-10 mg-md-t-0 order-lg-3">
-                    <div id="trending-stories">
-                        <!-- placeholder for trending-stories -->
-                    </div>
-
-                    <div id="zerolit">
-                        <!-- placeholder for zerolit -->
-                    </div>
-
-                    <div id="sponsor">
-                        <!-- placeholder for sponsor -->
-                    </div>
-
-                    <div id="feedback">
-                        <!-- placeholder for feedback -->
-                    </div>
+                    <TrendingStories />
+                    <ZeroLit />
+                    <Sponsor />
+                    <Feedback />
                 </div>
 
                 <div class="col-lg-6 mg-t-10 mg-lg-t-0 order-lg-2">
@@ -72,13 +52,8 @@
                         </div>
                     </div>
 
-                    <div id="new-topic">
-                        <!-- placeholder for new-topic -->
-                    </div>
-
-                    <div id="carousel">
-                        <!-- placeholder for carousel -->
-                    </div>
+                    <NewTopic />
+                    <Carousel />
 
                     <div class="card card-blog-split mg-t-10">
                         <div class="row no-gutters flex-row-reverse">
@@ -101,9 +76,8 @@
             </div>
         </div>
 
-        <div id="footer">
-            <!-- placeholder for footer -->
-        </div>
+        <Footer />
+        <ModalAdminPermission />
     </div>
 </template>
 
@@ -114,8 +88,41 @@ import Header from '@/components/Header.vue'
 /* Import NAVIGATION BAR. */
 import NavBar from '@/components/NavBar.vue'
 
+/* Import RECENT MESSAGES. */
+import RecentMessages from '@/components/RecentMessages.vue'
+
+/* Import TRENDING STORIES. */
+import TrendingStories from '@/components/TrendingStories.vue'
+
+/* Import SPONSOR. */
+import Sponsor from '@/components/Sponsor.vue'
+
+/* Import FEEDBACK. */
+import Feedback from '@/components/Feedback.vue'
+
+/* Import NEW TOPIC. */
+import NewTopic from '@/components/NewTopic.vue'
+
+/* Import CAROUSEL. */
+import Carousel from '@/components/Carousel.vue'
+
 /* Import ZEROEFFECT. */
 import ZeroEffect from '@/components/ZeroEffect.vue'
+
+/* Import ZEROLIFE. */
+import ZeroLife from '@/components/ZeroLife.vue'
+
+/* Import ZEROLIT. */
+import ZeroLit from '@/components/ZeroLit.vue'
+
+/* Import ZEROTASKS. */
+import ZeroTasks from '@/components/ZeroTasks.vue'
+
+/* Import FOOTER. */
+import Footer from '@/components/Footer.vue'
+
+/* Import (MODAL) ADMIN PERMISSION. */
+import ModalAdminPermission from '@/components/modal/AdminPermission.vue'
 
 /*******************************************************************************
 
@@ -133,7 +140,18 @@ const name = 'zerovue'
 const components = {
     Header,
     NavBar,
-    ZeroEffect
+    RecentMessages,
+    TrendingStories,
+    Sponsor,
+    Feedback,
+    NewTopic,
+    Carousel,
+    Footer,
+    ModalAdminPermission,
+    ZeroEffect,
+    ZeroLife,
+    ZeroLit,
+    ZeroTasks
 }
 
 /* Export. */
