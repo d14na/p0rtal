@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Slim from './views/Slim.vue'
+import ZeroVue from './views/ZeroVue.vue'
 // import Home from './views/Home.vue'
 
 Vue.use(Router)
@@ -10,8 +10,8 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'slim',
-            component: Slim
+            name: 'zerovue',
+            component: ZeroVue
         }, {
             path: '/home',
             name: 'home',
