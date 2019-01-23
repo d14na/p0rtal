@@ -1,5 +1,6 @@
 <template>
     <div id="appStyle">
+        <h3>{{ $t('helloWithNickname', { nickname: this.nickname }) }}</h3>
         <div id="nav">
             <router-link to="/">Vue</router-link> |
             <router-link to="/home">Home</router-link> |
@@ -21,7 +22,7 @@ import $ from 'jquery'
 
 export default {
     data: () => ({
-        test: "this is just a test!!!!!!!!!"
+        nickname: 'Satoshi'
     }),
     methods: {
         open0vueIdentity() {

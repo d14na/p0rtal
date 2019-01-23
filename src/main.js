@@ -7,7 +7,8 @@ import Stage from './Stage.vue'
 import Identity from './Identity.vue'
 
 /* Import plugins. */
-import "./plugins/bugsnag"
+import './plugins/bugsnag'
+import i18n from './plugins/i18next'
 
 /* Import application framework. */
 import router from './router'
@@ -21,6 +22,7 @@ Vue.config.productionTip = false
 new Vue({
     router,
     store,
+    i18n,
     render: h => h(App)
 }).$mount('#app')
 
@@ -28,6 +30,7 @@ new Vue({
 new Vue({
     // router,
     // store,
+    i18n,
     render: h => h(Stage)
 }).$mount('#_0vueStageMount')
 
@@ -35,5 +38,6 @@ new Vue({
 new Vue({
     // router,
     // store,
+    i18n,
     render: h => h(Identity)
 }).$mount('#_0vueIdentityMount')
