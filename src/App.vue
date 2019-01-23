@@ -1,50 +1,53 @@
 <template>
-    <div id="appStyle">
-        <h3>{{ $t('helloWithNickname', { nickname: this.nickname }) }}</h3>
-        <div id="nav">
-            <router-link to="/">Vue</router-link> |
-            <router-link to="/home">Home</router-link> |
-            <router-link to="/about">About</router-link>
+    <div>
+        <!-- This is a permanent header bar. -->
+        <Header />
+
+        <div id="tempNav">
+            FOR DEVELOPMENT PURPOSES ONLY
+            <div id="nav">
+                <router-link to="/home">Home</router-link> |
+                <a href="javascript://" @click="loadCache">Ca¢he</a> |
+                <router-link to="/about">About</router-link>
+            </div>
         </div>
-        <div id="nav2">
-            <a @click="open0vueStage">Stage</a> |
-            <a @click="open0vueIdentity">Identity</a> |
-            <a @click="open0vueMediaPlayer">Media</a> |
-            <a @click="open0vueSnackbar">Snackbar</a>
-        </div>
+
+        <!-- This is the MAIN (dynamic) view area. -->
         <router-view/>
     </div>
 </template>
 
 <script>
+/* Import JQuery. */
 import $ from 'jquery'
+
+/* Import HEADER. */
+import Header from '@/components/Header.vue'
+
 // import sliiide from '@/lib/sliiide'
 
+/* Initialize components. */
+const components = {
+    Header
+}
+
+/* Export. */
 export default {
+    components,
     data: () => ({
-        nickname: 'Satoshi'
+        //
     }),
     methods: {
-        open0vueIdentity() {
-            _0vueIdentity.activate()
-        },
-        open0vueStage() {
-            _0vueStage.activate()
-        },
-        open0vueMediaPlayer() {
-            _0vueMediaPlayer.activate()
-        },
-        open0vueSnackbar() {
-            _0vueSnackbar.activate()
+        loadCache() {
+            console.log('Start loading cache...')
         }
     },
     mounted: () => {
-        console.log('we are mounted!')
-
-        console.log('THIS', this)
+        console.log('App.vue is mounted.')
     }
 }
 
+/* JQuery is ready! Let's go! */
 $(function () {
     // return
     // console.log('load sliiide!');
@@ -64,12 +67,14 @@ $(function () {
 </script>
 
 <style>
-#appStyle {
+#tempNav {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-size: 0.7em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
+    margin: 2px 0 5px;
+    border-bottom: 1px solid #f333;
 }
 </style>

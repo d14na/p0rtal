@@ -3,8 +3,8 @@ import Vue from 'vue'
 
 /* Import application windows. */
 import App from './App.vue'
-import Stage from './Stage.vue'
-import Identity from './Identity.vue'
+import Stage from './stage/App.vue'
+import Identity from './identity/App.vue'
 
 /* Import plugins. */
 import './plugins/bugsnag'

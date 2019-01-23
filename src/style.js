@@ -12,6 +12,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* Import individual font files. */
 import {
+    faBell,
+    faBolt,
     faBookmark,
     faChevronDown,
     faCoffee,
@@ -20,11 +22,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 /* Add individual application fonts. */
-library.add(faBookmark)
-library.add(faChevronDown)
-library.add(faCoffee)
-library.add(faHeartbeat)
-library.add(faWrench)
+library.add(
+    faBell,
+    faBolt,
+    faBookmark,
+    faChevronDown,
+    faCoffee,
+    faHeartbeat,
+    faWrench
+)
 
 /* Load Vue component. */
 Vue.component('font-awesome-icon', FontAwesomeIcon)

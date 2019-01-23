@@ -1,6 +1,5 @@
 <template>
     <div class="slim-mainpanel">
-        <Header />
         <NavBar />
 
         <div class="container">
@@ -11,7 +10,7 @@
                 </ol>
 
                 <h6 class="slim-pagetitle">
-                    <a href="javascript://">PRIVATE GUEST</a>
+                    <a href="javascript://">{{ this.nickname ? $t('helloWithNickname', { nickname: this.nickname }) : 'PRIVATE GUEST' }}</a>
                     <small class="ml-1"><small><strong class="numPeers text-info">0</strong> peers connected</small></small>
                 </h6>
             </div>
@@ -34,7 +33,7 @@
                 <div class="col-lg-6 mg-t-10 mg-lg-t-0 order-lg-2">
 
                     <div class="card card-blog-overlay">
-                        <img class="img-fit-cover" src="img/img26.jpg" alt="Image">
+                        <img class="img-fit-cover" src="@/assets/img/img26.jpg" alt="Image">
 
                         <div class="blog-content-wrapper">
                             <div class="blog-content">
@@ -59,7 +58,7 @@
                         <div class="row no-gutters flex-row-reverse">
                             <div class="col-md-5 col-lg-6 col-xl-5">
                                 <figure>
-                                    <img src="img/img20.jpg" class="img-fit-cover" alt="">
+                                    <img src="@/assets/img/img20.jpg" class="img-fit-cover" alt="">
                                 </figure>
                             </div>
 
@@ -71,7 +70,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -82,9 +80,6 @@
 </template>
 
 <script>
-/* Import HEADER. */
-import Header from '@/components/Header.vue'
-
 /* Import NAVIGATION BAR. */
 import NavBar from '@/components/NavBar.vue'
 
@@ -134,11 +129,11 @@ import ModalAdminPermission from '@/components/modal/AdminPermission.vue'
 *******************************************************************************/
 
 /* Set name. */
+// NOTE: Are we ever going to use this??
 const name = 'zerovue'
 
 /* Initialize components. */
 const components = {
-    Header,
     NavBar,
     RecentMessages,
     TrendingStories,
@@ -157,6 +152,9 @@ const components = {
 /* Export. */
 export default {
     name,
-    components
+    components,
+    data: () => ({
+        nickname: 'Satoshi'
+    }),
 }
 </script>

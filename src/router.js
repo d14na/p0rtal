@@ -2,7 +2,6 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import ZeroVue from './views/ZeroVue.vue'
-// import Home from './views/Home.vue'
 
 Vue.use(Router)
 
@@ -16,6 +15,10 @@ export default new Router({
             path: '/home',
             name: 'home',
             component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
+        }, {
+            path: '/settings',
+            name: 'settings',
+            component: () => import(/* webpackChunkName: "settings" */ './views/Settings.vue')
         }, {
             path: '/about',
             name: 'about',
