@@ -67,6 +67,14 @@ $(function () {
 </script>
 
 <style>
+/* right and left sliding drawers */
+.btnWinClose {
+    font-size: 2.8em;
+    color: rgba(150, 90, 90, 0.4);
+    margin: 5px 15px 0 15px;
+    padding: 0;
+}
+
 .tempNav {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-size: 0.7em;

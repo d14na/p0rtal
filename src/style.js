@@ -19,6 +19,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 //     faCoffee,
 //     faHeartbeat,
 //     faUser,
+//     faTimesCircle,
 //     faWrench,
 // } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -33,6 +34,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 //     faCoffee,
 //     faHeartbeat,
 //     faUser,
+//     faTimesCircle,
 //     faWrench
 // )
 // library.add(fab, fas)
