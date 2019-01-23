@@ -1,7 +1,8 @@
 env:
-    browser: true
+    commonjs: true
 parserOptions:
     ecmaVersion: 8
+    sourceType: module
 rules:
     indent:
         - error

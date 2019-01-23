@@ -1,45 +1,34 @@
+/* Import Vue. */
 import Vue from 'vue'
+
+/* Import application windows. */
 import App from './App.vue'
 import Stage from './Stage.vue'
 import Identity from './Identity.vue'
+
+/* Import application framework. */
 import router from './router'
 import store from './store'
+import style from './style'
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import {
-    faBookmark,
-    faChevronDown,
-    faCoffee,
-    faHeartbeat,
-    faWrench,
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-import p0rtalStyle from '@/css/p0rtal.css'
-
-// import fontAwesome from 'font-awesome'
-// import fontAwesome from '@/lib/font-awesome/css/font-awesome.css'
-library.add(faBookmark)
-library.add(faChevronDown)
-library.add(faCoffee)
-library.add(faHeartbeat)
-library.add(faWrench)
-Vue.component('font-awesome-icon', FontAwesomeIcon)
-
+/* Production flag. */
 Vue.config.productionTip = false
 
+/* Initialize MAIN window. */
 new Vue({
     router,
     store,
     render: h => h(App)
 }).$mount('#app')
 
+/* Initialize STAGE window. */
 new Vue({
     // router,
     // store,
     render: h => h(Stage)
 }).$mount('#_0vueStageMount')
 
+/* Initialize IDENTITY window. */
 new Vue({
     // router,
     // store,
