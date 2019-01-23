@@ -11,7 +11,7 @@
 
                     <div class="sub-item">
                         <ul>
-                            <li><a href="builder/"><font-awesome-icon icon="wrench" class="icon mg-r-5" /> Build My First Zite</a></li>
+                            <li><a href="builder/"><font-awesome-icon icon="tools" class="icon mg-r-5" /> Build My First Zite</a></li>
                         </ul>
                     </div>
                 </li>

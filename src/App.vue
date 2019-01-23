@@ -3,7 +3,7 @@
         <!-- This is a permanent header bar. -->
         <Header />
 
-        <div id="tempNav">
+        <div class="tempNav">
             FOR DEVELOPMENT PURPOSES ONLY
             <div id="nav">
                 <router-link to="/home">Home</router-link> |
@@ -22,7 +22,7 @@
 import $ from 'jquery'
 
 /* Import HEADER. */
-import Header from '@/components/Header.vue'
+import Header from './components/Header.vue'
 
 // import sliiide from '@/lib/sliiide'
 
@@ -67,7 +67,7 @@ $(function () {
 </script>
 
 <style>
-#tempNav {
+.tempNav {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-size: 0.7em;
     -webkit-font-smoothing: antialiased;

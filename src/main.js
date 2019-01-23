@@ -28,7 +28,6 @@ new Vue({
 
 /* Initialize STAGE window. */
 new Vue({
-    // router,
     // store,
     i18n,
     render: h => h(Stage)
@@ -36,7 +35,6 @@ new Vue({
 
 /* Initialize IDENTITY window. */
 new Vue({
-    // router,
     // store,
     i18n,
     render: h => h(Identity)
