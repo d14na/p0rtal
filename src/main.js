@@ -5,7 +5,7 @@ import Identity from './Identity.vue'
 import router from './router'
 import store from './store'
 
-import p0rtalCss from './css/p0rtal.css'
+import p0rtalCss from '@/css/p0rtal.css'
 
 Vue.config.productionTip = false
 

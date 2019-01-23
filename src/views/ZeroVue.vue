@@ -1,10 +1,7 @@
 <template>
     <div class="slim-mainpanel">
         <Header />
-
-        <div id="navbar">
-            <!-- placeholder for navbar -->
-        </div>
+        <NavBar />
 
         <div class="container">
 
@@ -117,13 +114,30 @@
 /* Import HEADER. */
 import Header from '@/components/Header.vue'
 
-/**
- * ZeroVue Display Engine
- */
+/* Import NAVIGATION BAR. */
+import NavBar from '@/components/NavBar.vue'
+
+/*******************************************************************************
+
+  ZeroVue Display Engine
+  ----------------------
+
+  ...
+
+*******************************************************************************/
+
+/* Set name. */
+const name = 'zerovue'
+
+/* Set components. */
+const components = {
+    Header,
+    NavBar
+}
+
+/* Export default. */
 export default {
-    name: 'zerovue',
-    components: {
-        Header
-    }
+    name,
+    components
 }
 </script>

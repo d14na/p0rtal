@@ -8,14 +8,17 @@
         <div id="nav2">
             <a @click="open0vueStage">Stage</a> |
             <a @click="open0vueIdentity">Identity</a> |
-            <a @click="openMediaPlayer">Media</a> |
-            <a @click="openSnackbar">Snackbar</a>
+            <a @click="open0vueMediaPlayer">Media</a> |
+            <a @click="open0vueSnackbar">Snackbar</a>
         </div>
         <router-view/>
     </div>
 </template>
 
 <script>
+import $ from 'jquery'
+// import sliiide from '@/lib/sliiide'
+
 export default {
     data: () => ({
         test: "this is just a test!!!!!!!!!"
@@ -27,11 +30,11 @@ export default {
         open0vueStage() {
             _0vueStage.activate()
         },
-        openMediaPlayer() {
-            topMenu.activate()
+        open0vueMediaPlayer() {
+            _0vueMediaPlayer.activate()
         },
-        openSnackbar() {
-            bottomMenu.activate()
+        open0vueSnackbar() {
+            _0vueSnackbar.activate()
         }
     },
     mounted: () => {
@@ -40,6 +43,23 @@ export default {
         console.log('THIS', this)
     }
 }
+
+$(function () {
+    // return
+    // console.log('load sliiide!');
+
+    /* Initialize ZeroVue STAGE window. */
+    // const _0vueStage = $('#_0vueStage').sliiide({ place: 'left' })
+
+    /* Initialize ZeroVue IDENTITY window. */
+    // const _0vueIdentity = $('#_0vueIdentity').sliiide({ place: 'right' })
+
+    /* Initialize ZeroVue SNACKBAR view. */
+    // const _0vueSnackbar = $('#_0vueSnackbar').sliiide({ place: 'bottom' })
+
+    /* Initialize ZeroVue MEDIA PLAYER view. */
+    // const _0vueMediaPlayer = $('#_0vueMediaPlayer').sliiide({ place: 'top' })
+})
 </script>
 
 <style>
