@@ -5,13 +5,13 @@
 
                 <li class="nav-item with-sub active">
                     <a class="nav-link" href="javascript://">
-                        <i class="icon ion-md-bookmarks"></i>
+                        <font-awesome-icon icon="bookmark" class="icon" />
                         <span>My Zites</span>
                     </a>
 
                     <div class="sub-item">
                         <ul>
-                            <li><a href="builder/"><i class="icon ion-md-construct mg-r-5"></i> Build My First Zite</a></li>
+                            <li><a href="builder/"><font-awesome-icon icon="wrench" class="icon mg-r-5" /> Build My First Zite</a></li>
                         </ul>
                     </div>
                 </li>
@@ -19,6 +19,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="profile/life.html">
                         <i class="icon ion-md-pulse"></i>
+                        <font-awesome-icon icon="heartbeat" class="icon" />
                         <span>ZeroLife</span>
                     </a>
                 </li>

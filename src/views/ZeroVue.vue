@@ -18,10 +18,7 @@
 
             <div class="row row-xs">
                 <div class="col-md-6 col-lg-3 order-lg-1">
-
-                    <div id="zeroeffect">
-                        <!-- placeholder for zeroeffect -->
-                    </div>
+                    <ZeroEffect />
 
                     <div id="zerolife">
                         <!-- placeholder for zerolife -->
@@ -117,6 +114,9 @@ import Header from '@/components/Header.vue'
 /* Import NAVIGATION BAR. */
 import NavBar from '@/components/NavBar.vue'
 
+/* Import ZEROEFFECT. */
+import ZeroEffect from '@/components/ZeroEffect.vue'
+
 /*******************************************************************************
 
   ZeroVue Display Engine
@@ -129,13 +129,14 @@ import NavBar from '@/components/NavBar.vue'
 /* Set name. */
 const name = 'zerovue'
 
-/* Set components. */
+/* Initialize components. */
 const components = {
     Header,
-    NavBar
+    NavBar,
+    ZeroEffect
 }
 
-/* Export default. */
+/* Export. */
 export default {
     name,
     components

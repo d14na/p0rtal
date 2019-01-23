@@ -12453,8 +12453,10 @@ textarea.parsley-success:focus {
     .slim-navbar .nav-item:last-child .nav-link {
       border-right-width: 1px; }
     .slim-navbar .nav-item.with-sub > a::after {
-      content: '\f107';
-      font-family: 'FontAwesome';
+      content: '▽';
+      /* content: '▼'; */
+      /* content: '\f107'; */
+      /* font-family: 'FontAwesome'; */
       font-weight: 400;
       margin-left: 4px;
       margin-top: 0;
