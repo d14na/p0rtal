@@ -18,7 +18,9 @@
 
                     <div class="search-box">
                         <input type="text" class="form-control" placeholder="Your p2p request?">
-                        <button class="btn btn-primary"><font-awesome-icon icon="search" /></button>
+                        <button class="btn btn-primary" @click="search">
+                            <font-awesome-icon icon="search" />
+                        </button>
                     </div>
                 </div>
 
@@ -28,7 +30,7 @@
                     <a href="javascript://" class="logged-user" @click="open0vueIdentity">
                         <img src="@/assets/img/dark-hood-icon.jpg" alt="">
                         <span>Guest Peer</span>
-                        <!-- <font-awesome-icon icon="chevron-down" /> -->
+                        <!-- <span class="indicator"></span> -->
                     </a>
                 </div>
             </div>
@@ -63,6 +65,9 @@ export default {
         },
         open0vueStage() {
             _0vueStage.activate()
+        },
+        search() {
+            this.$router.push({ path: 'search', query: { q: 'trustless' } })
         }
     }
 }

@@ -23,6 +23,10 @@ export default new Router({
             path: '/privacy',
             name: 'privacy',
             component: () => import(/* webpackChunkName: "about" */ './views/Privacy.vue')
+        }, {
+            path: '/search',
+            name: 'search',
+            component: () => import(/* webpackChunkName: "search" */ './views/Search.vue')
         }
     ]
 })

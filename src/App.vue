@@ -71,6 +71,13 @@ $(function () {
     padding: 0;
 }
 
+/* ellipsis */
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* vertical divider */
 .v-divider:after {
     content: ' | ';

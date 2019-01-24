@@ -3,12 +3,13 @@
         <a href="javascript://" class="header-notification" data-toggle="dropdown">
             <font-awesome-icon icon="broadcast-tower" />
         </a>
+
         <div class="dropdown-menu">
             <div class="dropdown-menu-header">
-                <h6 class="dropdown-menu-title">Network Status</h6>
+                <h6 class="dropdown-menu-title">Activity Monitor</h6>
                 <div>
-                    <a href="javascript://">Events</a>
-                    <a href="javascript://">Settings</a>
+                    <a href="javascript://" @click="openActivities">Open</a>
+                    <a href="javascript://" @click="openSettings">Settings</a>
                 </div>
             </div>
 
@@ -21,7 +22,7 @@
                     <div class="row no-gutters">
                         <div class="col-2 tx-right">10:15am</div>
                         <div class="col-2 tx-center"><span class="square-10 bg-success"></span></div>
-                        <div class="col-8">Purchased christmas sale cloud storage</div>
+                        <div class="col-8 ellipsis">BigBuckBunny.mp5 downloaded <strong>successfully</strong></div>
                     </div>
                 </div>
 
@@ -29,15 +30,15 @@
                     <div class="row no-gutters">
                         <div class="col-2 tx-right">9:48am</div>
                         <div class="col-2 tx-center"><span class="square-10 bg-danger"></span></div>
-                        <div class="col-8">Login failure</div>
+                        <div class="col-8">Download <strong>failed</strong></div>
                     </div>
                 </div>
 
                 <div class="activity-item">
                     <div class="row no-gutters">
-                        <div class="col-2 tx-right">7:29am</div>
+                        <div class="col-2 tx-right">3:19pm</div>
                         <div class="col-2 tx-center"><span class="square-10 bg-warning"></span></div>
-                        <div class="col-8">(D:) Storage almost full</div>
+                        <div class="col-8">Meeting_backup_(rev3).zip <strong>saving</strong>...</div>
                     </div>
                 </div>
 
@@ -45,13 +46,13 @@
                     <div class="row no-gutters">
                         <div class="col-2 tx-right">3:21am</div>
                         <div class="col-2 tx-center"><span class="square-10 bg-success"></span></div>
-                        <div class="col-8">1 item sold <strong>Christmas bundle</strong></div>
+                        <div class="col-8">2 <strong>Missed</strong> calls</div>
                     </div>
                 </div>
             </div>
 
             <div class="dropdown-list-footer">
-                <a href="javascript://" @click="open0vueStage"><font-awesome-icon icon="chevron-down" /> Show All Activities</a>
+                <font-awesome-icon icon="chevron-down" /> &nbsp; scroll down 12 more &nbsp; <font-awesome-icon icon="chevron-down" />
             </div>
         </div>
     </div>
@@ -63,11 +64,11 @@ export default {
         //
     }),
     methods: {
-        open0vueIdentity() {
+        openActivities() {
             _0vueIdentity.activate()
         },
-        open0vueStage() {
-            _0vueStage.activate()
+        openSettings() {
+            console.log('open activity settings')
         }
     }
 }
