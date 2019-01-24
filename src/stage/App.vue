@@ -2,8 +2,12 @@
     <div id="stageWin">
         <div class="d-flex justify-content-between">
             <div class="btn-toolbar" role="toolbar" aria-label="Stage Menu">
+                <button type="button" class="btn btn-lg btn-outline-info" @click="loadHelp">
+                    <font-awesome-icon icon="headset" />
+                </button>
+
                 <div class="btn-group" role="group">
-                    <button id="btnGroupNetwork" type="button" class="btn btn-lg btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupNetwork" type="button" class="btn btn-lg btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <font-awesome-icon icon="network-wired" />
                     </button>
 
@@ -15,13 +19,13 @@
             </div>
 
             <!-- close window -->
-            <font-awesome-icon icon="times" class="btnWinClose" @click="close" />
+            <font-awesome-icon icon="times" class="btn-win-close" @click="close" />
         </div>
 
         <div class="container">
             <div class="row header">
                 <div class="col text-center">
-                    <h1>zer0net</h1>
+                    <h1>zer<span class="slashed-zero">0</span>net</h1>
                     <h3>Zite Stage</h3>
                 </div>
             </div>
@@ -32,6 +36,59 @@
                 </div>
             </div>
         </div>
+
+        <div>
+            <div>
+                <h6 class="dropdown-menu-title">Notifications</h6>
+                <div>
+                    <a href="javascript://">Mark All as Read</a>
+                    <a>Settings</a>
+                </div>
+            </div>
+
+            <div class="dropdown-list">
+                <a href="javascript://" class="dropdown-link">
+                    <div class="media">
+                        <img src="@/assets/img/img8.jpg" alt="">
+                        <div class="media-body">
+                            <p><strong>Suzzeth Bungaos</strong> tagged you and 18 others in a post.</p>
+                            <span>October 03, 2017 8:45am</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript://" class="dropdown-link">
+                    <div class="media">
+                        <img src="@/assets/img/img9.jpg" alt="">
+                        <div class="media-body">
+                            <p><strong>Mellisa Brown</strong> appreciated your work <strong>The Social Network</strong></p>
+                            <span>October 02, 2017 12:44am</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript://" class="dropdown-link read">
+                    <div class="media">
+                        <img src="@/assets/img/img10.jpg" alt="">
+                        <div class="media-body">
+                            <p>20+ new items added are for sale in your <strong>Sale Group</strong></p>
+                            <span>October 01, 2017 10:20pm</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="javascript://" class="dropdown-link read">
+                    <div class="media">
+                        <img src="@/assets/img/img2.jpg" alt="">
+                        <div class="media-body">
+                            <p><strong>Julius Erving</strong> wants to connect with you on your conversation with <strong>Ronnie Mara</strong></p>
+                            <span>October 01, 2017 6:08pm</span>
+                        </div>
+                    </div>
+                </a>
+                <div class="dropdown-list-footer">
+                    <a href="javascript://" @click="open0vueStage"><font-awesome-icon icon="chevron-down" /> Show All Notifications</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -44,11 +101,17 @@ export default {
         close() {
             _0vueStage.deactivate()
         },
+        loadHelp() {
+            console.log('load help')
+        },
         showOne() {
             console.log('show one')
         },
         showTwo() {
             console.log('show two')
+        },
+        open0vueStage() {
+            console.log('open vue stage')
         }
     },
     mounted: () => {
@@ -70,6 +133,7 @@ export default {
 }
 
 #stageWin {
-    /* padding: 20px; */
+    height: 100%;
+    border-right: 1px solid #9993;
 }
 </style>

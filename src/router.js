@@ -12,17 +12,17 @@ export default new Router({
             name: 'zerovue',
             component: ZeroVue
         }, {
-            path: '/home',
-            name: 'home',
-            component: () => import(/* webpackChunkName: "home" */ './views/Home.vue')
-        }, {
-            path: '/settings',
-            name: 'settings',
-            component: () => import(/* webpackChunkName: "settings" */ './views/Settings.vue')
-        }, {
             path: '/about',
             name: 'about',
-            component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+            component: () => import(/* webpackChunkName: "home" */ './views/About.vue')
+        }, {
+            path: '/legal',
+            name: 'legal',
+            component: () => import(/* webpackChunkName: "settings" */ './views/Legal.vue')
+        }, {
+            path: '/privacy',
+            name: 'privacy',
+            component: () => import(/* webpackChunkName: "about" */ './views/Privacy.vue')
         }
     ]
 })

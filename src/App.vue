@@ -3,15 +3,6 @@
         <!-- This is a permanent header bar. -->
         <Header />
 
-        <div class="tempNav">
-            FOR DEVELOPMENT PURPOSES ONLY
-            <div id="nav">
-                <router-link to="/home">Home</router-link> |
-                <a href="javascript://" @click="loadCache">Ca¢he</a> |
-                <router-link to="/about">About</router-link>
-            </div>
-        </div>
-
         <!-- This is the MAIN (dynamic) view area. -->
         <router-view/>
     </div>
@@ -38,9 +29,9 @@ export default {
         //
     }),
     methods: {
-        loadCache() {
-            console.log('Start loading cache...')
-        }
+        // loadCache() {
+        //     console.log('Start loading cache...')
+        // }
     },
     mounted: () => {
         console.log('App.vue is mounted.')
@@ -68,21 +59,22 @@ $(function () {
 
 <style>
 /* right and left sliding drawers */
-.btnWinClose {
+.btn-win-close {
     font-size: 2.8em;
     color: rgba(150, 90, 90, 0.4);
     margin: 5px 15px 0 15px;
     padding: 0;
 }
 
-.tempNav {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    font-size: 0.7em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin: 2px 0 5px;
-    border-bottom: 1px solid #f333;
+/* vertical divider */
+.v-divider:after {
+    content: ' | ';
+    color: rgba(90, 90, 90, 0.5);
+}
+
+/* vertical divider (dark) */
+.v-divider-dark:after {
+    content: ' | ';
+    color: rgba(210, 210, 210, 0.9);
 }
 </style>

@@ -2,19 +2,21 @@
     <div class="identityWin">
         <div class="d-flex justify-content-between">
             <!-- close window -->
-            <font-awesome-icon icon="times" class="btnWinClose" @click="close" />
+            <font-awesome-icon icon="times" class="btn-win-close" @click="close" />
 
+            <!-- toolbar buttons -->
             <div class="btn-toolbar" role="toolbar" aria-label="Identity Menu">
                 <button type="button" class="btn btn-lg btn-outline-info" @click="loadProfile">
                     <font-awesome-icon icon="user" />
                 </button>
 
                 <button type="button" class="btn btn-lg btn-outline-info" @click="loadCache">
-                    <font-awesome-icon icon="money-check-alt" />
+                    <font-awesome-icon icon="gem" />
+                    <!-- <font-awesome-icon icon="money-check-alt" /> -->
                 </button>
 
                 <div class="btn-group" role="group">
-                    <button id="btnGroupNetwork" type="button" class="btn btn-lg btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupNetwork" type="button" class="btn btn-lg btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <font-awesome-icon icon="sliders-h" />
                     </button>
 
@@ -30,17 +32,13 @@
                         </a>
                     </div>
                 </div>
-
-                <button type="button" class="btn btn-lg btn-outline-info" @click="loadHelp">
-                    <font-awesome-icon icon="headset" />
-                </button>
             </div>
         </div>
 
         <div class="container">
             <div class="row header">
                 <div class="col text-center">
-                    <h1>zer0net</h1>
+                    <h1>zer<span class="slashed-zero">0</span>net</h1>
                     <h3>My Identity</h3>
                 </div>
             </div>
@@ -83,9 +81,6 @@ export default {
         loadSettings() {
             console.log('load settings')
         },
-        loadHelp() {
-            console.log('load help')
-        },
         loadMainnet() {
             console.log('load Mainenet')
         },
@@ -114,8 +109,6 @@ export default {
 .identityWin {
     height: 100%;
     border-left: 1px solid #9993;
-    /* border: 1pt solid #f33; */
-    /* padding-top: 20px; */
 }
 
 /* .identityNav {
