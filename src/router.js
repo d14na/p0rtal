@@ -24,6 +24,10 @@ export default new Router({
             name: 'chans',
             component: () => import(/* webpackChunkName: "chans" */ './views/Chans.vue')
         }, {
+            path: '/events',
+            name: 'events',
+            component: () => import(/* webpackChunkName: "events" */ './views/Events.vue')
+        }, {
             path: '/file-manager',
             name: 'file-manager',
             component: () => import(/* webpackChunkName: "file-manager" */ './views/FileManager.vue')
