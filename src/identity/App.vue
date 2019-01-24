@@ -15,7 +15,7 @@
 import { mapGetters, mapActions } from 'vuex'
 
 /* Import NAVBAR. */
-import NavBar from './views/NavBar.vue'
+import NavBar from './components/NavBar.vue'
 
 /* Import WELCOME. */
 import Welcome from './views/Welcome.vue'
@@ -38,6 +38,7 @@ const components = {
     Settings
 }
 
+/* Export. */
 export default {
     components,
     data: () => ({
