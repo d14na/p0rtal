@@ -8,7 +8,7 @@
         <!-- identity navigation bar -->
         <div class="d-flex justify-content-around">
             <button type="button" class="btn btn-toolbar btn-link" @click="gotoProfile">
-                <font-awesome-icon icon="user" />
+                <font-awesome-icon :icon="['far', 'id-card']" />
             </button>
 
             <button type="button" class="btn btn-toolbar btn-link" @click="gotoCache">
@@ -65,12 +65,6 @@ export default {
         gotoSettings() {
             /* Set screen id. */
             this.updateIdentityScreenId('settings')
-        },
-        loadMainnet() {
-            console.log('load Mainenet')
-        },
-        loadRopsten() {
-            console.log('load Ropsten')
         }
     },
     mounted: () => {

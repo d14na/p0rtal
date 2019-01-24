@@ -77,11 +77,4 @@ export default {
 .win-toolbar {
     padding-right: 15px;
 }
-.win-scrollable {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin-top: 75px;
-    overflow: auto;
-}
 </style>

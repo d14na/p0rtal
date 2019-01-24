@@ -23,6 +23,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 //     faWrench,
 // } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 
 /* Add individual application fonts. */
@@ -38,7 +39,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 //     faWrench
 // )
 // library.add(fab, fas)
-library.add(fab, fas)
+library.add(fab, far, fas)
 
 /* Load Vue component. */
 Vue.component('font-awesome-icon', FontAwesomeIcon)

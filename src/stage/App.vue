@@ -3,9 +3,11 @@
         <!-- identity navigation bar -->
         <NavBar />
 
-        <Welcome v-if="stageScreenId === ''" />
-        <Chans v-if="stageScreenId === 'chans'" />
-        <Help v-if="stageScreenId === 'help'" />
+        <div class="win-scrollable">
+            <Welcome v-if="stageScreenId === ''" />
+            <Chans v-if="stageScreenId === 'chans'" />
+            <Help v-if="stageScreenId === 'help'" />
+        </div>
     </div>
 </template>
 
