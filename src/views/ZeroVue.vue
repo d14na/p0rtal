@@ -74,7 +74,6 @@
             </div>
         </div>
 
-        <Footer />
         <ModalAdminPermission />
     </div>
 </template>
@@ -113,9 +112,6 @@ import ZeroLit from '@/components/ZeroLit.vue'
 /* Import ZEROTASKS. */
 import ZeroTasks from '@/components/ZeroTasks.vue'
 
-/* Import FOOTER. */
-import Footer from '@/components/Footer.vue'
-
 /* Import (MODAL) ADMIN PERMISSION. */
 import ModalAdminPermission from '@/components/modal/AdminPermission.vue'
 
@@ -141,7 +137,6 @@ const components = {
     Feedback,
     NewTopic,
     Carousel,
-    Footer,
     ModalAdminPermission,
     ZeroEffect,
     ZeroLife,

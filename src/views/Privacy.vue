@@ -1,22 +1,37 @@
 <template>
-    <div class="privacyScreen">
+    <div class="screen">
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1>Privacy</h1>
-                </div>
-            </div>
+            <h1>Privacy</h1>
+
+            <p>
+                We respect YOURS!
+            </p>
         </div>
+
+        <Footer />
     </div>
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+/* Import FOOTER. */
+import Footer from '@/components/Footer.vue'
 
+/* Initialize components. */
+const components = {
+    Footer
+}
+
+/* Export. */
 export default {
-  // components: {
-  //   HelloWorld
-  // }
+    components,
+    data: () => ({
+        //
+    }),
+    methods: {
+        //
+    },
+    mounted: () => {
+        //
+    }
 }
 </script>

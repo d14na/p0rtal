@@ -58,6 +58,11 @@ $(function () {
 </script>
 
 <style>
+/* add support for slashed zero */
+.slashed-zero {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
+
 /* right and left sliding drawers */
 .btn-win-close {
     font-size: 2.8em;
@@ -75,6 +80,6 @@ $(function () {
 /* vertical divider (dark) */
 .v-divider-dark:after {
     content: ' | ';
-    color: rgba(210, 210, 210, 0.9);
+    color: rgba(90, 210, 210, 0.9);
 }
 </style>

@@ -70,10 +70,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.slashed-zero {
-    font-family: monaco, Consolas, "Lucida Console", monospace;
-}
-
 .subMenu {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-size: 0.7em;
@@ -85,7 +81,7 @@ export default {
     border-bottom: 1px solid #9993;
 }
 .subMenu a {
-    color: rgba(210, 210, 210, 0.9);
+    color: rgba(210, 210, 255, 0.9);
 }
 .subMenu a:hover {
     color: rgba(255, 150, 150, 0.9);
