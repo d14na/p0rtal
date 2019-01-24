@@ -72,8 +72,7 @@
                         <li><a href="/1JuwWYEgApiBVNyGxhvNYyohsv4YMtxy7M"><span class="flag-icon flag-icon-cn tx-16 mg-r-5"></span> 🌴BT🎈高清电影网 <small class="text-muted">249</small></a></li>
                         <li><a href="/1Apr5ba6u9Nz6eFASmFrefGvyBKkM76QgE"><span class="flag-icon flag-icon-ru tx-16 mg-r-5"></span> Ru-ZeroTalk <small class="text-muted">196</small></a></li>
                         <li><a href="/17ogL1aD6546DYwtb6UnMhF4hETaHBj6yD"><span class="flag-icon flag-icon-ru tx-16 mg-r-5"></span> Politics & Social <small class="text-muted">88</small></a></li>
-                        <li><a href="/1EVA2cNz81n4ftuXFovFCeWSVjUB7mSsmF"><span class="flag-icon flag-icon-us tx-16 mg-r-5"></span> HUFFPOST <small class="text-muted">23</small></a></li>
-                        <li><a href="javascript://">...</a></li>
+                        <!-- <li><a href="/1EVA2cNz81n4ftuXFovFCeWSVjUB7mSsmF"><span class="flag-icon flag-icon-us tx-16 mg-r-5"></span> HUFFPOST <small class="text-muted">23</small></a></li> -->
                     </ul>
                 </div>
             </div>
