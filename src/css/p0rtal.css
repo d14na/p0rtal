@@ -12453,7 +12453,7 @@ textarea.parsley-success:focus {
     .slim-navbar .nav-item:last-child .nav-link {
       border-right-width: 1px; }
     .slim-navbar .nav-item.with-sub > a::after {
-      content: '▽';
+      /* content: '▽'; */
       /* content: '▼'; */
       /* content: '\f107'; */
       /* font-family: 'FontAwesome'; */

@@ -11,7 +11,7 @@
 
                     <div class="sub-item">
                         <ul>
-                            <li><a href="builder/"><font-awesome-icon icon="tools" class="icon mg-r-5" /> Build My First Zite</a></li>
+                            <li><a href="builder/"><font-awesome-icon icon="tools" class="icon mg-r-5" /> BUIDL My First Zite</a></li>
                         </ul>
                     </div>
                 </li>
@@ -26,7 +26,7 @@
 
                 <li class="nav-item with-sub mega-dropdown">
                     <a class="nav-link" href="javascript://">
-                        <i class="icon ion-md-compass"></i>
+                        <font-awesome-icon icon="compass" class="icon" />
                         <span>Discovery</span>
                     </a>
                     <div class="sub-item">
@@ -107,7 +107,7 @@
 
                 <li class="nav-item">
                     <a class="nav-link" href="messages/">
-                        <i class="icon ion-md-chatbubbles"></i>
+                        <font-awesome-icon icon="comments" class="icon" />
                         <span>Messages</span>
                         <span class="square-8"></span>
                     </a>
@@ -115,7 +115,7 @@
 
                 <li class="nav-item with-sub mega-dropdown">
                     <a class="nav-link" href="javascript://">
-                        <i class="icon ion-md-globe"></i>
+                        <font-awesome-icon icon="globe" class="icon" />
                         <span>0net 360&deg;</span>
                     </a>
                     <div class="sub-item">
