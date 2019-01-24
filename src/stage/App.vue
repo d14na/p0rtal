@@ -3,10 +3,12 @@
         <!-- identity navigation bar -->
         <NavBar />
 
-        <div class="win-scrollable">
-            <Welcome v-if="stageScreenId === ''" />
-            <Chans v-if="stageScreenId === 'chans'" />
-            <Help v-if="stageScreenId === 'help'" />
+        <div class="win-scrollable-outer">
+            <div class="win-scrollable-inner">
+                <Welcome v-if="stageScreenId === ''" />
+                <Chans v-if="stageScreenId === 'chans'" />
+                <Help v-if="stageScreenId === 'help'" />
+            </div>
         </div>
     </div>
 </template>
@@ -71,5 +73,12 @@ export default {
 }
 .win-toolbar {
     padding-left: 15px;
+}
+
+/* (left-hand inset) drop shadow */
+.win-scrollable-outer {
+    -moz-box-shadow:inset 0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
+    -webkit-box-shadow:inset 0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
+    box-shadow:inset 0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
 }
 </style>

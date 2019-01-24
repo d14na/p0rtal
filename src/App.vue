@@ -90,20 +90,16 @@ $(function () {
     /* FIXME Remove hard-coded value. */
     width: 300px;
 }
-.win-scrollable {
+.win-scrollable-outer {
     position: absolute;
     top: 0;
     bottom: 0;
     margin-top: 75px;
+    padding: 1px 0 2px;
+}
+.win-scrollable-inner {
+    height: 100%;
     overflow: auto;
-
-    /* (inset) drop shadow */
-    -moz-box-shadow:inset -0.5px -0.5px 3px 0 rgba(30,30,30,0.8);
-    -webkit-box-shadow:inset -0.5px -0.5px 3px 0 rgba(30,30,30,0.8);
-    box-shadow:inset -0.5px -0.5px 3px 0 rgba(30,30,30,0.8);
-    /* -moz-box-shadow:inset 0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
-    -webkit-box-shadow:inset 0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
-    box-shadow:inset 0.5px 0.5px 3px 0 rgba(30,30,30,0.8); */
 }
 
 /* ellipsis */
@@ -124,4 +120,13 @@ $(function () {
     content: ' | ';
     color: rgba(90, 210, 210, 0.9);
 }
+
+/* padding for shadow on lists */
+.shadow-list-right {
+    padding-right: 2px;
+}
+.shadow-list-left {
+    padding-left: 2px;
+}
+
 </style>
