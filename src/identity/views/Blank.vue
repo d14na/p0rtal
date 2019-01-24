@@ -1,17 +1,19 @@
 <template>
     <div class="screen">
         <div class="container">
-            <div class="row header">
-                <div class="col text-center">
-                    <h1>zer<span class="slashed-zero">0</span>net</h1>
-                    <h3>Welcome</h3>
-                </div>
-            </div>
+            <h1>Blank Screen</h1>
+
+            <p>
+                put content here...
+            </p>
         </div>
     </div>
 </template>
 
 <script>
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
+
 /* Import COMPONENT. */
 // import Component from '@/components/Component.vue'
 

@@ -28,14 +28,14 @@ new Vue({
 
 /* Initialize STAGE window. */
 new Vue({
-    // store,
+    store,
     i18n,
     render: h => h(Stage)
 }).$mount('#_0vueStageMount')
 
 /* Initialize IDENTITY window. */
 new Vue({
-    // store,
+    store,
     i18n,
     render: h => h(Identity)
 }).$mount('#_0vueIdentityMount')

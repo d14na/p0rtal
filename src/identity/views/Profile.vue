@@ -3,11 +3,11 @@
         <div class="container">
             <div class="slim-pageheader">
                 <ol class="breadcrumb slim-breadcrumb">
-                    <li class="breadcrumb-item"><a href="">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">My p0rtal</li>
+                    <li class="breadcrumb-item"><a href="">Profile</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Settings</li>
                 </ol>
 
-                <h6 class="slim-pagetitle">My p0rtal</h6>
+                <h6 class="slim-pagetitle">Profile</h6>
             </div>
 
             <div class="row row-sm">

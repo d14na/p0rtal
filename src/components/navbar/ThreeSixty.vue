@@ -2,7 +2,7 @@
     <li class="nav-item with-sub mega-dropdown">
         <a class="nav-link" href="javascript://">
             <font-awesome-icon icon="globe" class="icon" />
-            <span><strong class="slashed-zero">0</strong>net 101</span>
+            <span><strong class="slashed-zero">0</strong>net 360&deg;</span>
         </a>
         <div class="sub-item">
             <div class="row">
@@ -24,7 +24,7 @@
                 <div class="col-lg mg-t-30 mg-lg-t-0">
                     <label class="section-label">
                         <font-awesome-icon icon="network-wired" class="mg-r-3" />
-                        360&deg; Network Status
+                        Network Status
                     </label>
 
                     <div>
@@ -38,7 +38,11 @@
                 </div>
 
                 <div class="col-lg mg-t-30 mg-lg-t-0">
-                    <label class="section-label"><i class="fa fa-cogs mg-r-3"></i> p<span class="slashed-zero">0</span>rtal Helpers</label>
+                    <label class="section-label">
+                        <font-awesome-icon icon="suitcase" class="mg-r-3" />
+                        Basic Essentials
+                    </label>
+
                     <ul>
                         <li>
                             <router-link to="/events">
@@ -52,12 +56,19 @@
                                 File Manager
                             </router-link>
                         </li>
+                        <li>
+                            <router-link to="/untar">
+                                <font-awesome-icon icon="save" class="mg-r-5" />
+                                Untar P2P Archives
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="col-lg mg-t-30 mg-lg-t-0">
                     <label class="section-label">
-                        <font-awesome-icon icon="certificate" class="mg-r-3" /> Features &amp; Services
+                        <font-awesome-icon icon="trophy" class="mg-r-3" />
+                        Best of Zer<span class="slashed-zero">0</span>net
                     </label>
 
                     <ul>

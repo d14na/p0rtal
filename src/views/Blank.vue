@@ -19,6 +19,9 @@
 </template>
 
 <script>
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
+
 /* Import NAVIGATION BAR. */
 import NavBar from '@/components/NavBar.vue'
 

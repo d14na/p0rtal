@@ -5,7 +5,7 @@
                 <ZeroLife />
                 <Discovery />
                 <Buidl />
-                <Learn />
+                <ThreeSixty />
             </ul>
         </div>
     </div>
@@ -21,15 +21,15 @@ import Discovery from './navbar/Discovery.vue'
 /* Import BUIDL. */
 import Buidl from './navbar/Buidl.vue'
 
-/* Import LEARN. */
-import Learn from './navbar/Learn.vue'
+/* Import THREESIXTY. */
+import ThreeSixty from './navbar/ThreeSixty.vue'
 
 /* Initialize components. */
 const components = {
     ZeroLife,
     Discovery,
     Buidl,
-    Learn
+    ThreeSixty
 }
 
 /* Export. */
