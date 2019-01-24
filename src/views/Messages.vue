@@ -16,7 +16,7 @@
                 <div class="messages-list">
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img2.jpg" alt="">
+                            <img src="@/assets/img/img2.jpg" alt="">
                             <span class="square-10 bg-success"></span>
                         </div>
 
@@ -34,7 +34,7 @@
 
                     <a href="javascript://" class="media unread">
                         <div class="media-left">
-                            <img src="img/img4.jpg" alt="">
+                            <img src="@/assets/img/img4.jpg" alt="">
                             <span class="square-10 bg-success"></span>
                         </div>
 
@@ -53,7 +53,7 @@
 
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img3.jpg" alt="">
+                            <img src="@/assets/img/img3.jpg" alt="">
                             <span class="square-10 bg-success"></span>
                         </div>
 
@@ -71,7 +71,7 @@
 
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img5.jpg" alt="">
+                            <img src="@/assets/img/img5.jpg" alt="">
                             <span class="square-10 bg-gray-600"></span>
                         </div>
 
@@ -89,7 +89,7 @@
 
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img6.jpg" alt="">
+                            <img src="@/assets/img/img6.jpg" alt="">
                             <span class="square-10 bg-gray-600"></span>
                         </div>
 
@@ -107,7 +107,7 @@
 
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img7.jpg" alt="">
+                            <img src="@/assets/img/img7.jpg" alt="">
                             <span class="square-10 bg-success"></span>
                         </div>
 
@@ -125,7 +125,7 @@
 
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img8.jpg" alt="">
+                            <img src="@/assets/img/img8.jpg" alt="">
                             <span class="square-10 bg-success"></span>
                         </div>
 
@@ -143,7 +143,7 @@
 
                     <a href="javascript://" class="media">
                         <div class="media-left">
-                            <img src="img/img9.jpg" alt="">
+                            <img src="@/assets/img/img9.jpg" alt="">
                             <span class="square-10 bg-success"></span>
                         </div>
 
@@ -170,7 +170,7 @@
                     <a href="javascript://" class="message-back"><i class="fa fa-angle-left"></i></a>
 
                     <div class="media">
-                        <img src="img/img4.jpg" alt="">
+                        <img src="@/assets/img/img4.jpg" alt="">
                         <div class="media-body">
                             <h6>Joyce Chua</h6>
                             <p>Last seen: 2 hours ago</p>
@@ -194,7 +194,7 @@
                 <div class="message-body">
                     <div class="media-list">
                         <div class="media">
-                            <img src="img/img1.jpg" alt="">
+                            <img src="@/assets/img/img1.jpg" alt="">
                             <div class="media-body">
                                 <div class="msg">
                                     <p>Hi, there?</p>
@@ -213,11 +213,11 @@
                                 </div>
                             </div>
 
-                            <img src="img/img4.jpg" class="wd-50 rounded-circle" alt="">
+                            <img src="@/assets/img/img4.jpg" class="wd-50 rounded-circle" alt="">
                         </div>
 
                         <div class="media">
-                            <img src="img/img1.jpg" alt="">
+                            <img src="@/assets/img/img1.jpg" alt="">
                             <div class="media-body">
                                 <div class="msg">
                                     <p>As good a place as any.</p>
@@ -236,11 +236,11 @@
                                 </div>
                             </div>
 
-                            <img src="img/img4.jpg" class="wd-50 rounded-circle" alt="">
+                            <img src="@/assets/img/img4.jpg" class="wd-50 rounded-circle" alt="">
                         </div>
 
                         <div class="media">
-                            <img src="img/img1.jpg" alt="">
+                            <img src="@/assets/img/img1.jpg" alt="">
                             <div class="media-body">
                                 <div class="msg">
                                     <p>That's just it, it ain't no story. I saw that prisoner shoot you down. I ran after him, I snapped his neck. It ain't gonna be easy, but Lori and Carl, they'll get over you. They done it before. They just gonna have to.</p>

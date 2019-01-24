@@ -1,0 +1,21 @@
+{
+ "address": "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc",
+ "address_index": 14886911,
+ "background-color": "#FFF",
+ "description": "The Zer0net starts here! An 0PEN community empowering ALL of US to trust in EVERYone over AnyONE.",
+ "favicon": "img/favicon.png",
+ "files": {},
+ "ignore": "(\\.git|lib|templates)",
+ "inner_path": "content.json",
+ "modified": 1541084310,
+ "postmessage_nonce_security": true,
+ "signers_sign": "Gz2wnMFO/692AfiPordVsqtNwmGJq2/poqO8U5TPzd7/U475FL86l+H6t0/an7jt6LWNIRrFN5XVD+MxP6TXyss=",
+ "signs": {
+  "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc": "G6XP/ifskyFbpnU+bAn8Kd1iaRO6YS3squ1zRW9BYc/2B6T/VCMPFAzNrRypDUPIvhBAPwxhFj2X/6Yr/eOOugc="
+ },
+ "signs_required": 1,
+ "title": "p0rtal",
+ "translate": ["js/all.js"],
+ "viewport": "width=device-width, initial-scale=1.0",
+ "zeronet_version": "0.6.3"
+}
