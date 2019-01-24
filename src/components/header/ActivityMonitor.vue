@@ -8,7 +8,7 @@
             <div class="dropdown-menu-header">
                 <h6 class="dropdown-menu-title">Activity Monitor</h6>
                 <div>
-                    <a href="javascript://" @click="openActivities">Open</a>
+                    <a href="javascript://" @click="openActivities">Show All</a>
                     <a href="javascript://" @click="openSettings">Settings</a>
                 </div>
             </div>

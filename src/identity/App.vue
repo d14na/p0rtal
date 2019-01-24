@@ -1,22 +1,24 @@
 <template>
-    <div class="identityWin">
-        <div class="d-flex justify-content-between">
+    <div class="win-identity" role="toolbar" aria-label="Identity Menu">
+        <div class="win-toolbar d-flex justify-content-between">
             <!-- close window -->
-            <font-awesome-icon icon="times" class="btn-win-close" @click="close" />
+            <button type="button" class="btn btn-lg btn-link" @click="close">
+                <font-awesome-icon icon="window-close" class="btn-win-close" />
+            </button>
 
             <!-- toolbar buttons -->
-            <div class="btn-toolbar" role="toolbar" aria-label="Identity Menu">
-                <button type="button" class="btn btn-lg btn-outline-info" @click="loadProfile">
+            <div class="d-flex justify-content-around">
+                <button type="button" class="btn btn-toolbar btn-link" @click="loadProfile">
                     <font-awesome-icon icon="user" />
                 </button>
 
-                <button type="button" class="btn btn-lg btn-outline-info" @click="loadCache">
-                    <font-awesome-icon icon="gem" />
+                <button type="button" class="btn btn-toolbar btn-link" @click="loadCache">
+                    <font-awesome-icon icon="wallet" />
                     <!-- <font-awesome-icon icon="money-check-alt" /> -->
                 </button>
 
                 <div class="btn-group" role="group">
-                    <button id="btnGroupNetwork" type="button" class="btn btn-lg btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupNetwork" type="button" class="btn btn-toolbar btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <font-awesome-icon icon="sliders-h" />
                     </button>
 
@@ -106,18 +108,11 @@ export default {
     color: rgb(180, 60, 60);
 }
 
-.identityWin {
+.win-identity {
     height: 100%;
     border-left: 1px solid #9993;
 }
-
-/* .identityNav {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    font-size: 0.7em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    border-bottom: 1px solid #9993;
-} */
+.win-toolbar {
+    padding-right: 15px;
+}
 </style>

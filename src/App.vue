@@ -4,7 +4,7 @@
         <Header />
 
         <!-- This is the MAIN (dynamic) view area. -->
-        <router-view/>
+        <router-view />
     </div>
 </template>
 
@@ -65,10 +65,20 @@ $(function () {
 
 /* right and left sliding drawers */
 .btn-win-close {
-    font-size: 2.8em;
-    color: rgba(150, 90, 90, 0.4);
+    font-size: 2.4em;
+    color: rgba(120, 90, 90, 0.4);
     margin: 5px 15px 0 15px;
     padding: 0;
+}
+
+/* window toolbar */
+.win-toolbar {
+    height: 75px;
+    background-color: rgba(255, 255, 255, 1.0);
+    border-bottom: 1px solid #9993;
+}
+.win-toolbar .btn-toolbar {
+    font-size: 2.0em;
 }
 
 /* ellipsis */

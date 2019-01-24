@@ -1,13 +1,13 @@
 <template>
-    <div id="stageWin">
-        <div class="d-flex justify-content-between">
-            <div class="btn-toolbar" role="toolbar" aria-label="Stage Menu">
-                <button type="button" class="btn btn-lg btn-outline-info" @click="loadHelp">
+    <div class="win-stage" role="toolbar" aria-label="Stage Menu">
+        <div class="win-toolbar d-flex justify-content-between">
+            <div class="d-flex justify-content-around">
+                <button type="button" class="btn btn-toolbar btn-link" @click="loadHelp">
                     <font-awesome-icon icon="headset" />
                 </button>
 
                 <div class="btn-group" role="group">
-                    <button id="btnGroupNetwork" type="button" class="btn btn-lg btn-outline-info" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button id="btnGroupNetwork" type="button" class="btn btn-toolbar btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <font-awesome-icon icon="network-wired" />
                     </button>
 
@@ -19,7 +19,9 @@
             </div>
 
             <!-- close window -->
-            <font-awesome-icon icon="times" class="btn-win-close" @click="close" />
+            <button type="button" class="btn btn-lg btn-link" @click="close">
+                <font-awesome-icon icon="window-close" class="btn-win-close" />
+            </button>
         </div>
 
         <div class="container">
@@ -132,8 +134,11 @@ export default {
     color: rgb(180, 60, 60);
 }
 
-#stageWin {
+.win-stage {
     height: 100%;
     border-right: 1px solid #9993;
+}
+.win-toolbar {
+    padding-left: 15px;
 }
 </style>

@@ -35,13 +35,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- mini sub-menu (this replaces the standard footer links) -->
-        <div class="subMenu">
-            <router-link to="/about">About</router-link> <span class="v-divider-dark"></span>
-            <router-link to="/legal">Legal</router-link> <span class="v-divider-dark"></span>
-            <router-link to="/privacy">Privacy</router-link>
-        </div>
     </div>
 </template>
 

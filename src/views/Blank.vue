@@ -7,10 +7,10 @@
         <NavBar />
 
         <div class="container">
-            <h1>Legal</h1>
+            <h1>Blank Screen</h1>
 
             <p>
-                Please send all DMCA requests to <a href="mailto:legal@d14na.org">legal@d14na.org</a>.
+                put content here...
             </p>
         </div>
 
@@ -49,3 +49,7 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+
+</style>

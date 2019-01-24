@@ -1,9 +1,12 @@
 <template>
     <div class="slim-mainpanel">
+        <!-- links bar -->
+        <LinksBar />
+
+        <!-- navigation bar -->
         <NavBar />
 
         <div class="container">
-
             <div class="slim-pageheader">
                 <ol class="breadcrumb slim-breadcrumb">
                     <li class="breadcrumb-item active" aria-current="page">You are <strong>Home</strong></li>
@@ -82,6 +85,9 @@
 /* Import NAVIGATION BAR. */
 import NavBar from '@/components/NavBar.vue'
 
+/* Import LINKS BAR. */
+import LinksBar from '@/components/LinksBar.vue'
+
 /* Import RECENT MESSAGES. */
 import RecentMessages from '@/components/RecentMessages.vue'
 
@@ -131,6 +137,7 @@ const name = 'zerovue'
 /* Initialize components. */
 const components = {
     NavBar,
+    LinksBar,
     RecentMessages,
     TrendingStories,
     Sponsor,

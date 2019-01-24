@@ -18,7 +18,11 @@ export default new Router({
         }, {
             path: '/legal',
             name: 'legal',
-            component: () => import(/* webpackChunkName: "settings" */ './views/Legal.vue')
+            component: () => import(/* webpackChunkName: "legal" */ './views/Legal.vue')
+        }, {
+            path: '/zerolife',
+            name: 'zerolife',
+            component: () => import(/* webpackChunkName: "zerolife" */ './views/ZeroLife.vue')
         }, {
             path: '/privacy',
             name: 'privacy',

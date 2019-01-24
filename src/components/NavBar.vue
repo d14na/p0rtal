@@ -17,11 +17,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="profile/life.html">
+                    <router-link to="/zerolife" class="nav-link">
                         <i class="icon ion-md-pulse"></i>
                         <font-awesome-icon icon="heartbeat" class="icon" />
                         <span>ZeroLife</span>
-                    </a>
+                    </router-link>
                 </li>
 
                 <li class="nav-item with-sub mega-dropdown">
