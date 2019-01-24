@@ -70,6 +70,10 @@ $(function () {
     margin: 5px 5px 0 5px;
     padding: 0;
 }
+.btn-win-close {
+    margin: 0 7px;
+    padding: 0;
+}
 
 /* window toolbar */
 .win-toolbar {
@@ -79,6 +83,12 @@ $(function () {
 }
 .win-toolbar .btn-toolbar {
     font-size: 2.0em;
+}
+
+/* window screen */
+.win-screen {
+    /* FIXME Remove hard-coded value. */
+    width: 300px;
 }
 
 /* ellipsis */

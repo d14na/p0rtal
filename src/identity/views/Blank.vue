@@ -1,5 +1,5 @@
 <template>
-    <div class="screen">
+    <div class="win-screen">
         <div class="container">
             <h1>Blank Screen</h1>
 

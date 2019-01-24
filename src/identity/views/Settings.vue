@@ -1,10 +1,14 @@
 <template>
-    <div class="screen">
+    <div class="win-screen">
         <div class="container">
             <div class="slim-pageheader">
                 <ol class="breadcrumb slim-breadcrumb">
-                    <li class="breadcrumb-item"><a href="">Settings</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">General</li>
+                    <li class="breadcrumb-item">
+                        <a href="javascript://" @click="gotoSettings">Settings</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        General
+                    </li>
                 </ol>
 
                 <h6 class="slim-pagetitle">Settings</h6>
@@ -20,41 +24,58 @@
                   <a href="javascript://"><i class="fa fa-twitter"></i></a>
                   <a href="javascript://"><i class="fa fa-google"></i></a>
                 </p>
-              </div><!-- tx-center -->
+              </div>
 
               <p class="contact-item">
                 <span>Phone:</span>
                 <span>+1 012 3456 789</span>
-              </p><!-- contact-item -->
+              </p>
               <p class="contact-item">
                 <span>Email:</span>
                 <a href="javascript://">person1@domain.com</a>
-              </p><!-- contact-item -->
+              </p>
               <p class="contact-item">
                 <span>URL:</span>
                 <a href="javascript://">http://thmpxls.me</a>
-              </p><!-- contact-item -->
-            </div><!-- card -->
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                Featured
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
 
         </div>
     </div>
 </template>
 
 <script>
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
     data: () => ({
         //
     }),
+    computed: mapGetters([
+        'identityScreenId'
+    ]),
     methods: {
-        close() {
-            // _0vueIdentity.deactivate()
-        },
-        loadProfile() {
-
+        ...mapActions([
+            'updateIdentityScreenId'
+        ]),
+        gotoSettings() {
+            this.updateIdentityScreenId('')
         }
     },
     mounted: () => {
-        // console.log('Profile is mounted.')
+        //
     }
 }
 </script>

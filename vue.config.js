@@ -1,4 +1,4 @@
 module.exports = {
     baseUrl: '',
-    filenameHashing: false
+    productionSourceMap: false
 }

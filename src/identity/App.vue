@@ -3,10 +3,12 @@
         <!-- identity navigation bar -->
         <NavBar />
 
-        <Welcome v-if="identityScreenId === ''" />
-        <Profile v-if="identityScreenId === 'profile'" />
-        <Cache v-if="identityScreenId === 'cache'" />
-        <Settings v-if="identityScreenId === 'settings'" />
+        <div class="win-scrollable">
+            <Welcome v-if="identityScreenId === ''" />
+            <Profile v-if="identityScreenId === 'profile'" />
+            <Cache v-if="identityScreenId === 'cache'" />
+            <Settings v-if="identityScreenId === 'settings'" />
+        </div>
     </div>
 </template>
 
@@ -74,5 +76,12 @@ export default {
 }
 .win-toolbar {
     padding-right: 15px;
+}
+.win-scrollable {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: 75px;
+    overflow: auto;
 }
 </style>

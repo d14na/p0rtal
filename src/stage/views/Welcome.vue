@@ -1,5 +1,5 @@
 <template>
-    <div class="screen">
+    <div class="win-screen">
         <div class="container">
             <div class="row header">
                 <div class="col text-center">

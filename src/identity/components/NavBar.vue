@@ -1,8 +1,8 @@
 <template>
     <div class="win-toolbar d-flex justify-content-between">
         <!-- close window -->
-        <button type="button" class="btn btn-lg btn-link" @click="close">
-            <font-awesome-icon icon="window-close" class="btn-win-close" />
+        <button type="button" class="btn btn-win-close btn-link" @click="close">
+            <font-awesome-icon icon="arrow-left" class="btn-win-close" />
         </button>
 
         <!-- identity navigation bar -->
@@ -94,8 +94,5 @@ export default {
 .win-identity {
     height: 100%;
     border-left: 1px solid #9993;
-}
-.win-toolbar {
-    padding-right: 15px;
 }
 </style>

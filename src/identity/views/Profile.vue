@@ -293,12 +293,10 @@ export default {
         //
     }),
     methods: {
-        close() {
-            _0vueIdentity.deactivate()
-        }
+        //
     },
     mounted: () => {
-        console.log('Profile is mounted.')
+        //
     }
 }
 </script>
