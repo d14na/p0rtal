@@ -14,11 +14,27 @@ export default new Router({
         }, {
             path: '/about',
             name: 'about',
-            component: () => import(/* webpackChunkName: "home" */ './views/About.vue')
+            component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+        }, {
+            path: '/buidl',
+            name: 'buidl',
+            component: () => import(/* webpackChunkName: "buidl" */ './views/Buidl.vue')
+        }, {
+            path: '/chans',
+            name: 'chans',
+            component: () => import(/* webpackChunkName: "chans" */ './views/Chans.vue')
+        }, {
+            path: '/file-manager',
+            name: 'file-manager',
+            component: () => import(/* webpackChunkName: "file-manager" */ './views/FileManager.vue')
         }, {
             path: '/legal',
             name: 'legal',
             component: () => import(/* webpackChunkName: "legal" */ './views/Legal.vue')
+        }, {
+            path: '/messages',
+            name: 'messages',
+            component: () => import(/* webpackChunkName: "messages" */ './views/Messages.vue')
         }, {
             path: '/zerolife',
             name: 'zerolife',
@@ -26,7 +42,7 @@ export default new Router({
         }, {
             path: '/privacy',
             name: 'privacy',
-            component: () => import(/* webpackChunkName: "about" */ './views/Privacy.vue')
+            component: () => import(/* webpackChunkName: "privacy" */ './views/Privacy.vue')
         }, {
             path: '/search',
             name: 'search',

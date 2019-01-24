@@ -8,12 +8,12 @@
 
                 <div class="btn-group" role="group">
                     <button id="btnGroupNetwork" type="button" class="btn btn-toolbar btn-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <font-awesome-icon icon="network-wired" />
+                        <font-awesome-icon icon="satellite-dish" />
                     </button>
 
                     <div class="dropdown-menu" aria-labelledby="btnGroupNetwork">
-                        <a class="dropdown-item" href="javascript://" @click="showOne">One</a>
-                        <a class="dropdown-item" href="javascript://" @click="showTwo">Two</a>
+                        <a class="dropdown-item" href="javascript://" @click="showOne">Chan One</a>
+                        <a class="dropdown-item" href="javascript://" @click="showTwo">Chan Two</a>
                     </div>
                 </div>
             </div>

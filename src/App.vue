@@ -67,7 +67,7 @@ $(function () {
 .btn-win-close {
     font-size: 2.4em;
     color: rgba(120, 90, 90, 0.4);
-    margin: 5px 15px 0 15px;
+    margin: 5px 5px 0 5px;
     padding: 0;
 }
 

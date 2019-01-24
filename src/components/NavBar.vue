@@ -2,27 +2,7 @@
     <div class="slim-navbar">
         <div class="container">
             <ul class="nav">
-
-                <li class="nav-item with-sub active">
-                    <a class="nav-link" href="javascript://">
-                        <font-awesome-icon icon="bookmark" class="icon" />
-                        <span>My Zites</span>
-                    </a>
-
-                    <div class="sub-item">
-                        <ul>
-                            <li><a href="builder/"><font-awesome-icon icon="tools" class="icon mg-r-5" /> BUIDL My First Zite</a></li>
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <router-link to="/zerolife" class="nav-link">
-                        <i class="icon ion-md-pulse"></i>
-                        <font-awesome-icon icon="heartbeat" class="icon" />
-                        <span>ZeroLife</span>
-                    </router-link>
-                </li>
+                <ZeroLife />
 
                 <li class="nav-item with-sub mega-dropdown">
                     <a class="nav-link" href="javascript://">
@@ -106,31 +86,33 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="messages/">
-                        <font-awesome-icon icon="comments" class="icon" />
-                        <span>Messages</span>
-                        <span class="square-8"></span>
-                    </a>
+                    <router-link to="/buidl" class="nav-link">
+                        <font-awesome-icon icon="tools" class="icon" />
+                        <span>Buidl</span>
+                    </router-link>
                 </li>
 
                 <li class="nav-item with-sub mega-dropdown">
                     <a class="nav-link" href="javascript://">
                         <font-awesome-icon icon="globe" class="icon" />
-                        <span>0net 360&deg;</span>
+                        <span><strong class="slashed-zero">0</strong>net 101</span>
                     </a>
                     <div class="sub-item">
                         <div class="row">
                             <div class="col-lg">
-                                <label class="section-label"><i class="icon ion-md-home mg-r-3"></i> Welcome to Zer0net</label>
+                                <label class="section-label">
+                                    <font-awesome-icon icon="hand-peace" class="mg-r-3" />
+                                    Welcome to the Zer<span class="slashed-zero">0</span>net
+                                </label>
                                 <p class="text-left">
                                     The Zeronet delivers you greater information freedom, identity protection and data privacy than the Internet, without the creepy funk of the Darkweb.
                                 </p>
 
-                                <a href="/1GUiDEr5E5XaFLBJBr78UTTZQgtC99Z8oa" class="btn btn-outline-info btn-lg"><i class="icon ion-md-book mg-r-3"></i> 0net User Guide</a>
+                                <a href="/1GUiDEr5E5XaFLBJBr78UTTZQgtC99Z8oa" class="btn btn-outline-info btn-lg"><i class="icon ion-md-book mg-r-3"></i> <span class="slashed-zero">0</span>net User Guide</a>
                             </div>
 
                             <div class="col-lg mg-t-30 mg-lg-t-0">
-                                <label class="section-label"><i class="icon ion-md-git-network mg-r-3"></i> 0PEN Dashboard</label>
+                                <label class="section-label"><i class="icon ion-md-git-network mg-r-3"></i> <span class="slashed-zero">0</span>PEN Dashboard</label>
 
                                 <div class="text-center">
                                     <a href="nubo/pricing.html"><i class="fa fa-usd mg-r-3"></i> Pricing Plans</a> |
@@ -148,11 +130,10 @@
                             </div>
 
                             <div class="col-lg mg-t-30 mg-lg-t-0">
-                                <label class="section-label"><i class="fa fa-cogs mg-r-3"></i> p0rtal Manager</label>
+                                <label class="section-label"><i class="fa fa-cogs mg-r-3"></i> p<span class="slashed-zero">0</span>rtal Helpers</label>
                                 <ul>
-                                    <li><a href="events/"><i class="fa fa-calendar mg-r-5"></i> Event Calendar</a></li>
-                                    <li><a href="profile/files.html"><i class="fa fa-floppy-o mg-r-5"></i> File Manager</a></li>
-                                    <li><a href="builder/"><i class="icon ion-md-construct mg-r-5"></i> Zite Builder</a></li>
+                                    <li><a href="events/"><font-awesome-icon icon="calendar-alt" class="mg-r-5" /> Event Calendar</a></li>
+                                    <li><router-link to="/file-manager"><font-awesome-icon icon="save" class="mg-r-5" /> File Manager</router-link></li>
                                 </ul>
                             </div>
 
@@ -176,14 +157,17 @@
 </template>
 
 <script>
+/* Import ZEROLIFE. */
+import ZeroLife from './navbar/ZeroLife.vue'
+
+/* Initialize components. */
+const components = {
+    ZeroLife
+}
 export default {
-    name: 'NavBar',
-    // props: {
-    //     msg: String
-    // }
+    components
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
