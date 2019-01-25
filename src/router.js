@@ -29,6 +29,10 @@ export default new Router({
             name: 'chans',
             component: () => import(/* webpackChunkName: "bundle" */ './views/Chans.vue')
         }, {
+            path: '/dmca',
+            name: 'dmca',
+            component: () => import(/* webpackChunkName: "bundle" */ './views/DMCA.vue')
+        }, {
             path: '/events',
             name: 'events',
             component: () => import(/* webpackChunkName: "bundle" */ './views/Events.vue')
@@ -36,10 +40,10 @@ export default new Router({
             path: '/file-manager',
             name: 'file-manager',
             component: () => import(/* webpackChunkName: "bundle" */ './views/FileManager.vue')
-        }, {
-            path: '/legal',
-            name: 'legal',
-            component: () => import(/* webpackChunkName: "bundle" */ './views/Legal.vue')
+        // }, {
+        //     path: '/legal',
+        //     name: 'legal',
+        //     component: () => import(/* webpackChunkName: "bundle" */ './views/Legal.vue')
         }, {
             path: '/messages',
             name: 'messages',

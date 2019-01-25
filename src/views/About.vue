@@ -14,6 +14,30 @@
             </p>
         </div>
 
+        <div class="container">
+            <h3>For Contractors</h3>
+
+            <p>
+                We're always looking for talented individuals to cooperate with on mutual goals.
+                Please reach out to us: <a href="mailto:info@d14na.org">info@d14na.org</a>
+            </p>
+        </div>
+
+        <div class="container">
+            <h3>Bug Bounty Program</h3>
+
+            <ol>
+                <li>
+                    IFrame Escape — 30k ZeroGold
+                </li>
+                <li>
+                    CSRF, XSS — 10k ZeroGold
+                </li>
+            </ol>
+
+            <button class="btn btn-block btn-warning">Submit a Bug</button>
+        </div>
+
         <Footer />
     </div>
 </template>

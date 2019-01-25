@@ -13,6 +13,21 @@
             <p>
                 Balance: 0 <span class="slashed-zero">0</span>GOLD
             </p>
+
+            <div class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control">
+                        <div class="input-group-append">
+                            <span class="input-group-text">.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </template>

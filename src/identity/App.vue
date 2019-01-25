@@ -83,4 +83,8 @@ export default {
     -webkit-box-shadow:inset -0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
     box-shadow:inset -0.5px 0.5px 3px 0 rgba(30,30,30,0.8);
 }
+.win-scrollable-inner {
+    /* content spacer */
+    padding-bottom: 10px;
+}
 </style>
