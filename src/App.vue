@@ -58,6 +58,11 @@ $(function () {
 </script>
 
 <style>
+/* disable all scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* add support for slashed zero */
 .slashed-zero {
     font-family: Monaco, Consolas, "Lucida Console", monospace;
@@ -101,6 +106,10 @@ $(function () {
     height: 100%;
     overflow: auto;
 }
+/* disable this window's scrollbar */
+/* .win-scrollable-inner::-webkit-scrollbar {
+    display: none;
+} */
 
 /* ellipsis */
 .ellipsis {

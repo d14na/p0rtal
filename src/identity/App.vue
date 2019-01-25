@@ -6,8 +6,9 @@
         <div class="win-scrollable-outer">
             <div class="win-scrollable-inner">
                 <Welcome v-if="identityScreenId === ''" />
-                <Profile v-if="identityScreenId === 'profile'" />
+                <Auth v-if="identityScreenId === 'auth'" />
                 <Cache v-if="identityScreenId === 'cache'" />
+                <Profile v-if="identityScreenId === 'profile'" />
                 <Settings v-if="identityScreenId === 'settings'" />
             </div>
         </div>
@@ -18,28 +19,24 @@
 /* Initialize Vuex. */
 import { mapGetters, mapActions } from 'vuex'
 
-/* Import NAVBAR. */
+/* Import components. */
 import NavBar from './components/NavBar.vue'
 
-/* Import WELCOME. */
-import Welcome from './views/Welcome.vue'
-
-/* Import PROFILE. */
-import Profile from './views/Profile.vue'
-
-/* Import CACHE. */
+/* Import views. */
+import Auth from './views/Auth.vue'
 import Cache from './views/Cache.vue'
-
-/* Import SETTINGS. */
+import Profile from './views/Profile.vue'
 import Settings from './views/Settings.vue'
+import Welcome from './views/Welcome.vue'
 
 /* Initialize components. */
 const components = {
     NavBar,
-    Welcome,
-    Profile,
+    Auth,
     Cache,
-    Settings
+    Profile,
+    Settings,
+    Welcome
 }
 
 /* Export. */

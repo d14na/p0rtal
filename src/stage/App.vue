@@ -17,17 +17,13 @@
 /* Initialize Vuex. */
 import { mapGetters, mapActions } from 'vuex'
 
-/* Import NAVBAR. */
+/* Import components. */
 import NavBar from './components/NavBar.vue'
 
-/* Import WELCOME. */
-import Welcome from './views/Welcome.vue'
-
-/* Import CHANS. */
+/* Import views. */
 import Chans from './views/Chans.vue'
-
-/* Import HELP. */
 import Help from './views/Help.vue'
+import Welcome from './views/Welcome.vue'
 
 /* Initialize components. */
 const components = {
