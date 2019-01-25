@@ -45,6 +45,7 @@ export default {
         // screenId: ''
     }),
     computed: mapGetters([
+        'account',
         'identityScreenId'
     ]),
     methods: {
@@ -55,12 +56,24 @@ export default {
             _0vueIdentity.deactivate()
         },
         gotoProfile() {
-            /* Set screen id. */
-            this.updateIdentityScreenId('profile')
+            /* Validate authorization. */
+            if (this.account === 0x0) {
+                /* Set screen id. */
+                this.updateIdentityScreenId('auth')
+            } else {
+                /* Set screen id. */
+                this.updateIdentityScreenId('profile')
+            }
         },
         gotoCache() {
-            /* Set screen id. */
-            this.updateIdentityScreenId('cache')
+            /* Validate authorization. */
+            if (this.account === 0x0) {
+                /* Set screen id. */
+                this.updateIdentityScreenId('auth')
+            } else {
+                /* Set screen id. */
+                this.updateIdentityScreenId('cache')
+            }
         },
         gotoSettings() {
             /* Set screen id. */

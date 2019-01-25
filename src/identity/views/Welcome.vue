@@ -17,13 +17,16 @@
                     </p>
                 </div>
             </div>
+
+            <button class="btn btn-block btn-lg btn-outline-info" @click="learnMore">Learn More</button>
+            <button class="btn btn-block btn-lg btn-info" @click="signin">Sign In</button>
         </div>
     </div>
 </template>
 
 <script>
-/* Import COMPONENT. */
-// import Component from '@/components/Component.vue'
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
 
 /* Initialize components. */
 const components = {
@@ -37,7 +40,15 @@ export default {
         //
     }),
     methods: {
-        //
+        ...mapActions([
+            'updateIdentityScreenId'
+        ]),
+        signin() {
+            this.updateIdentityScreenId('auth')
+        },
+        learnMore() {
+            console.log('learn more')
+        }
     },
     mounted: () => {
         //

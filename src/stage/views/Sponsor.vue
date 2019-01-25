@@ -1,11 +1,7 @@
 <template>
     <div class="win-screen">
         <div class="container">
-            <h1>Blank Screen</h1>
-
-            <p>
-                put content here...
-            </p>
+            <h1>SPONSOR CONTENT HERE</h1>
         </div>
     </div>
 </template>
@@ -28,13 +24,8 @@ export default {
     data: () => ({
         //
     }),
-    computed: mapGetters([
-        'account'
-    ]),
     methods: {
-        ...mapActions([
-            //
-        ])
+        //
     },
     mounted: () => {
         //

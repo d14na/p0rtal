@@ -9,31 +9,45 @@ export default new Vuex.Store({
         stageScreenId: '',
 
         /* Initialize identity screen id. */
-        identityScreenId: ''
+        identityScreenId: '',
+
+        /* Initialize account (empty Ethereum address). */
+        account: 0x0
     },
     getters: {
         /* Initialize stage screen id. */
         stageScreenId: _state => _state.stageScreenId,
 
         /* Initialize identity screen id. */
-        identityScreenId: _state => _state.identityScreenId
+        identityScreenId: _state => _state.identityScreenId,
+
+        /* Initialize account. */
+        account: _state => _state.account
     },
     actions: {
         /* Initialize stage screen id. */
         updateStageScreenId: ({ commit }, _screenId) => commit('updateStageScreenId', _screenId),
 
         /* Initialize identity screen id. */
-        updateIdentityScreenId: ({ commit }, _screenId) => commit('updateIdentityScreenId', _screenId)
+        updateIdentityScreenId: ({ commit }, _screenId) => commit('updateIdentityScreenId', _screenId),
+
+        /* Initialize account. */
+        account: ({ commit }, _account) => commit('updateAccount', _account)
     },
     mutations: {
-        /* Initialize stage screen id. */
+        /* Update stage screen id. */
         updateStageScreenId (_state, _screenId) {
             _state.stageScreenId = _screenId
         },
 
-        /* Initialize identity screen id. */
+        /* Update identity screen id. */
         updateIdentityScreenId (_state, _screenId) {
             _state.identityScreenId = _screenId
+        },
+
+        /* Update account. */
+        updateAccount (_state, _account) {
+            _state.account = _account
         }
     }
 })

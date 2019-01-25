@@ -3,8 +3,7 @@
         <div class="container">
             <div class="row header">
                 <div class="col text-center">
-                    <h1>zer<span class="slashed-zero">0</span>net</h1>
-                    <h3>Welcome</h3>
+                    <h3>Authorization Required</h3>
                 </div>
             </div>
         </div>
