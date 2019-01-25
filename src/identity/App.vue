@@ -5,11 +5,11 @@
 
         <div class="win-scrollable-outer">
             <div class="win-scrollable-inner">
-                <Welcome v-if="identityScreenId === ''" />
-                <Auth v-if="identityScreenId === 'auth'" />
-                <Cache v-if="identityScreenId === 'cache'" />
-                <Profile v-if="identityScreenId === 'profile'" />
-                <Settings v-if="identityScreenId === 'settings'" />
+                <Welcome v-show="identityScreenId === ''" />
+                <Auth v-show="identityScreenId === 'auth'" />
+                <Cache v-show="identityScreenId === 'cache'" />
+                <Profile v-show="identityScreenId === 'profile'" />
+                <Settings v-show="identityScreenId === 'settings'" />
             </div>
         </div>
     </div>

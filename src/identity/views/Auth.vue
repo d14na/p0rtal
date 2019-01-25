@@ -49,7 +49,7 @@
                     </p>
 
                     <p class="small mt-1">
-                        <strong>2. NEVER</strong> sign to an insecure computer with your crypto account.
+                        <strong>2. NEVER</strong> signin to an insecure computer with your crypto account.
                     </p>
                 </div>
 

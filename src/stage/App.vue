@@ -5,10 +5,10 @@
 
         <div class="win-scrollable-outer">
             <div class="win-scrollable-inner">
-                <Welcome v-if="stageScreenId === ''" />
-                <Chans v-if="stageScreenId === 'chans'" />
-                <Help v-if="stageScreenId === 'help'" />
-                <Sponsor v-if="stageScreenId === 'sponsor'" />
+                <Welcome v-show="stageScreenId === ''" />
+                <Chans v-show="stageScreenId === 'chans'" />
+                <Help v-show="stageScreenId === 'help'" />
+                <Sponsor v-show="stageScreenId === 'sponsor'" />
             </div>
         </div>
 
