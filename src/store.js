@@ -12,7 +12,10 @@ export default new Vuex.Store({
         identityScreenId: '',
 
         /* Initialize account (empty Ethereum address). */
-        account: 0x0
+        account: 0x0,
+
+        /* Initialize email address. */
+        email: ''
     },
     getters: {
         /* Initialize stage screen id. */
@@ -22,17 +25,23 @@ export default new Vuex.Store({
         identityScreenId: _state => _state.identityScreenId,
 
         /* Initialize account. */
-        account: _state => _state.account
+        account: _state => _state.account,
+
+        /* Initialize email. */
+        email: _state => _state.email
     },
     actions: {
-        /* Initialize stage screen id. */
+        /* Request stage screen id update. */
         updateStageScreenId: ({ commit }, _screenId) => commit('updateStageScreenId', _screenId),
 
-        /* Initialize identity screen id. */
+        /* Request identity screen id update. */
         updateIdentityScreenId: ({ commit }, _screenId) => commit('updateIdentityScreenId', _screenId),
 
-        /* Initialize account. */
-        account: ({ commit }, _account) => commit('updateAccount', _account)
+        /* Request account update. */
+        updateAccount: ({ commit }, _account) => commit('updateAccount', _account),
+
+        /* Request email update. */
+        updateEmail: ({ commit }, _email) => commit('updateEmail', _email)
     },
     mutations: {
         /* Update stage screen id. */
@@ -48,6 +57,11 @@ export default new Vuex.Store({
         /* Update account. */
         updateAccount (_state, _account) {
             _state.account = _account
+        },
+
+        /* Update email. */
+        updateEmail (_state, _email) {
+            _state.email = _email
         }
     }
 })

@@ -26,19 +26,23 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><font-awesome-icon icon="at" fixed-width /></span>
                         </div>
-                        <input type="text" id="email" class="form-control" placeholder="preferred email address">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="preferred email address"
+                            v-model:value="email">
                     </div>
 
                     <div class="row mt-3">
                         <div class="col">
                             <label class="rdiobox">
-                                <input name="accountType" type="radio" checked>
+                                <input name="accountType" type="radio" value="email" v-model="accountType" checked>
                                 <span>Email Id</span>
                             </label>
                         </div>
                         <div class="col">
                             <label class="rdiobox">
-                                <input name="accountType" type="radio">
+                                <input name="accountType" type="radio" value="photo" v-model="accountType">
                                 <span>Photo Id</span>
                             </label>
                         </div>
@@ -53,7 +57,7 @@
                     </p>
                 </div>
 
-                <button class="btn btn-block btn-primary mt-3">Signin with Email ONLY</button>
+                <button class="btn btn-block btn-primary mt-3" @click="authByEmail">Signin with Email ONLY</button>
             </div>
 
             <div class="card mt-3">
@@ -131,8 +135,15 @@
 </template>
 
 <script>
-/* Import COMPONENT. */
-// import Component from '@/components/Component.vue'
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
+
+/* Initialize Web3. */
+const Web3 = require('web3')
+
+/* Initialize constants. */
+// const HTTP_PROVIDER = 'https://mainnet.infura.io/v3/773850fb37e546dca04e04faf7ba2c58'
+const HTTP_PROVIDER = 'https://ropsten.infura.io/v3/773850fb37e546dca04e04faf7ba2c58'
 
 /* Initialize components. */
 const components = {
@@ -143,10 +154,47 @@ const components = {
 export default {
     components,
     data: () => ({
-        //
+        /* Initialize email address. */
+        email: '',
+        accountType: 'email'
     }),
+    computed: mapGetters([
+        'account'
+    ]),
     methods: {
-        //
+        ...mapActions([
+            'updateIdentityScreenId',
+            'updateAccount',
+            'updateEmail'
+        ]),
+        authByEmail() {
+            console.log('authorize by email', this.email, this.accountType)
+
+            /* Validate authorization. */
+            if (this.email === '') {
+                alert('enter a value')
+            } else {
+                /* Set screen id. */
+                this.updateEmail(this.email)
+
+                const web3 = new Web3(new Web3.providers.HttpProvider(HTTP_PROVIDER))
+
+                /* Initilize private key. */
+                // const pk = CONFIG['accounts']['market'].privateKey
+                const pk = web3.utils.soliditySha3(this.email)
+                console.log('EMAIL -> PK', this.email, pk)
+
+                /* Initialize new account from private key. */
+                const acct = web3.eth.accounts.privateKeyToAccount(pk)
+                console.log('ACCOUNT', acct.address)
+
+                /* Set screen id. */
+                this.updateAccount(acct.address)
+
+                /* Set screen id. */
+                this.updateIdentityScreenId('profile')
+            }
+        }
     },
     mounted: () => {
         //

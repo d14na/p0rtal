@@ -10,6 +10,13 @@
                 <h6 class="slim-pagetitle">Cache</h6>
             </div>
 
+            <!-- abbreviated account address -->
+            <h2 class="text-info text-center">
+                <span class="badge badge-info">
+                    {{accountAbbr}}
+                </span>
+            </h2>
+
             <p>
                 Balance: 0 <span class="slashed-zero">0</span>GOLD
             </p>
@@ -36,9 +43,6 @@
 /* Initialize Vuex. */
 import { mapGetters, mapActions } from 'vuex'
 
-/* Import COMPONENT. */
-// import Component from '@/components/Component.vue'
-
 /* Initialize components. */
 const components = {
     //
@@ -50,6 +54,26 @@ export default {
     data: () => ({
         //
     }),
+    computed: {
+        ...mapGetters([
+            'account'
+        ]),
+        accountAbbr() {
+            /* Initialize full account (address). */
+            const account = this.account
+
+            /* Validate account. */
+            if (account === 0) {
+                return ''
+            }
+
+            /* Set abbreviation. */
+            const abbr = `${account.slice(0, 10)} ... ${account.slice(-8)}`
+
+            /* Return abbreviation. */
+            return abbr
+        }
+    },
     methods: {
         //
     },
