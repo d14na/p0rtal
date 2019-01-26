@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <button class="btn btn-block btn-lg btn-outline-info" @click="learnMore">Learn More</button>
             <button class="btn btn-block btn-lg btn-info" @click="signin">Sign In</button>
+            <button class="btn btn-block btn-lg btn-outline-info" @click="learnMore">Learn More</button>
         </div>
     </div>
 </template>

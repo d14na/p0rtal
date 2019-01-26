@@ -62,6 +62,8 @@
                 </div>
             </div>
 
+            <ActivitySummary class="mt-3" />
+
         </div>
     </div>
 </template>
@@ -70,9 +72,12 @@
 /* Initialize Vuex. */
 import { mapGetters, mapActions } from 'vuex'
 
+/* Import COMPONENT. */
+import ActivitySummary from '@/identity/components/ActivitySummary.vue'
+
 /* Initialize components. */
 const components = {
-    //
+    ActivitySummary
 }
 
 /* Export. */
