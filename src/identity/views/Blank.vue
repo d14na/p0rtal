@@ -1,7 +1,16 @@
 <template>
     <div class="win-screen">
         <div class="container">
-            <h1>Blank Screen</h1>
+            <div class="slim-pageheader">
+                <ol class="breadcrumb slim-breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="javascript://" @click="gotoParent">back to Parent</a>
+                    </li>
+                </ol>
+
+                <h6 class="slim-pagetitle">Blank</h6>
+            </div>
+
 
             <p>
                 put content here...
@@ -34,7 +43,10 @@ export default {
     methods: {
         ...mapActions([
             //
-        ])
+        ]),
+        gotoParent() {
+            
+        }
     },
     mounted: () => {
         //

@@ -3,8 +3,7 @@
         <div class="container">
             <div class="slim-pageheader">
                 <ol class="breadcrumb slim-breadcrumb">
-                    <li class="breadcrumb-item"><a href="">₵a¢he</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Summary</li>
+                    <!-- <li class="breadcrumb-item active" aria-current="page">₵a¢he</li> -->
                 </ol>
 
                 <h6 class="slim-pagetitle">₵a¢he</h6>
@@ -12,7 +11,7 @@
 
             <div class="row price-boxes">
                 <div class="col pr-0">
-                    <div class="cache-boxes ether-box card-drop-shadow">
+                    <div class="cache-boxes ether-box card-drop-shadow" @click="gotoETH">
                         <strong>Ethereum</strong>
                         <br />{{ethDisplay}}
                     </div>
@@ -48,22 +47,7 @@
             <button class="btn btn-lg btn-block btn-outline-success mt-3">Go to Marketplace</button>
             <button class="btn btn-lg btn-block btn-outline-warning mt-3">Go to Exchange</button>
 
-            <div class="row mt-3">
-                <div class="col">
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">$</span>
-                        </div>
-                        <input type="text" class="form-control">
-                        <div class="input-group-append">
-                            <span class="input-group-text">.00</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <ActivitySummary class="mt-3" />
-
         </div>
     </div>
 </template>
@@ -127,7 +111,12 @@ export default {
         }
     },
     methods: {
-        //
+        ...mapActions([
+            'updateIdentityScreenId'
+        ]),
+        gotoETH() {
+            this.updateIdentityScreenId('cache_eth')
+        }
     },
     mounted: () => {
         //
@@ -140,6 +129,7 @@ export default {
     background-color: rgba(255, 255, 255, 1.0);
     text-align: center;
     padding: 10px;
+    cursor: pointer;
 }
 
 .ether-box {

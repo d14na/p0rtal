@@ -7,7 +7,11 @@
             <div class="win-scrollable-inner">
                 <Welcome v-show="identityScreenId === ''" />
                 <Auth v-show="identityScreenId === 'auth'" />
+
+                <!-- Cache screens -->
                 <Cache v-show="identityScreenId === 'cache'" />
+                <CacheETH v-show="identityScreenId === 'cache_eth'" />
+
                 <Profile v-show="identityScreenId === 'profile'" />
                 <Settings v-show="identityScreenId === 'settings'" />
             </div>
@@ -25,6 +29,7 @@ import NavBar from './components/NavBar.vue'
 /* Import views. */
 import Auth from './views/Auth.vue'
 import Cache from './views/Cache.vue'
+import CacheETH from './views/Cache/ETH.vue'
 import Profile from './views/Profile.vue'
 import Settings from './views/Settings.vue'
 import Welcome from './views/Welcome.vue'
@@ -34,6 +39,7 @@ const components = {
     NavBar,
     Auth,
     Cache,
+    CacheETH,
     Profile,
     Settings,
     Welcome
