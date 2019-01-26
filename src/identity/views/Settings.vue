@@ -74,7 +74,7 @@ export default {
             this.updateIdentityScreenId('')
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

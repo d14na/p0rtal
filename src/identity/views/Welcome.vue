@@ -50,7 +50,7 @@ export default {
             console.log('learn more')
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

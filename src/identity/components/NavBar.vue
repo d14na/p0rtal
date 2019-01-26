@@ -80,7 +80,7 @@ export default {
             this.updateIdentityScreenId('settings')
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

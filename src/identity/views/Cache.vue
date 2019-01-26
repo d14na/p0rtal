@@ -14,6 +14,7 @@
                     <div class="cache-boxes ether-box card-drop-shadow" @click="gotoETH">
                         <strong>Ethereum</strong>
                         <br />{{ethDisplay}}
+                        <br /><small>{{ethDisplayChange}} <font-awesome-icon icon="arrow-up" /></small>
                     </div>
                     <div class="small">HODLing</div>
                 </div>
@@ -21,6 +22,7 @@
                     <div class="cache-boxes dai-box card-drop-shadow">
                         <strong>Dai</strong>
                         <br />{{daiDisplay}}
+                        <br /><small>{{daiDisplayChange}} <font-awesome-icon icon="down-up" /></small>
                     </div>
                     <div class="small">SPEDNing</div>
                 </div>
@@ -28,6 +30,7 @@
                     <div class="cache-boxes zerogold-box card-drop-shadow">
                         <strong>ZeroGold</strong>
                         <br />{{zerogoldDisplay}}
+                        <br /><small>{{zerogoldDisplayChange}} <font-awesome-icon icon="arrow-up" /></small>
                     </div>
                     <div class="small">STAEKing</div>
                 </div>
@@ -68,9 +71,12 @@ const components = {
 export default {
     components,
     data: () => ({
-        ethSpotPrice: 123.45,
-        daiSpotPrice: 1.00,
-        zerogoldSpotPrice: 0.023809523809524
+        ethUsd: 0.0,
+        ethUsdChange: 0.0,
+        daiPrice: 0.0,
+        daiPriceChange: 0.0,
+        zerogoldPrice: 0.0,
+        zerogoldPriceChange: 0.0
     }),
     computed: {
         ...mapGetters([
@@ -95,19 +101,37 @@ export default {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.ethSpotPrice).format('$0,0.00')
+            return numeral(this.ethUsd).format('$0,0.00')
+        },
+        ethDisplayChange() {
+            /* Require moment. */
+            const numeral = require('numeral')
+
+            return numeral(this.ethUsdChange).format('0%')
         },
         daiDisplay() {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.daiSpotPrice).format('$0.00')
+            return numeral(this.daiPrice).format('$0.00')
+        },
+        daiDisplayChange() {
+            /* Require moment. */
+            const numeral = require('numeral')
+
+            return numeral(this.daiUsdChange).format('0%')
         },
         zerogoldDisplay() {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.zerogoldSpotPrice).format('$0.0000')
+            return numeral(this.zerogoldPrice).format('$0.0000')
+        },
+        zerogoldDisplayChange() {
+            /* Require moment. */
+            const numeral = require('numeral')
+
+            return numeral(this.zerogoldUsdChange).format('0%')
         }
     },
     methods: {
@@ -118,8 +142,28 @@ export default {
             this.updateIdentityScreenId('cache_eth')
         }
     },
-    mounted: () => {
-        //
+    mounted: async function () {
+        /* Initialize CCXT library. */
+        const ccxt = require ('ccxt')
+        // console.log (ccxt.exchanges)
+
+        /* Initialize coinmarketcap. */
+        const exchange = new ccxt.coinmarketcap ()
+
+        const ethUsd = await exchange.fetch_ticker('ETH/USD')
+        // console.log (exchange.id, ethUsd, this)
+
+        /* Update ETH spot price data. */
+        this.ethUsd = ethUsd.last
+        this.ethUsdChange = ethUsd.change
+
+        /* Update DAI spot price data. */
+        this.daiUsd = 0.0
+        this.daiUsdChange = 0.0
+
+        /* Update DAI spot price data. */
+        this.zerogoldUsd = 0.023809523809524
+        this.zerogoldUsdChange = 0.0
     }
 }
 </script>

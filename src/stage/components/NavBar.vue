@@ -57,7 +57,7 @@ export default {
             this.updateStageScreenId('chans')
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

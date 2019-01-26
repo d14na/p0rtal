@@ -1,3 +1,7 @@
+/* Import Babel polyfill. */
+// FIXME How can we remove this hack (smh)??
+import 'babel-polyfill'
+
 /* Import Vue. */
 import Vue from 'vue'
 

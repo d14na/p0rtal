@@ -33,7 +33,7 @@ export default {
         //     console.log('Start loading cache...')
         // }
     },
-    mounted: () => {
+    mounted: function () {
         console.log('App.vue is mounted.')
     }
 }

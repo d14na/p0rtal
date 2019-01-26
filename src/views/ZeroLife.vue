@@ -202,7 +202,7 @@ export default {
     methods: {
         //
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

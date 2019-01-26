@@ -196,7 +196,7 @@ export default {
             }
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

@@ -11,6 +11,8 @@
                 <h6 class="slim-pagetitle">Ethereum</h6>
             </div>
 
+            <button class="btn btn-lg btn-block btn-outline-info mt-3" @click="buy">Buy Crypto</button>
+
             <div class="row mt-3">
                 <div class="col">
                     <div class="input-group">
@@ -61,9 +63,12 @@ export default {
         },
         send() {
             console.log(`Sending ${this.txAmount} ether`)
+        },
+        buy() {
+            console.log('buy some crypto')
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }

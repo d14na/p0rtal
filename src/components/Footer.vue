@@ -16,7 +16,7 @@ export default {
     }),
     methods: {
     },
-    mounted: () => {
+    mounted: function () {
         // console.log('Footer is mounted.')
     }
 }

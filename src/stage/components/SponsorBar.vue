@@ -31,7 +31,7 @@ export default {
             this.updateStageScreenId('sponsor')
         }
     },
-    mounted: () => {
+    mounted: function () {
         //
     }
 }
