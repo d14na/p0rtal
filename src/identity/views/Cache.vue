@@ -3,10 +3,10 @@
         <div class="container">
             <div class="slim-pageheader">
                 <ol class="breadcrumb slim-breadcrumb">
-                    <!-- <li class="breadcrumb-item active" aria-current="page">₵a¢he</li> -->
+                    <!--  -->
                 </ol>
 
-                <h6 class="slim-pagetitle">₵a¢he</h6>
+                <h6 class="slim-pagetitle">My ₵a¢he</h6>
             </div>
 
             <div class="row price-boxes">
@@ -22,7 +22,7 @@
                     <div class="cache-boxes dai-box card-drop-shadow">
                         <strong>Dai</strong>
                         <br />{{daiDisplay}}
-                        <br /><small>{{daiDisplayChange}} <font-awesome-icon icon="down-up" /></small>
+                        <br /><small>{{daiDisplayChange}} <font-awesome-icon icon="arrow-down" /></small>
                     </div>
                     <div class="small">SPEDNing</div>
                 </div>
@@ -73,10 +73,10 @@ export default {
     data: () => ({
         ethUsd: 0.0,
         ethUsdChange: 0.0,
-        daiPrice: 0.0,
-        daiPriceChange: 0.0,
-        zerogoldPrice: 0.0,
-        zerogoldPriceChange: 0.0
+        daiUsd: 0.0,
+        daiUsdChange: 0.0,
+        zerogoldUsd: 0.0,
+        zerogoldUsdChange: 0.0
     }),
     computed: {
         ...mapGetters([
@@ -107,31 +107,61 @@ export default {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.ethUsdChange).format('0%')
+            /* Set change. */
+            const change = this.ethUsdChange
+
+            /* Set last price. */
+            const lastPrice = parseFloat(this.ethUsd - change)
+
+            /* Calculate percentage change. */
+            const pctChange = change / lastPrice
+
+            /* Return formatted. */
+            return numeral(pctChange).format('0.00%')
         },
         daiDisplay() {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.daiPrice).format('$0.00')
+            return numeral(this.daiUsd).format('$0.00')
         },
         daiDisplayChange() {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.daiUsdChange).format('0%')
+            /* Set change. */
+            const change = this.daiUsdChange
+
+            /* Set last price. */
+            const lastPrice = parseFloat(this.daiUsd - change)
+
+            /* Calculate percentage change. */
+            const pctChange = change / lastPrice
+
+            /* Return formatted. */
+            return numeral(pctChange).format('0.00%')
         },
         zerogoldDisplay() {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.zerogoldPrice).format('$0.0000')
+            return numeral(this.zerogoldUsd).format('$0.0000')
         },
         zerogoldDisplayChange() {
             /* Require moment. */
             const numeral = require('numeral')
 
-            return numeral(this.zerogoldUsdChange).format('0%')
+            /* Set change. */
+            const change = this.zerogoldUsdChange
+
+            /* Set last price. */
+            const lastPrice = parseFloat(this.zerogoldUsd - change)
+
+            /* Calculate percentage change. */
+            const pctChange = change / lastPrice
+
+            /* Return formatted. */
+            return numeral(pctChange).format('0.00%')
         }
     },
     methods: {
@@ -158,7 +188,7 @@ export default {
         this.ethUsdChange = ethUsd.change
 
         /* Update DAI spot price data. */
-        this.daiUsd = 0.0
+        this.daiUsd = 1.00
         this.daiUsdChange = 0.0
 
         /* Update DAI spot price data. */
