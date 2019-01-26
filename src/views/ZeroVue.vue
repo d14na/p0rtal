@@ -29,7 +29,7 @@
                 <div class="col-md-6 col-lg-3 mg-t-10 mg-md-t-0 order-lg-3">
                     <TrendingStories />
                     <ZeroLit />
-                    <Sponsor />
+                    <SponsorBox />
                     <Feedback />
                 </div>
 
@@ -94,8 +94,8 @@ import RecentMessages from '@/components/RecentMessages.vue'
 /* Import TRENDING STORIES. */
 import TrendingStories from '@/components/TrendingStories.vue'
 
-/* Import SPONSOR. */
-import Sponsor from '@/components/Sponsor.vue'
+/* Import SPONSOR BOX. */
+import SponsorBox from '@/components/SponsorBox.vue'
 
 /* Import FEEDBACK. */
 import Feedback from '@/components/Feedback.vue'
@@ -140,7 +140,7 @@ const components = {
     LinksBar,
     RecentMessages,
     TrendingStories,
-    Sponsor,
+    SponsorBox,
     Feedback,
     NewTopic,
     Carousel,

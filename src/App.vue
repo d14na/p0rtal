@@ -93,7 +93,7 @@ $(function () {
 /* window screen */
 .win-screen {
     /* FIXME Remove hard-coded value. */
-    width: 300px;
+    width: 324px;
 }
 .win-scrollable-outer {
     position: absolute;
@@ -138,4 +138,10 @@ $(function () {
     padding-left: 2px;
 }
 
+/* drop-shadow for standard card */
+.card-drop-shadow {
+    -moz-box-shadow: 0.5px 0.5px 3px 0px rgba(90, 90, 90, 0.5);
+    -webkit-box-shadow: 0.5px 0.5px 3px 0px rgba(90, 90, 90, 0.5);
+    box-shadow: 0.5px 0.5px 3px 0px rgba(90, 90, 90, 0.5);
+}
 </style>
