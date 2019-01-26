@@ -12,6 +12,8 @@
             <p>
                 Learn more here...
             </p>
+
+            <hr />
         </div>
 
         <div class="container">
@@ -21,6 +23,8 @@
                 We're always looking for talented individuals to cooperate with on mutual goals.
                 Please reach out to us: <a href="mailto:info@d14na.org">info@d14na.org</a>
             </p>
+
+            <hr />
         </div>
 
         <div class="container">
@@ -36,6 +40,31 @@
             </ol>
 
             <button class="btn btn-block btn-warning">Submit a Bug</button>
+
+            <hr />
+        </div>
+
+        <div class="container">
+            <h3>Our Partners</h3>
+
+            <p>
+                Although we have a very robust network of redundant nodes across the globe; we still rely on these valuable partners to provide our customers with the most reliable service.
+            </p>
+
+            <h4>INFURA</h4>
+            <p>
+                Powering our Ethereum Virtual Machine (EVM).
+            </p>
+
+            <h4>Cloudflare</h4>
+            <p>
+                Powering our Interplanetary Filesystem (IPFS).
+            </p>
+
+            <h4>Coinmarketcap</h4>
+            <p>
+                Providing all coin and token pricing data.
+            </p>
         </div>
 
         <Footer />
