@@ -18,11 +18,13 @@
     "@fortawesome/vue-fontawesome": "^0.1.5",
     "@panter/vue-i18next": "^0.13.0",
     "ccxt": "^1.18.152",
+    "ethers": "^4.0.25",
     "i18next": "^13.1.5",
     "jquery": "^3.3.1",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "vue": "^2.5.21",
+    "vue-qrcode-reader": "^1.3.4",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
     "web3": "^1.0.0-beta.38"

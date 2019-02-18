@@ -138,13 +138,6 @@
 /* Initialize Vuex. */
 import { mapGetters, mapActions } from 'vuex'
 
-/* Initialize Web3. */
-const Web3 = require('web3')
-
-/* Initialize constants. */
-// const HTTP_PROVIDER = 'https://mainnet.infura.io/v3/773850fb37e546dca04e04faf7ba2c58'
-const HTTP_PROVIDER = 'https://ropsten.infura.io/v3/773850fb37e546dca04e04faf7ba2c58'
-
 /* Initialize components. */
 const components = {
     //
@@ -165,6 +158,7 @@ export default {
         ...mapActions([
             'updateIdentityScreenId',
             'updateAccount',
+            'updateAddress',
             'updateEmail'
         ]),
         authByEmail() {
@@ -177,8 +171,6 @@ export default {
                 /* Set screen id. */
                 this.updateEmail(this.email)
 
-                const web3 = new Web3(new Web3.providers.HttpProvider(HTTP_PROVIDER))
-
                 /* Initilize private key. */
                 // const pk = CONFIG['accounts']['market'].privateKey
                 const pk = web3.utils.soliditySha3(this.email)
@@ -188,10 +180,13 @@ export default {
                 const acct = web3.eth.accounts.privateKeyToAccount(pk)
                 console.log('ACCOUNT', acct.address)
 
-                /* Set screen id. */
-                this.updateAccount(acct.address)
+                /* Update address. */
+                this.updateAddress(acct.address)
 
-                /* Set screen id. */
+                /* Update account. */
+                this.updateAccount(acct)
+
+                /* Update screen id. */
                 this.updateIdentityScreenId('profile')
             }
         }

@@ -8,7 +8,7 @@
                     </li>
                 </ol>
 
-                <h6 class="slim-pagetitle">Ethereum</h6>
+                <h6 class="slim-pagetitle">DAI Stablecoin</h6>
             </div>
 
             <button class="btn btn-lg btn-block btn-outline-info mt-3" @click="buy">Buy Crypto</button>

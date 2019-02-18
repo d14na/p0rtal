@@ -11,8 +11,11 @@ export default new Vuex.Store({
         /* Initialize identity screen id. */
         identityScreenId: '',
 
-        /* Initialize account (empty Ethereum address). */
-        account: 0x0,
+        /* Initialize address (empty Ethereum address). */
+        address: 0x0,
+
+        /* Initialize account. */
+        account: {},
 
         /* Initialize email address. */
         email: ''
@@ -24,6 +27,9 @@ export default new Vuex.Store({
         /* Initialize identity screen id. */
         identityScreenId: _state => _state.identityScreenId,
 
+        /* Initialize address. */
+        address: _state => _state.address,
+
         /* Initialize account. */
         account: _state => _state.account,
 
@@ -32,35 +38,43 @@ export default new Vuex.Store({
     },
     actions: {
         /* Request stage screen id update. */
-        updateStageScreenId: ({ commit }, _screenId) => commit('updateStageScreenId', _screenId),
+        updateStageScreenId: ({ commit }, _screenId) => commit('UPDATE_STAGE_SCREEN_ID', _screenId),
 
         /* Request identity screen id update. */
-        updateIdentityScreenId: ({ commit }, _screenId) => commit('updateIdentityScreenId', _screenId),
+        updateIdentityScreenId: ({ commit }, _screenId) => commit('UPDATE_IDENTITY_SCREEN_ID', _screenId),
+
+        /* Request address update. */
+        updateAddress: ({ commit }, _address) => commit('UPDATE_ADDRESS', _address),
 
         /* Request account update. */
-        updateAccount: ({ commit }, _account) => commit('updateAccount', _account),
+        updateAccount: ({ commit }, _account) => commit('UPDATE_ACCOUNT', _account),
 
         /* Request email update. */
-        updateEmail: ({ commit }, _email) => commit('updateEmail', _email)
+        updateEmail: ({ commit }, _email) => commit('UPDATE_EMAIL', _email)
     },
     mutations: {
         /* Update stage screen id. */
-        updateStageScreenId (_state, _screenId) {
+        UPDATE_STAGE_SCREEN_ID (_state, _screenId) {
             _state.stageScreenId = _screenId
         },
 
         /* Update identity screen id. */
-        updateIdentityScreenId (_state, _screenId) {
+        UPDATE_IDENTITY_SCREEN_ID (_state, _screenId) {
             _state.identityScreenId = _screenId
         },
 
+        /* Update address. */
+        UPDATE_ADDRESS (_state, _address) {
+            _state.address = _address
+        },
+
         /* Update account. */
-        updateAccount (_state, _account) {
+        UPDATE_ACCOUNT (_state, _account) {
             _state.account = _account
         },
 
         /* Update email. */
-        updateEmail (_state, _email) {
+        UPDATE_EMAIL (_state, _email) {
             _state.email = _email
         }
     }

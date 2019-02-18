@@ -19,6 +19,28 @@ import router from './router'
 import store from './store'
 import style from './style'
 
+/* Initialize globals. */
+import { ethers } from 'ethers'
+import moment from 'moment'
+import numeral from 'numeral'
+
+/* Initialize Web3. */
+// FIXME Why do we still need both Web3 AND Ethers?
+//       Web3 is currently failing to interface with contracts due to
+//       conflicts existing when using in VueJs
+//       (maybe if we disable observers??)
+import Web3 from 'web3'
+
+/* Initialize window.web3 global. */
+// const HTTP_PROVIDER = 'https://mainnet.infura.io/v3/773850fb37e546dca04e04faf7ba2c58'
+const HTTP_PROVIDER = 'https://ropsten.infura.io/v3/773850fb37e546dca04e04faf7ba2c58'
+window.web3 = new Web3(new Web3.providers.HttpProvider(HTTP_PROVIDER))
+
+/* Add globals to window. */
+window.ethers = ethers
+window.moment = moment
+window.numeral = numeral
+
 /* Production flag. */
 Vue.config.productionTip = false
 

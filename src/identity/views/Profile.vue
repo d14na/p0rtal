@@ -36,7 +36,7 @@
                     </div>
 
                     <ul class="nav nav-activity-profile mg-t-20">
-                        <li class="nav-item"><a href="javascript://" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Share an update</a></li>
+                        <li class="nav-item" @click="signout"><a href="javascript://" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Sign Out</a></li>
                         <li class="nav-item"><a href="javascript://" class="nav-link"><i class="icon ion-image tx-primary"></i> Publish photo</a></li>
                         <li class="nav-item"><a href="javascript://" class="nav-link"><i class="icon ion-document-text tx-success"></i> Add an article</a></li>
                     </ul>
@@ -288,12 +288,32 @@
 </template>
 
 <script>
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
+
 export default {
     data: () => ({
         //
     }),
+    computed: {
+        ...mapGetters([
+            'account',
+            'address'
+        ]),
+        // accountAbbr() {
+        // }
+    },
     methods: {
-        //
+        ...mapActions([
+            'updateIdentityScreenId'
+        ]),
+        loadScreen(_screenId) {
+            this.updateIdentityScreenId(_screenId)
+        },
+        signout() {
+            console.log('DO SIGN OUT!')
+            this.loadScreen('')
+        }
     },
     mounted: function () {
         //

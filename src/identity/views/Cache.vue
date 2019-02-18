@@ -11,7 +11,7 @@
 
             <div class="row price-boxes">
                 <div class="col pr-0">
-                    <div class="cache-boxes ether-box card-drop-shadow" @click="gotoETH">
+                    <div class="cache-boxes ether-box card-drop-shadow" @click="loadScreen('cache-WETH')">
                         <strong>Ethereum</strong>
                         <br />{{ethDisplay}}
                         <br /><small>{{ethDisplayChange}} <font-awesome-icon icon="arrow-up" /></small>
@@ -19,7 +19,7 @@
                     <div class="small">HODLing</div>
                 </div>
                 <div class="col">
-                    <div class="cache-boxes dai-box card-drop-shadow">
+                    <div class="cache-boxes dai-box card-drop-shadow" @click="loadScreen('cache-DAI')">
                         <strong>Dai</strong>
                         <br />{{daiDisplay}}
                         <br /><small>{{daiDisplayChange}} <font-awesome-icon icon="arrow-down" /></small>
@@ -27,7 +27,7 @@
                     <div class="small">SPEDNing</div>
                 </div>
                 <div class="col pl-0">
-                    <div class="cache-boxes zerogold-box card-drop-shadow">
+                    <div class="cache-boxes zerogold-box card-drop-shadow" @click="loadScreen('cache-0GOLD')">
                         <strong>ZeroGold</strong>
                         <br />{{zerogoldDisplay}}
                         <br /><small>{{zerogoldDisplayChange}} <font-awesome-icon icon="arrow-up" /></small>
@@ -80,19 +80,20 @@ export default {
     }),
     computed: {
         ...mapGetters([
-            'account'
+            'account',
+            'address'
         ]),
         accountAbbr() {
             /* Initialize full account (address). */
-            const account = this.account
+            const address = this.address
 
-            /* Validate account. */
-            if (account === 0) {
+            /* Validate address. */
+            if (address === 0) {
                 return ''
             }
 
             /* Set abbreviation. */
-            const abbr = `${account.slice(0, 10)} ... ${account.slice(-8)}`
+            const abbr = `${address.slice(0, 10)} ... ${address.slice(-8)}`
 
             /* Return abbreviation. */
             return abbr
@@ -168,8 +169,8 @@ export default {
         ...mapActions([
             'updateIdentityScreenId'
         ]),
-        gotoETH() {
-            this.updateIdentityScreenId('cache_eth')
+        loadScreen(_screenId) {
+            this.updateIdentityScreenId(_screenId)
         }
     },
     mounted: async function () {
