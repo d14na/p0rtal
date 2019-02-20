@@ -37,6 +37,10 @@ export default new Router({
             name: 'events',
             component: () => import(/* webpackChunkName: "bundle" */ './views/Events.vue')
         }, {
+            path: '/faq',
+            name: 'faq',
+            component: () => import(/* webpackChunkName: "bundle" */ './views/FAQ.vue')
+        }, {
             path: '/file-manager',
             name: 'file-manager',
             component: () => import(/* webpackChunkName: "bundle" */ './views/FileManager.vue')

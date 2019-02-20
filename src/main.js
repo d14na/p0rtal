@@ -45,7 +45,7 @@ window.numeral = numeral
 Vue.config.productionTip = false
 
 /* Initialize MAIN window. */
-new Vue({
+window.p0rtal = new Vue({
     router,
     store,
     i18n,
@@ -53,14 +53,14 @@ new Vue({
 }).$mount('#app')
 
 /* Initialize STAGE window. */
-new Vue({
+window.p0rtalStage = new Vue({
     store,
     i18n,
     render: h => h(Stage)
 }).$mount('#_0vueStageMount')
 
 /* Initialize IDENTITY window. */
-new Vue({
+window.p0rtalIdentity = new Vue({
     store,
     i18n,
     render: h => h(Identity)

@@ -31,7 +31,52 @@
                 </div>
             </div>
 
-            <button class="btn btn-lg btn-block btn-warning mt-3" @click="send">Send ETH</button>
+            <div class="row mt-3">
+                <div class="col">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">ADD</span>
+                        </div>
+                        <input type="text" class="form-control" v-model:value="txBoost">
+                        <div class="input-group-append">
+                            <span class="input-group-text">BOOST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-lg btn-block btn-info mt-3" @click="relay">Cache Transfer</button>
+
+            <div class="mt-3 p-3 bg-black-1">
+                <h3>Advanced Users ONLY</h3>
+
+                <p>
+                    Nice! Your account is loaded with GAS.
+                    You can power your own transactions.
+                </p>
+
+                <p class="text-center">
+                    <button class="btn btn-sm btn-info" @click="cacheIsBetter">Why Cache is better than ETH?</button>
+                </p>
+
+            </div>
+
+            <button class="btn btn-lg btn-block btn-outline-secondary" @click="send">Metamask Transfer</button>
+
+            <div class="mt-3 p-3 bg-teal text-white">
+                <h3>Grow My Cache</h3>
+
+                <p>
+                    Oops! Looks like you still have some tokens to deposit into your Cache.
+                </p>
+
+                <p class="text-center">
+                    [ <a href="javascript://" class="text-white">Why Cache is better than ETH?</a> ]
+                </p>
+
+            </div>
+
+            <button class="btn btn-lg btn-block btn-outline-secondary" @click="deposit">Add New Tokens</button>
 
         </div>
     </div>
@@ -54,6 +99,7 @@ export default {
     components,
     data: () => ({
         txAmount: 10**8,
+        txBoost: 0,
         balance: 0
     }),
     computed: mapGetters([
@@ -66,6 +112,46 @@ export default {
         ]),
         gotoCache() {
             this.updateIdentityScreenId('cache')
+        },
+        cacheIsBetter() {
+            _0vueIdentity.deactivate()
+
+            const path = 'faq'
+            const query = { topic: 'cache-is-better' }
+
+            /* Load FAQ. */
+            p0rtal.$router.push({ path, query })
+        },
+        deposit() {
+            console.log('Deposit remaining tokens to my Cache.');
+        },
+        relay() {
+            /* Initilize address. */
+            // NOTE: ZeroCache (latest) should be pulled dynamically from db.
+            const contractAddress = '0xA6CB833eA8127Aa628152720b622F6B4d002fCD8'
+
+            console.log('Contract Address', contractAddress)
+
+            const sigHash = web3.utils.soliditySha3(
+                { t: 'address', v: contractAddress },
+                { t: 'address', v: '0x079F89645eD85b85a475BF2bdc82c82f327f2932' },
+                { t: 'address', v: '0xe5Fe2e0Ec02bB85d0655CA6Cf4E23824fAD285DC' },
+                { t: 'address', v: '0xb07d84f2c5d8be1f4a440173bc536e0b2ee3b05e' },
+                { t: 'uint256', v: '1337' },
+                { t: 'bytes'  , v: '0x0000000000000000000000000000000000000000' }, // same as address, but w/out checksum
+                { t: 'uint256', v: '0' },
+                { t: 'uint256', v: '5050000' },
+                { t: 'uint256', v: '0' }
+            )
+
+            console.log('SIGNATURE HASH', sigHash)
+
+            const sig = web3.eth.accounts.sign(
+                sigHash, this.account.privateKey)
+
+            console.log('SIGNATURE PACKAGE', sig)
+
+            console.log('SIGNATURE', sig.signature)
         },
         async send() {
             const to = '0xb07d84F2c5D8bE1f4a440173BC536E0B2ee3b05E'
