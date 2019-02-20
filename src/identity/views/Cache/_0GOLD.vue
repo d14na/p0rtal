@@ -45,6 +45,10 @@
                 </div>
             </div>
 
+            <p class="text-center">
+                <button class="btn btn-sm btn-outline-secondary" @click="whatIsBoost">What is <strong>BOOST</strong>?</button>
+            </p>
+
             <button class="btn btn-lg btn-block btn-info mt-3" @click="relay">Cache Transfer</button>
 
             <div class="mt-3 p-3 bg-black-1">
@@ -56,7 +60,7 @@
                 </p>
 
                 <p class="text-center">
-                    <button class="btn btn-sm btn-info" @click="cacheIsBetter">Why Cache is better than ETH?</button>
+                    <button class="btn btn-sm btn-outline-secondary" @click="cacheIsBetter">How is Cache <strong>BETTER</strong> than ETH?</button>
                 </p>
 
             </div>
@@ -64,14 +68,14 @@
             <button class="btn btn-lg btn-block btn-outline-secondary" @click="send">Metamask Transfer</button>
 
             <div class="mt-3 p-3 bg-teal text-white">
-                <h3>Grow My Cache</h3>
+                <h3 class="text-center">Grow My Cache</h3>
 
                 <p>
-                    Oops! Looks like you still have some tokens to deposit into your Cache.
+                    Great news! We found some tokens to deposit into your Cache.
                 </p>
 
                 <p class="text-center">
-                    [ <a href="javascript://" class="text-white">Why Cache is better than ETH?</a> ]
+                    <button class="btn btn-sm btn-secondary" @click="cacheIsBetter">How is Cache <strong>BETTER</strong> than ETH?</button>
                 </p>
 
             </div>
@@ -116,11 +120,20 @@ export default {
         cacheIsBetter() {
             _0vueIdentity.deactivate()
 
-            const path = 'faq'
-            const query = { topic: 'cache-is-better' }
+            const name = 'faq'
+            const params = { topic: 'cache-is-better' }
 
             /* Load FAQ. */
-            p0rtal.$router.push({ path, query })
+            p0rtal.$router.push({ name, params })
+        },
+        whatIsBoost() {
+            _0vueIdentity.deactivate()
+
+            const name = 'faq'
+            const params = { topic: 'what-is-boost' }
+
+            /* Load FAQ. */
+            p0rtal.$router.push({ name, params })
         },
         deposit() {
             console.log('Deposit remaining tokens to my Cache.');
