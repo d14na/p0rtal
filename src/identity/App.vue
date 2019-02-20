@@ -5,17 +5,25 @@
 
         <div class="win-scrollable-outer">
             <div class="win-scrollable-inner">
+                <!-- Intro screens -->
                 <Welcome v-show="identityScreenId === ''" />
-                <Auth v-show="identityScreenId === 'auth'" />
+                <Auth    v-show="identityScreenId === 'auth'" />
 
                 <!-- Cache screens -->
-                <Cache v-show="identityScreenId === 'cache'" />
-                <CacheWETH v-show="identityScreenId === 'cache-WETH'" />
-                <CacheDAI v-show="identityScreenId === 'cache-DAI'" />
-                <Cache0GOLD v-show="identityScreenId === 'cache-0GOLD'" />
-                <Cache0xBTC v-show="identityScreenId === 'cache-0xBTC'" />
+                <Cache             v-show="identityScreenId === 'cache'" />
+                <CacheWETH         v-show="identityScreenId === 'cache-WETH'" />
+                <CacheDAI          v-show="identityScreenId === 'cache-DAI'" />
+                <Cache0GOLD        v-show="identityScreenId === 'cache-0GOLD'" />
+                <Cache0xBTC        v-show="identityScreenId === 'cache-0xBTC'" />
+                <CacheTokens       v-show="identityScreenId === 'cache-tokens'" />
+                <CacheCollectibles v-show="identityScreenId === 'cache-collectibles'" />
+                <CacheTrade        v-show="identityScreenId === 'cache-trade'" />
+                <CacheInvest       v-show="identityScreenId === 'cache-invest'" />
 
+                <!-- Profile screens -->
                 <Profile v-show="identityScreenId === 'profile'" />
+
+                <!-- Settings screens -->
                 <Settings v-show="identityScreenId === 'settings'" />
             </div>
         </div>
@@ -40,19 +48,33 @@ import CacheWETH from './views/Cache/WETH.vue'
 import CacheDAI from './views/Cache/DAI.vue'
 import Cache0GOLD from './views/Cache/_0GOLD.vue'
 import Cache0xBTC from './views/Cache/_0xBTC.vue'
+import CacheTokens from './views/Cache/Tokens.vue'
+import CacheCollectibles from './views/Cache/Collectibles.vue'
+import CacheTrade from './views/Cache/Trade.vue'
+import CacheInvest from './views/Cache/Invest.vue'
 
 /* Initialize components. */
 const components = {
     NavBar,
     Auth,
+    Welcome,
+
+    /* Cache */
     Cache,
     CacheWETH,
     CacheDAI,
     Cache0GOLD,
     Cache0xBTC,
+    CacheTokens,
+    CacheCollectibles,
+    CacheTrade,
+    CacheInvest,
+
+    /* Profile */
     Profile,
-    Settings,
-    Welcome
+
+    /* Settings */
+    Settings
 }
 
 /* Export. */

@@ -138,6 +138,13 @@ $(function () {
     padding-left: 2px;
 }
 
+/* balance display card */
+.balance-card {
+    background-color: rgba(255, 255, 255, 1.0);
+    font-size: 3.6em;
+    text-align: center;
+}
+
 /* drop-shadow for standard card */
 .card-drop-shadow {
     -moz-box-shadow: 0.5px 0.5px 3px 0px rgba(90, 90, 90, 0.5);

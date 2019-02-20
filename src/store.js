@@ -5,11 +5,32 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
+        /***********************************************************************
+         * CONSTANTS
+         *
+         * Provide convenient, global access to application values.
+         **********************************************************************/
+
+        /* Initialize stage screen id. */
+        contractAddress: '0xFE50c8E86DD7f7F4FB3D9f634662e753445F8b4C',
+
+        /***********************************************************************
+         * APPLICATION
+         *
+         * Used to manage CORE application functions.
+         **********************************************************************/
+
         /* Initialize stage screen id. */
         stageScreenId: '',
 
         /* Initialize identity screen id. */
         identityScreenId: '',
+
+        /***********************************************************************
+         * USER / PROFILE
+         *
+         * Used to personalize the application.
+         **********************************************************************/
 
         /* Initialize address (empty Ethereum address). */
         address: 0x0,
@@ -18,7 +39,23 @@ export default new Vuex.Store({
         account: {},
 
         /* Initialize email address. */
-        email: ''
+        email: '',
+
+        /* Initialize theme (eg light or dark). */
+        // TODO NOT YET IMPLEMENTED
+        theme: '',
+
+        /***********************************************************************
+         * ZEROCACHE
+         *
+         * Financial services.
+         **********************************************************************/
+
+        /* Initialize (Cache) exchange source. */
+        exchangeSource: '',
+
+        /* Initialize (Cache) exchange target. */
+        exchangeTarget: ''
     },
     getters: {
         /* Initialize stage screen id. */
@@ -34,7 +71,13 @@ export default new Vuex.Store({
         account: _state => _state.account,
 
         /* Initialize email. */
-        email: _state => _state.email
+        email: _state => _state.email,
+
+        /* Initialize (Cache) exchange source. */
+        exchangeSource: _state => _state.exchangeSource,
+
+        /* Initialize (Cache) exchange target. */
+        exchangeTarget: _state => _state.exchangeTarget
     },
     actions: {
         /* Request stage screen id update. */
@@ -50,7 +93,13 @@ export default new Vuex.Store({
         updateAccount: ({ commit }, _account) => commit('UPDATE_ACCOUNT', _account),
 
         /* Request email update. */
-        updateEmail: ({ commit }, _email) => commit('UPDATE_EMAIL', _email)
+        updateEmail: ({ commit }, _email) => commit('UPDATE_EMAIL', _email),
+
+        /* Request (Cache) exchange source update. */
+        updateExchangeSource: ({ commit }, _exchangeSource) => commit('UPDATE_EXCHANGE_SOURCE', _exchangeSource),
+
+        /* Request (Cache) exchange target update. */
+        updateExchangeTarget: ({ commit }, _exchangeTarget) => commit('UPDATE_EXCHANGE_TARGET', _exchangeTarget)
     },
     mutations: {
         /* Update stage screen id. */
@@ -76,6 +125,16 @@ export default new Vuex.Store({
         /* Update email. */
         UPDATE_EMAIL (_state, _email) {
             _state.email = _email
+        },
+
+        /* Update (Cache) exchange source. */
+        UPDATE_EXCHANGE_SOURCE (_state, _exchangeSource) {
+            _state.exchangeSource = _exchangeSource
+        },
+
+        /* Update (Cache) exchange target. */
+        UPDATE_EXCHANGE_TARGET (_state, _exchangeTarget) {
+            _state.exchangeTarget = _exchangeTarget
         }
     }
 })

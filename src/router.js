@@ -38,10 +38,6 @@ export default new Router({
             path: '/events',
             name: 'events',
             component: () => import(/* webpackChunkName: "bundle" */ './views/Events.vue')
-        // }, {
-        //     path: '/faq',
-        //     name: 'faq',
-        //     component: () => import(/* webpackChunkName: "bundle" */ './views/FAQ.vue')
         }, {
             path: '/faq/:topic',
             name: 'faq',

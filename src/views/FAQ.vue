@@ -17,14 +17,8 @@
                     <h6 class="slim-pagetitle">{{title}}</h6>
                 </div>
 
-                <div class="section-wrapper">
-                    <label class="section-title">WHY CACHE IS BETTER THAN ETH</label>
-
-                    <p class="mg-b-20 mg-sm-b-40">
-                        We appreciate your feedback!
-
-                        <button @click="params">params</button>
-                    </p>
+                <div class="section-wrapper" v-html="summary">
+                    <!-- content placeholder -->
                 </div>
             </div>
         </div>
@@ -54,15 +48,11 @@ const components = {
 export default {
     components,
     data: () => ({
-        title: ''
+        title: '',
+        summary: ''
     }),
     methods: {
-        params() {
-            /* Load query path. */
-            const params = this.$route.params
-
-            console.log('FAQ PARAMS', params)
-        }
+        //
     },
     mounted: function () {
         /* Load query path. */
@@ -76,9 +66,11 @@ export default {
         switch(topic) {
             case 'cache-is-better':
                 this.title = 'Cache Is Better!'
+                this.summary = '<h3>Let Us Count The Ways</h3> (1) Transactions are <strong class="text-info">FREE</strong> forever! <br />(2) <strong class="text-info">GUARANTEED</strong> fastest delivery <strong class="text-danger">⇄</strong> confirmation.'
                 break
             case 'what-is-boost':
                 this.title = 'What is Boost?'
+                this.summary = 'Request priority execution for your transactions.'
                 break
             default:
                 this.title = 'NO TOPIC'

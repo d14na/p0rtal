@@ -11,10 +11,8 @@
                 <h6 class="slim-pagetitle">ZeroGold</h6>
             </div>
 
-            <button class="btn btn-lg btn-block btn-outline-info mt-3" @click="buy">Buy Gold</button>
-
-            <div>
-                <h1>Balance is: {{balance}}</h1>
+            <div class="balance-card card-drop-shadow mt-3">
+                {{balance}}
             </div>
 
             <div class="row mt-3">
@@ -45,11 +43,20 @@
                 </div>
             </div>
 
-            <p class="text-center">
-                <button class="btn btn-sm btn-outline-secondary" @click="whatIsBoost">What is <strong>BOOST</strong>?</button>
+            <p class="text-right mt-1">
+                <button class="btn btn-sm btn-outline-secondary" @click="whatIsBoost">
+                    <font-awesome-icon icon="info-circle" class="mr-1" />
+                    What is <strong>BOOST</strong>?
+                </button>
             </p>
 
-            <button class="btn btn-lg btn-block btn-info mt-3" @click="relay">Cache Transfer</button>
+            <button class="btn btn-lg btn-block btn-info mt-3" @click="relay">
+                Cache Transfer
+            </button>
+
+            <button class="btn btn-lg btn-block btn-outline-warning mt-3" @click="buy">
+                Need Gold for STAEKing?
+            </button>
 
             <div class="mt-3 p-3 bg-black-1">
                 <h3>Advanced Users ONLY</h3>
@@ -60,28 +67,36 @@
                 </p>
 
                 <p class="text-center">
-                    <button class="btn btn-sm btn-outline-secondary" @click="cacheIsBetter">How is Cache <strong>BETTER</strong> than ETH?</button>
+                    <button class="btn btn-sm btn-outline-secondary" @click="cacheIsBetter">
+                        <font-awesome-icon icon="info-circle" class="mr-1" />
+                        How is Cache <strong>BETTER</strong> than ETH?
+                    </button>
                 </p>
 
             </div>
 
             <button class="btn btn-lg btn-block btn-outline-secondary" @click="send">Metamask Transfer</button>
 
-            <div class="mt-3 p-3 bg-teal text-white">
-                <h3 class="text-center">Grow My Cache</h3>
+            <div>
+                <div class="mt-3 p-3 bg-teal text-white">
+                    <h3 class="text-center">Grow My Cache</h3>
 
-                <p>
-                    Great news! We found some tokens to deposit into your Cache.
-                </p>
+                    <p>
+                        Great news! We found some tokens to deposit into your Cache.
+                    </p>
 
-                <p class="text-center">
-                    <button class="btn btn-sm btn-secondary" @click="cacheIsBetter">How is Cache <strong>BETTER</strong> than ETH?</button>
-                </p>
+                    <p class="text-center">
+                        <button class="btn btn-sm btn-secondary" @click="cacheIsBetter">
+                            <font-awesome-icon icon="info-circle" class="mr-1" />
+                            How is Cache <strong>BETTER</strong> than ETH?
+                        </button>
+                    </p>
+                </div>
 
+                <button class="btn btn-lg btn-block btn-outline-secondary" @click="deposit">
+                    Add New Tokens
+                </button>
             </div>
-
-            <button class="btn btn-lg btn-block btn-outline-secondary" @click="deposit">Add New Tokens</button>
-
         </div>
     </div>
 </template>

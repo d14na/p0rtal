@@ -14,15 +14,23 @@
                     <div class="cache-boxes ether-box card-drop-shadow" @click="loadScreen('cache-WETH')">
                         <strong>Ethereum</strong>
                         <br />{{ethDisplay}}
-                        <br /><small>{{ethDisplayChange}} <font-awesome-icon icon="arrow-up" /></small>
+                        <small>
+                            <br />{{ethDisplayChange}}
+                            <font-awesome-icon icon="arrow-up" v-if="ethUsdChange > 0" />
+                            <font-awesome-icon icon="arrow-down" v-if="ethUsdChange < 0" />
+                        </small>
                     </div>
                     <div class="small">HODLing</div>
                 </div>
                 <div class="col">
                     <div class="cache-boxes dai-box card-drop-shadow" @click="loadScreen('cache-DAI')">
-                        <strong>Dai</strong>
+                        <strong>Dai <small><small>STABLE</small></small></strong>
                         <br />{{daiDisplay}}
-                        <br /><small>{{daiDisplayChange}} <font-awesome-icon icon="arrow-down" /></small>
+                        <small>
+                            <br />{{daiDisplayChange}}
+                            <font-awesome-icon icon="arrow-up" v-if="daiUsdChange > 0" />
+                            <font-awesome-icon icon="arrow-down" v-if="daiUsdChange < 0" />
+                        </small>
                     </div>
                     <div class="small">SPEDNing</div>
                 </div>
@@ -30,7 +38,11 @@
                     <div class="cache-boxes zerogold-box card-drop-shadow" @click="loadScreen('cache-0GOLD')">
                         <strong>ZeroGold</strong>
                         <br />{{zerogoldDisplay}}
-                        <br /><small>{{zerogoldDisplayChange}} <font-awesome-icon icon="arrow-up" /></small>
+                        <small>
+                            <br />{{zerogoldDisplayChange}}
+                            <font-awesome-icon icon="arrow-up" v-if="zerogoldUsdChange > 0" />
+                            <font-awesome-icon icon="arrow-down" v-if="zerogoldUsdChange < 0" />
+                        </small>
                     </div>
                     <div class="small">STAEKing</div>
                 </div>
@@ -47,8 +59,37 @@
                 $0.00
             </div>
 
-            <button class="btn btn-lg btn-block btn-outline-success mt-3">Go to Marketplace</button>
-            <button class="btn btn-lg btn-block btn-outline-warning mt-3">Go to Exchange</button>
+            <div class="row">
+                <div class="col-5 pr-1">
+                    <button class="btn btn-lg btn-block btn-outline-primary mt-3" @click="loadScreen('cache-tokens')">
+                        <font-awesome-icon icon="coins" class="mx-1" />
+                        Tokens
+                    </button>
+                </div>
+                <div class="col-7 pl-1">
+                    <button class="btn btn-lg btn-block btn-outline-secondary mt-3 text-light" @click="loadScreen('cache-collectibles')">
+                        <font-awesome-icon icon="gifts" class="mx-1" />
+                        Collectibles
+                    </button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-7 pr-1">
+                    <button class="btn btn-lg btn-block btn-outline-success mt-3" @click="loadScreen('cache-trade')">
+                        <font-awesome-icon icon="exchange-alt" class="mx-1" />
+                        Buy / Trade
+                    </button>
+                </div>
+                <div class="col-5 pl-1">
+                    <button class="btn btn-lg btn-block btn-outline-secondary mt-3 text-light" @click="loadScreen('cache-invest')">
+                        <font-awesome-icon icon="piggy-bank" class="mx-1" />
+                        Invest
+                    </button>
+                </div>
+            </div>
+
+            <hr />
 
             <ActivitySummary class="mt-3" />
         </div>
@@ -108,14 +149,8 @@ export default {
             /* Require moment. */
             const numeral = require('numeral')
 
-            /* Set change. */
-            const change = this.ethUsdChange
-
-            /* Set last price. */
-            const lastPrice = parseFloat(this.ethUsd - change)
-
-            /* Calculate percentage change. */
-            const pctChange = change / lastPrice
+            /* Set percent change. */
+            const pctChange = parseFloat(this.ethUsdChange / 100)
 
             /* Return formatted. */
             return numeral(pctChange).format('0.00%')
@@ -130,14 +165,8 @@ export default {
             /* Require moment. */
             const numeral = require('numeral')
 
-            /* Set change. */
-            const change = this.daiUsdChange
-
-            /* Set last price. */
-            const lastPrice = parseFloat(this.daiUsd - change)
-
-            /* Calculate percentage change. */
-            const pctChange = change / lastPrice
+            /* Set percent change. */
+            const pctChange = parseFloat(this.daiUsdChange / 100)
 
             /* Return formatted. */
             return numeral(pctChange).format('0.00%')
@@ -152,14 +181,8 @@ export default {
             /* Require moment. */
             const numeral = require('numeral')
 
-            /* Set change. */
-            const change = this.zerogoldUsdChange
-
-            /* Set last price. */
-            const lastPrice = parseFloat(this.zerogoldUsd - change)
-
-            /* Calculate percentage change. */
-            const pctChange = change / lastPrice
+            /* Set percent change. */
+            const pctChange = parseFloat(this.zerogoldUsdChange / 100)
 
             /* Return formatted. */
             return numeral(pctChange).format('0.00%')
@@ -169,32 +192,41 @@ export default {
         ...mapActions([
             'updateIdentityScreenId'
         ]),
+        async _initPrices() {
+            /* Initialize CCXT library. */
+            const ccxt = require ('ccxt')
+            // console.log (ccxt.exchanges)
+
+            /* Initialize coinmarketcap. */
+            const exchange = new ccxt.coinmarketcap ()
+
+            // console.log('EXCHANGE', exchange)
+
+            const ethUsd = await exchange.fetch_ticker('ETH/USD')
+            // console.log (exchange.id, ethUsd)
+
+            /* Update ETH spot price data. */
+            this.ethUsd = ethUsd.last
+            this.ethUsdChange = ethUsd.change
+
+            const daiUsd = await exchange.fetch_ticker('DAI/USD')
+            // console.log (exchange.id, daiUsd)
+
+            /* Update DAI spot price data. */
+            this.daiUsd = daiUsd.last
+            this.daiUsdChange = daiUsd.change
+
+            /* Update DAI spot price data. */
+            this.zerogoldUsd = 0.023809523809524
+            this.zerogoldUsdChange = 0.0
+        },
         loadScreen(_screenId) {
             this.updateIdentityScreenId(_screenId)
         }
     },
-    mounted: async function () {
-        /* Initialize CCXT library. */
-        const ccxt = require ('ccxt')
-        // console.log (ccxt.exchanges)
-
-        /* Initialize coinmarketcap. */
-        const exchange = new ccxt.coinmarketcap ()
-
-        const ethUsd = await exchange.fetch_ticker('ETH/USD')
-        // console.log (exchange.id, ethUsd, this)
-
-        /* Update ETH spot price data. */
-        this.ethUsd = ethUsd.last
-        this.ethUsdChange = ethUsd.change
-
-        /* Update DAI spot price data. */
-        this.daiUsd = 1.00
-        this.daiUsdChange = 0.0
-
-        /* Update DAI spot price data. */
-        this.zerogoldUsd = 0.023809523809524
-        this.zerogoldUsdChange = 0.0
+    mounted: function () {
+        /* Initialize (spot) prices. */
+        this._initPrices()
     }
 }
 </script>
@@ -208,18 +240,34 @@ export default {
 }
 
 .ether-box {
-    background-color: rgba(31, 104, 239, 0.7);
-    border: 1pt solid rgba(9, 13, 239, 1.0);
+    background-image: radial-gradient(
+        circle at top right,
+        rgba(100, 132, 167, 1.0),
+        rgba(75, 66, 112, 1.0)
+        /* #f06d06 */
+    );
+    border: 1pt solid rgba(11, 183, 255, 1.0);
     color: rgba(255, 255, 255, 1.0);
 }
 .dai-box {
-    background-color: rgba(9, 239, 67, 0.7);
-    border: 1pt solid rgba(54, 150, 78, 1.0);
+    background-image: radial-gradient(
+        circle at top right,
+        rgba(26, 171, 154, 1.0),
+        rgba(86, 105, 120, 1.0)
+        /* #f06d06 */
+    );
+    border: 1pt solid rgba(28, 244, 221, 1.0);
     color: rgba(255, 255, 255, 1.0);
 }
 .zerogold-box {
-    background-color: rgba(239, 239, 31, 0.7);
+    background-image: radial-gradient(
+        circle at top right,
+        rgba(239, 239, 31, 1.0),
+        rgba(225, 173, 14, 1.0)
+        /* #f06d06 */
+    );
     border: 1pt solid rgba(255, 255, 0, 1.0);
+    /* color: rgba(255, 255, 255, 1.0); */
     color: rgba(90, 90, 90, 1.0);
 }
 
@@ -235,11 +283,5 @@ export default {
     font-size: 0.6em;
     font-weight: bold;
     color: rgba(90, 90, 90, 0.5);
-}
-
-.balance-card {
-    background-color: rgba(255, 255, 255, 1.0);
-    font-size: 3.6em;
-    text-align: center;
 }
 </style>
