@@ -58,7 +58,7 @@ export default {
         /* Load query path. */
         const params = this.$route.params
 
-        console.log('FAQ PARAMS', params)
+        // console.log('FAQ PARAMS', params)
 
         /* Set topic. */
         const topic = params.topic
@@ -66,11 +66,15 @@ export default {
         switch(topic) {
             case 'cache-is-better':
                 this.title = 'Cache Is Better!'
-                this.summary = '<h3>Let Us Count The Ways</h3> (1) Transactions are <strong class="text-info">FREE</strong> forever! <br />(2) <strong class="text-info">GUARANTEED</strong> fastest delivery <strong class="text-danger">⇄</strong> confirmation.'
+                this.summary = require('./FAQ/cache-is-better')
+                break
+            case 'nametag':
+                this.title = 'Nametag Guide'
+                this.summary = require('./FAQ/nametag')
                 break
             case 'what-is-boost':
                 this.title = 'What is Boost?'
-                this.summary = 'Request priority execution for your transactions.'
+                this.summary = require('./FAQ/what-is-boost')
                 break
             default:
                 this.title = 'NO TOPIC'

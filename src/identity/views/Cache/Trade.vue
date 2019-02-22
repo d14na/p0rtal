@@ -42,7 +42,7 @@
                             </div>
                         </a>
 
-                        <a href="javascript://" class="media">
+                        <a href="javascript://" class="media" @click="updateSource('0xBTC')">
                             <img src="@/assets/img/tokens/0xBTC.png" alt="0xBitcoin Token">
                             <div class="media-body">
                                 <div>
