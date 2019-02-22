@@ -16,32 +16,30 @@
                     <h5 class="mg-t-10 mg-b-5">Londynn Lee</h5>
                     <p>Product Director</p>
                     <p class="contact-social">
-                        <a href="javascript://"><i class="fa fa-facebook"></i></a>
-                        <a href="javascript://"><i class="fa fa-twitter"></i></a>
-                        <a href="javascript://"><i class="fa fa-google"></i></a>
+                        <font-awesome-icon :icon="['fab', 'facebook']" />
+                        <font-awesome-icon :icon="['fab', 'twitter']" />
+                        <font-awesome-icon :icon="['fab', 'google']" />
                     </p>
                 </div>
 
                 <p class="contact-item">
                     <span>Phone:</span>
-                    <span>+1 012 3456 789</span>
+                    <span>+1 (646) 846-8181</span>
                 </p>
 
                 <p class="contact-item">
-                    <span>Email:</span>
-                    <a href="javascript://">person1@domain.com</a>
-                </p>
-
-                <p class="contact-item">
-                    <span>URL:</span>
-                    <a href="javascript://">http://thmpxls.me</a>
+                    <span>Matrix</span>
+                    <a href="javascript://">LondynnLee@0net.io</a>
                 </p>
             </div>
 
             <ul class="nav nav-activity-profile mg-t-20">
-                <li class="nav-item" @click="signout"><a href="javascript://" class="nav-link"><i class="icon ion-ios-redo tx-purple"></i> Sign Out</a></li>
-                <li class="nav-item"><a href="javascript://" class="nav-link"><i class="icon ion-image tx-primary"></i> Publish photo</a></li>
-                <li class="nav-item"><a href="javascript://" class="nav-link"><i class="icon ion-document-text tx-success"></i> Add an article</a></li>
+                <li class="nav-item" @click="signout">
+                    <span class="nav-link">
+                        <i class="icon ion-ios-redo tx-purple"></i>
+                        Sign Out
+                    </span>
+                </li>
             </ul>
 
             <div class="card card-connection mg-t-20">
@@ -111,46 +109,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="card pd-25 mg-t-20">
-                    <div class="slim-card-title">Contact &amp; Personal Info</div>
-
-                    <div class="media-list mg-t-25">
-                        <div class="media">
-                            <div><i class="icon ion-link tx-24 lh-0"></i></div>
-                            <div class="media-body mg-l-15 mg-t-4">
-                                <h6 class="tx-14 tx-gray-700">Websites</h6>
-                                <a href="javascript://" class="d-block">http://themepixels.me</a>
-                                <a href="javascript://" class="d-block">http://themeforest.net</a>
-                            </div>
-                        </div>
-
-                        <div class="media mg-t-25">
-                            <div><i class="icon ion-ios-telephone-outline tx-24 lh-0"></i></div>
-                            <div class="media-body mg-l-15 mg-t-4">
-                                <h6 class="tx-14 tx-gray-700">Phone Number</h6>
-                                <span class="d-block">+1 234 5678 910</span>
-                            </div>
-                        </div>
-
-                        <div class="media mg-t-25">
-                            <div><i class="icon ion-ios-email-outline tx-24 lh-0"></i></div>
-                            <div class="media-body mg-l-15 mg-t-4">
-                                <h6 class="tx-14 tx-gray-700">Email Address</h6>
-                                <span class="d-block">yourname@sample.com</span>
-                            </div>
-                        </div>
-
-                        <div class="media mg-t-25">
-                            <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
-                            <div class="media-body mg-l-15 mg-t-2">
-                                <h6 class="tx-14 tx-gray-700">Twitter</h6>
-                                <a href="javascript://#" class="d-block">@themepixels</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>
@@ -194,5 +152,10 @@ export default {
 #identityStyle {
     border: 1pt solid #f33;
     padding-top: 20px;
+}
+
+.contact-social {
+    display: flex;
+    justify-content: space-evenly;
 }
 </style>

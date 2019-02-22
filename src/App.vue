@@ -118,6 +118,11 @@ $(function () {
     text-overflow: ellipsis;
 }
 
+/* navigation links */
+.nav-link {
+    cursor: pointer;
+}
+
 /* vertical divider */
 .v-divider:after {
     content: ' | ';

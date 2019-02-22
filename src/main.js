@@ -13,6 +13,7 @@ import Identity from './identity/App.vue'
 /* Import plugins. */
 import './plugins/bugsnag'
 import i18n from './plugins/i18next'
+import './plugins/toggle-button'
 
 /* Import application framework. */
 import router from './router'

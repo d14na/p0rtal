@@ -10,42 +10,53 @@
             </div>
 
             <div class="card-contact mg-b-20">
-              <div class="tx-center">
-                <a href="javascript://"><img src="@/assets/img/img12.jpg" class="card-img" alt=""></a>
-                <h5 class="mg-t-10 mg-b-5"><a href="javascript://" class="contact-name">Maricel Villalon</a></h5>
-                <p>Product Director</p>
-                <p class="contact-social">
-                  <a href="javascript://"><i class="fa fa-facebook"></i></a>
-                  <a href="javascript://"><i class="fa fa-twitter"></i></a>
-                  <a href="javascript://"><i class="fa fa-google"></i></a>
+                <h5 class="text-center">Basic Settings</h5>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="bell" class="text-info mr-1" /> Notifications</span>
+                    <font-awesome-icon icon="chevron-right" />
                 </p>
-              </div>
 
-              <p class="contact-item">
-                <span>Phone:</span>
-                <span>+1 012 3456 789</span>
-              </p>
-              <p class="contact-item">
-                <span>Email:</span>
-                <a href="javascript://">person1@domain.com</a>
-              </p>
-              <p class="contact-item">
-                <span>URL:</span>
-                <a href="javascript://">http://thmpxls.me</a>
-              </p>
+                <h5 class="text-center mg-t-20">Advanced Settings</h5>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="network-wired" class="text-info mr-1" /> Blockchain Network</span>
+
+                    <toggle-button
+                        :labels="{ checked: 'Mainnet', unchecked: 'Ropsten' }"
+                        width="75"
+                        v-model="isProduction"
+                        @change="onProductionHandler"
+                    />
+                </p>
+
+                <h5 class="text-center mg-t-20">Additional Resources</h5>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="info-circle" class="text-info mr-1" /> FAQ</span>
+                    <font-awesome-icon icon="chevron-right" />
+                </p>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="comment-alt" class="text-info mr-1" /> Send Feedback</span>
+                    <font-awesome-icon icon="chevron-right" />
+                </p>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="user-secret" class="text-info mr-1" /> Privacy</span>
+                    <font-awesome-icon icon="chevron-right" />
+                </p>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="file-signature" class="text-info mr-1" /> Terms</span>
+                    <font-awesome-icon icon="chevron-right" />
+                </p>
+
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="file-contract" class="text-info mr-1" /> Licenses</span>
+                    <font-awesome-icon icon="chevron-right" />
+                </p>
             </div>
-
-            <div class="card">
-              <div class="card-header">
-                Featured
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul>
-            </div>
-
         </div>
     </div>
 </template>
@@ -56,7 +67,7 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
     data: () => ({
-        //
+        isProduction: false
     }),
     computed: mapGetters([
         'identityScreenId'
@@ -67,6 +78,9 @@ export default {
         ]),
         gotoSettings() {
             this.updateIdentityScreenId('')
+        },
+        onProductionHandler(_val) {
+            console.log('toggle clicked', _val)
         }
     },
     mounted: function () {
@@ -76,5 +90,7 @@ export default {
 </script>
 
 <style scoped>
-
+.vue-js-switch {
+    margin: 0;
+}
 </style>
