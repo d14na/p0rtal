@@ -6,7 +6,7 @@
                     <!--  -->
                 </ol>
 
-                <h6 class="slim-pagetitle">My ₵a¢he</h6>
+                <h6 class="slim-pagetitle">₵a¢he</h6>
             </div>
 
             <div class="row price-boxes">
@@ -61,13 +61,13 @@
 
             <div class="row">
                 <div class="col-5 pr-1">
-                    <button class="btn btn-lg btn-block btn-outline-primary mt-3" @click="loadScreen('cache-tokens')">
+                    <button class="btn btn-lg btn-block btn-primary mt-3" @click="loadScreen('cache-tokens')">
                         <font-awesome-icon icon="coins" class="mx-1" />
                         Tokens
                     </button>
                 </div>
                 <div class="col-7 pl-1">
-                    <button class="btn btn-lg btn-block btn-outline-secondary mt-3 text-light" @click="loadScreen('cache-collectibles')">
+                    <button class="btn btn-lg btn-block btn-outline-secondary mt-3" @click="loadScreen('cache-collectibles')">
                         <font-awesome-icon icon="gifts" class="mx-1" />
                         Collectibles
                     </button>
@@ -76,13 +76,13 @@
 
             <div class="row">
                 <div class="col-7 pr-1">
-                    <button class="btn btn-lg btn-block btn-outline-success mt-3" @click="loadScreen('cache-trade')">
+                    <button class="btn btn-lg btn-block btn-success mt-3" @click="loadScreen('cache-trade')">
                         <font-awesome-icon icon="exchange-alt" class="mx-1" />
                         Buy / Trade
                     </button>
                 </div>
                 <div class="col-5 pl-1">
-                    <button class="btn btn-lg btn-block btn-outline-secondary mt-3 text-light" @click="loadScreen('cache-invest')">
+                    <button class="btn btn-lg btn-block btn-outline-secondary mt-3" @click="loadScreen('cache-invest')">
                         <font-awesome-icon icon="piggy-bank" class="mx-1" />
                         Invest
                     </button>

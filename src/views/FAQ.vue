@@ -17,9 +17,9 @@
                     <h6 class="slim-pagetitle">{{title}}</h6>
                 </div>
 
-                <div class="section-wrapper" v-html="summary">
-                    <!-- content placeholder -->
-                </div>
+                <CacheIsBetter v-if="topic == 'cache-is-better'" />
+                <Nametag v-if="topic == 'nametag'" />
+                <WhatIsBoost v-if="topic == 'what-is-boost'" />
             </div>
         </div>
 
@@ -37,48 +37,60 @@ import LinksBar from '@/components/LinksBar.vue'
 /* Import FOOTER. */
 import Footer from '@/components/Footer.vue'
 
+/* Import FAQs. */
+import CacheIsBetter from './FAQ/CacheIsBetter.vue'
+import Nametag from './FAQ/Nametag.vue'
+import WhatIsBoost from './FAQ/WhatIsBoost.vue'
+
 /* Initialize components. */
 const components = {
     NavBar,
     LinksBar,
-    Footer
+    Footer,
+
+    CacheIsBetter,
+    Nametag,
+    WhatIsBoost
 }
 
 /* Export. */
 export default {
     components,
     data: () => ({
-        title: '',
-        summary: ''
+        // title: '',
+        // summary: ''
     }),
+    computed: {
+        title() {
+            switch(this.getTopic()) {
+                case 'cache-is-better':
+                    return 'Cache Is Better!'
+                case 'nametag':
+                    return 'Nametag Guide'
+                case 'what-is-boost':
+                    return 'What is Boost?'
+                default:
+                    return 'NO TOPIC'
+            }
+        },
+        topic() {
+            return this.getTopic()
+        }
+    },
     methods: {
-        //
+        getTopic() {
+            /* Load query path. */
+            const params = this.$route.params
+
+            /* Set topic. */
+            const topic = params.topic
+
+            /* Return topic. */
+            return topic
+        }
     },
     mounted: function () {
-        /* Load query path. */
-        const params = this.$route.params
-
-        // console.log('FAQ PARAMS', params)
-
-        /* Set topic. */
-        const topic = params.topic
-
-        switch(topic) {
-            case 'cache-is-better':
-                this.title = 'Cache Is Better!'
-                this.summary = require('./FAQ/cache-is-better')
-                break
-            case 'nametag':
-                this.title = 'Nametag Guide'
-                this.summary = require('./FAQ/nametag')
-                break
-            case 'what-is-boost':
-                this.title = 'What is Boost?'
-                this.summary = require('./FAQ/what-is-boost')
-                break
-            default:
-                this.title = 'NO TOPIC'
-        }
+        //
     }
 }
 </script>
