@@ -95,7 +95,7 @@
                     </p>
                 </div>
 
-                <button class="btn btn-block btn-primary mt-3">Signin with Email + Password</button>
+                <button class="btn btn-block btn-primary mt-3" @click="authWithPassword">Signin with Email + Password</button>
             </div>
 
             <div class="card mt-3">
@@ -138,6 +138,9 @@
 /* Initialize Vuex. */
 import { mapGetters, mapActions } from 'vuex'
 
+/* Initialize Shamir Secret Sharing. */
+import Shamir from '@/lib/shamir.js'
+
 /* Initialize components. */
 const components = {
     //
@@ -172,9 +175,15 @@ export default {
                 this.updateEmail(this.email)
 
                 /* Initilize private key. */
-                // const pk = CONFIG['accounts']['market'].privateKey
                 const pk = web3.utils.soliditySha3(this.email)
                 console.log('EMAIL -> PK', this.email, pk)
+
+                /* Initialize Shamir's secret. */
+                const shamirSecret = pk.slice(2)
+
+                /* Generate 3 Shamir secret hashes from private key. */
+                const shamirShares = Shamir.generateShares(shamirSecret, 3, 2)
+                console.log(shamirShares)
 
                 /* Initialize new account from private key. */
                 const acct = web3.eth.accounts.privateKeyToAccount(pk)
@@ -189,6 +198,9 @@ export default {
                 /* Update screen id. */
                 this.updateIdentityScreenId('profile')
             }
+        },
+        authWithPassword() {
+            console.log('TODO Implement auth with password')
         }
     },
     mounted: function () {
