@@ -10,18 +10,26 @@
             </div>
 
             <div class="card-contact mg-b-20">
-                <h5 class="text-center">Basic Settings</h5>
+                <h5 class="text-center text-info">Basic Settings</h5>
 
-                <p class="contact-item">
-                    <span><font-awesome-icon icon="bell" class="text-info mr-1" /> Notifications</span>
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="bell" class="text-info mr-1" fixed-width />Notifications</span>
                     <font-awesome-icon icon="chevron-right" />
                 </p>
 
-                <h5 class="text-center mg-t-20">Advanced Settings</h5>
+                <p class="contact-item">
+                    <span><font-awesome-icon icon="moon" class="text-info mr-1" fixed-width />Dark Mode</span>
+                    <toggle-button
+                        :labels="true"
+                        v-model="isDark"
+                        @change="onDarkHandler"
+                    />
+                </p>
+
+                <h5 class="text-center mg-t-20 text-info">Advanced Settings</h5>
 
                 <p class="contact-item">
-                    <span><font-awesome-icon icon="network-wired" class="text-info mr-1" /> Blockchain Network</span>
-
+                    <span><font-awesome-icon icon="network-wired" class="text-info mr-1" fixed-width />Blockchain Network</span>
                     <toggle-button
                         :labels="{ checked: 'Mainnet', unchecked: 'Ropsten' }"
                         width="75"
@@ -30,30 +38,30 @@
                     />
                 </p>
 
-                <h5 class="text-center mg-t-20">Additional Resources</h5>
+                <h5 class="text-center mg-t-20 text-info">Additional Resources</h5>
 
-                <p class="contact-item">
-                    <span><font-awesome-icon icon="info-circle" class="text-info mr-1" /> FAQ</span>
+                <p class="contact-item click-item" @click="faq">
+                    <span><font-awesome-icon icon="info-circle" class="text-info mr-1" fixed-width />FAQ</span>
+                    <font-awesome-icon icon="external-link-alt" />
+                </p>
+
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="user-edit" class="text-info mr-1" fixed-width />Send Feedback</span>
                     <font-awesome-icon icon="chevron-right" />
                 </p>
 
-                <p class="contact-item">
-                    <span><font-awesome-icon icon="comment-alt" class="text-info mr-1" /> Send Feedback</span>
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="user-secret" class="text-info mr-1" fixed-width />Privacy</span>
                     <font-awesome-icon icon="chevron-right" />
                 </p>
 
-                <p class="contact-item">
-                    <span><font-awesome-icon icon="user-secret" class="text-info mr-1" /> Privacy</span>
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="file-signature" class="text-info mr-1" fixed-width />Terms</span>
                     <font-awesome-icon icon="chevron-right" />
                 </p>
 
-                <p class="contact-item">
-                    <span><font-awesome-icon icon="file-signature" class="text-info mr-1" /> Terms</span>
-                    <font-awesome-icon icon="chevron-right" />
-                </p>
-
-                <p class="contact-item">
-                    <span><font-awesome-icon icon="file-contract" class="text-info mr-1" /> Licenses</span>
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="file-contract" class="text-info mr-1" fixed-width />Licenses</span>
                     <font-awesome-icon icon="chevron-right" />
                 </p>
             </div>
@@ -67,6 +75,7 @@ import { mapGetters, mapActions } from 'vuex'
 
 export default {
     data: () => ({
+        isDark: false,
         isProduction: false
     }),
     computed: mapGetters([
@@ -79,8 +88,20 @@ export default {
         gotoSettings() {
             this.updateIdentityScreenId('')
         },
+        onDarkHandler(_val) {
+            console.log('toggle dark mode', _val)
+        },
         onProductionHandler(_val) {
             console.log('toggle clicked', _val)
+        },
+        faq() {
+            _0vueIdentity.deactivate()
+
+            const name = 'faq'
+            const params = { topic: 'welcome' }
+
+            /* Load FAQ. */
+            p0rtal.$router.push({ name, params })
         }
     },
     mounted: function () {

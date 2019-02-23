@@ -118,8 +118,8 @@ $(function () {
     text-overflow: ellipsis;
 }
 
-/* navigation links */
-.nav-link {
+/* click items */
+.click-item {
     cursor: pointer;
 }
 

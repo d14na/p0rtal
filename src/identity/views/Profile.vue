@@ -11,7 +11,7 @@
 
             <div class="card-contact mg-b-20">
                 <div class="tx-center">
-                    <img src="@/assets/img/img12.jpg" class="card-img" alt="">
+                    <img src="@/assets/img/img12.jpg" class="card-img click-item" alt="" @click="updatePhoto">
 
                     <h5 class="mg-t-10 mg-b-5">Londynn Lee</h5>
                     <p>Product Director</p>
@@ -22,22 +22,34 @@
                     </p>
                 </div>
 
-                <p class="contact-item">
-                    <span>Phone:</span>
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="signature" class="text-info mr-1" fixed-width />Nametag</span>
+                    <span>LondynnLee</span>
+                </p>
+
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="phone" class="text-info mr-1" fixed-width />Phone</span>
                     <span>+1 (646) 846-8181</span>
                 </p>
 
-                <p class="contact-item">
-                    <span>Matrix</span>
-                    <a href="javascript://">LondynnLee@0net.io</a>
+                <p class="contact-item click-item">
+                    <span><font-awesome-icon icon="comment-alt" class="text-info mr-1" fixed-width /><span class="text-danger">[</span>matrix<span class="text-danger">]</span></span>
+                    <span>LondynnLee@0net.io</span>
                 </p>
             </div>
 
             <ul class="nav nav-activity-profile mg-t-20">
-                <li class="nav-item" @click="signout">
+                <li class="nav-item click-item" @click="promote">
                     <span class="nav-link">
-                        <i class="icon ion-ios-redo tx-purple"></i>
-                        Sign Out
+                        <font-awesome-icon icon="bullhorn" size="lg" class="text-info mr-2" />
+                        Promote Zeronet
+                    </span>
+                </li>
+
+                <li class="nav-item click-item" @click="signout">
+                    <span class="nav-link">
+                        <font-awesome-icon icon="sign-out-alt" size="lg" class="text-info mr-2" />
+                        Secure Sign Out
                     </span>
                 </li>
             </ul>
@@ -136,6 +148,12 @@ export default {
         ]),
         loadScreen(_screenId) {
             this.updateIdentityScreenId(_screenId)
+        },
+        promote() {
+            console.log('Promote the Zeronet')
+        },
+        updatePhoto() {
+            console.log('Update photo')
         },
         signout() {
             console.log('DO SIGN OUT!')

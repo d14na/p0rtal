@@ -19,6 +19,7 @@
 
                 <CacheIsBetter v-if="topic == 'cache-is-better'" />
                 <Nametag v-if="topic == 'nametag'" />
+                <Welcome v-if="topic == 'welcome'" />
                 <WhatIsBoost v-if="topic == 'what-is-boost'" />
             </div>
         </div>
@@ -40,6 +41,7 @@ import Footer from '@/components/Footer.vue'
 /* Import FAQs. */
 import CacheIsBetter from './FAQ/CacheIsBetter.vue'
 import Nametag from './FAQ/Nametag.vue'
+import Welcome from './FAQ/Welcome.vue'
 import WhatIsBoost from './FAQ/WhatIsBoost.vue'
 
 /* Initialize components. */
@@ -50,6 +52,7 @@ const components = {
 
     CacheIsBetter,
     Nametag,
+    Welcome,
     WhatIsBoost
 }
 
@@ -67,6 +70,8 @@ export default {
                     return 'Cache Is Better!'
                 case 'nametag':
                     return 'Nametag Guide'
+                case 'welcome':
+                    return 'Welcome'
                 case 'what-is-boost':
                     return 'What is Boost?'
                 default:
