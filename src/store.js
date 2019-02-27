@@ -11,8 +11,9 @@ export default new Vuex.Store({
          * Provide convenient, global access to application values.
          **********************************************************************/
 
-        /* Initialize stage screen id. */
-        contractAddress: '0xFE50c8E86DD7f7F4FB3D9f634662e753445F8b4C',
+        /* Initialize ANAME location of ZeroCache. */
+        // FIXME Let's pull this value from `db.0net.io -> aname.zerocache`.
+        anameZeroCache: '0x565d0859a620aE99052Cc44dDe74b199F13A3433',
 
         /***********************************************************************
          * APPLICATION
@@ -58,6 +59,9 @@ export default new Vuex.Store({
         exchangeTarget: ''
     },
     getters: {
+        /* Initialize ANAME location of ZeroCache. */
+        anameZeroCache: _state => _state.anameZeroCache,
+
         /* Initialize stage screen id. */
         stageScreenId: _state => _state.stageScreenId,
 

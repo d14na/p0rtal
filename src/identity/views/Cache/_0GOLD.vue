@@ -123,7 +123,8 @@ export default {
     }),
     computed: mapGetters([
         'address',
-        'account'
+        'account',
+        'anameZeroCache'
     ]),
     methods: {
         ...mapActions([
@@ -153,33 +154,116 @@ export default {
         deposit() {
             console.log('Deposit remaining tokens to my Cache.');
         },
-        relay() {
+        async relay() {
             /* Initilize address. */
             // NOTE: ZeroCache (latest) should be pulled dynamically from db.
-            const contractAddress = '0xA6CB833eA8127Aa628152720b622F6B4d002fCD8'
+            const anameZeroCache = this.anameZeroCache
 
-            console.log('Contract Address', contractAddress)
+            console.log('ANAME ZeroCache', anameZeroCache)
 
+            console.log('WEB3', web3)
+            console.log('WEB3 ETH', web3.eth)
+            console.log('WEB3 UTILS', web3.utils)
+
+            web3.eth.getBlockNumber()
+                .then(console.log)
+
+            /* Retrieve current block number. */
+            const blockNumber = await web3.eth.getBlockNumber()
+                .catch(_error => {
+                    console.error('ERROR:', _error)
+                })
+
+            console.log('Current block number', blockNumber)
+
+            /* Calculate time-to-live. */
+            const ttl = blockNumber + 250 // approx 60 minutes
+
+            console.log('Time-to-live', ttl)
+
+            /**
+             * Initialize all transaction parameters for signing.
+             *
+             * NOTE: We manually set the `t` of each parameter
+             *       for accurate type casting.
+             */
+            const contract = { t: 'address', v: anameZeroCache }
+            const token = { t: 'address', v: '0x079F89645eD85b85a475BF2bdc82c82f327f2932' }
+            const from = { t: 'address', v: '0xe5Fe2e0Ec02bB85d0655CA6Cf4E23824fAD285DC' }
+            const to = { t: 'address', v: '0xb07d84f2c5d8be1f4a440173bc536e0b2ee3b05e' }
+            const tokens = { t: 'uint256', v: '1337' }
+            const staekholder = { t: 'bytes', v: '0x0000000000000000000000000000000000000000' }
+            const staek = { t: 'uint256', v: '0' }
+            const expires = { t: 'uint256', v: ttl }
+            const nonce = { t: 'uint256', v: moment().valueOf() } // milliseconds
+
+            /* Sign the parameters to generate a hash signature. */
             const sigHash = web3.utils.soliditySha3(
-                { t: 'address', v: contractAddress },
-                { t: 'address', v: '0x079F89645eD85b85a475BF2bdc82c82f327f2932' },
-                { t: 'address', v: '0xe5Fe2e0Ec02bB85d0655CA6Cf4E23824fAD285DC' },
-                { t: 'address', v: '0xb07d84f2c5d8be1f4a440173bc536e0b2ee3b05e' },
-                { t: 'uint256', v: '1337' },
-                { t: 'bytes'  , v: '0x0000000000000000000000000000000000000000' }, // same as address, but w/out checksum
-                { t: 'uint256', v: '0' },
-                { t: 'uint256', v: '5050000' },
-                { t: 'uint256', v: '0' }
+                contract, // ZeroCache's contract address
+                token, // token's contract address
+                from, // sender's address
+                to, // receiver's address
+                tokens, // quantity of tokens
+                staekholder, // staekholder (NOTE: bytes is the same as address, but w/out checksum)
+                staek, // staek amount
+                expires, // expiration time
+                nonce // nonce (unique integer)
             )
 
-            console.log('SIGNATURE HASH', sigHash)
+            // console.log('SIGNATURE HASH', sigHash)
 
-            const sig = web3.eth.accounts.sign(
+            /* Sign signature hash. */
+            const signaturePkg = web3.eth.accounts.sign(
                 sigHash, this.account.privateKey)
 
-            console.log('SIGNATURE PACKAGE', sig)
+            // console.log('SIGNATURE PACKAGE', signaturePkg)
 
-            console.log('SIGNATURE', sig.signature)
+            /* Set signature. */
+            const signature = signaturePkg.signature
+
+            console.log('SIGNATURE', signature)
+
+            /* Build relay package. */
+            const relayPkg = {
+                token: token.v,
+                from: from.v,
+                to: to.v,
+                tokens: tokens.v,
+                staekholder: staekholder.v,
+                staek: staek.v,
+                expires: expires.v,
+                nonce: nonce.v,
+                signature
+            }
+
+            console.log('Relay Package', relayPkg)
+
+            /* Set method. */
+            const method = 'POST'
+
+            /* Set headers. */
+            const headers = {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+
+            /* Set body. */
+            const body = JSON.stringify(relayPkg)
+
+            /* Set options. */
+            const options = { method, headers, body }
+
+            /* Initialize (Cache) endpoint. */
+            const ENDPOINT = 'http://localhost:3000'
+            // const ENDPOINT = 'https://cache.0net.io'
+
+            /* Make RPC. */
+            const rawResponse = await fetch(ENDPOINT + '/v1/transfer', options)
+
+            /* Retrieve response. */
+            const content = await rawResponse.json()
+
+            console.log(content)
         },
         async send() {
             const to = '0xb07d84F2c5D8bE1f4a440173BC536E0B2ee3b05E'
