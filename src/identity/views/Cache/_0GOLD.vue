@@ -161,25 +161,18 @@ export default {
 
             console.log('ANAME ZeroCache', anameZeroCache)
 
-            console.log('WEB3', web3)
-            console.log('WEB3 ETH', web3.eth)
-            console.log('WEB3 UTILS', web3.utils)
-
-            web3.eth.getBlockNumber()
-                .then(console.log)
-
             /* Retrieve current block number. */
             const blockNumber = await web3.eth.getBlockNumber()
                 .catch(_error => {
                     console.error('ERROR:', _error)
                 })
 
-            console.log('Current block number', blockNumber)
+            // console.log('Current block number', blockNumber)
 
             /* Calculate time-to-live. */
             const ttl = blockNumber + 250 // approx 60 minutes
 
-            console.log('Time-to-live', ttl)
+            // console.log('Time-to-live', ttl)
 
             /**
              * Initialize all transaction parameters for signing.
@@ -195,7 +188,7 @@ export default {
             const staekholder = { t: 'bytes', v: '0x0000000000000000000000000000000000000000' }
             const staek = { t: 'uint256', v: '0' }
             const expires = { t: 'uint256', v: ttl }
-            const nonce = { t: 'uint256', v: moment().valueOf() } // milliseconds
+            const nonce = { t: 'uint256', v: moment().unix() } // seconds
 
             /* Sign the parameters to generate a hash signature. */
             const sigHash = web3.utils.soliditySha3(
@@ -254,11 +247,20 @@ export default {
             const options = { method, headers, body }
 
             /* Initialize (Cache) endpoint. */
-            const ENDPOINT = 'http://localhost:3000'
-            // const ENDPOINT = 'https://cache.0net.io'
+            let endpoint = null
+
+            /* Initialize (Cache) endpoint. */
+            // FIXME We need to detect the network and connect appropriately.
+            if (false) { // MAINNET
+                endpoint = 'http://localhost:3000/v1'
+                // endpoint = 'https://cache.0net.io/v1'
+            } else { // ROPSTEN
+                endpoint = 'http://localhost:4000/v1'
+                // endpoint = 'https://cache-ropsten.0net.io/v1'
+            }
 
             /* Make RPC. */
-            const rawResponse = await fetch(ENDPOINT + '/v1/transfer', options)
+            const rawResponse = await fetch(endpoint + '/transfer', options)
 
             /* Retrieve response. */
             const content = await rawResponse.json()
