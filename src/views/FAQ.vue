@@ -21,6 +21,7 @@
                 <Nametag v-if="topic == 'nametag'" />
                 <Welcome v-if="topic == 'welcome'" />
                 <WhatIsBoost v-if="topic == 'what-is-boost'" />
+                <ZeroDelta v-if="topic == 'zerodelta'" />
             </div>
         </div>
 
@@ -43,6 +44,7 @@ import CacheIsBetter from './FAQ/CacheIsBetter.vue'
 import Nametag from './FAQ/Nametag.vue'
 import Welcome from './FAQ/Welcome.vue'
 import WhatIsBoost from './FAQ/WhatIsBoost.vue'
+import ZeroDelta from './FAQ/ZeroDelta.vue'
 
 /* Initialize components. */
 const components = {
@@ -53,7 +55,8 @@ const components = {
     CacheIsBetter,
     Nametag,
     Welcome,
-    WhatIsBoost
+    WhatIsBoost,
+    ZeroDelta
 }
 
 /* Export. */
@@ -74,6 +77,8 @@ export default {
                     return 'Welcome'
                 case 'what-is-boost':
                     return 'What is Boost?'
+                case 'zerodelta':
+                    return 'ZeroDelta'
                 default:
                     return 'NO TOPIC'
             }

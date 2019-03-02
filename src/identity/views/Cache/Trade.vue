@@ -158,6 +158,33 @@
 
             <button class="btn btn-lg btn-block btn-warning mt-3" @click="send">Start Exchange</button>
 
+            <hr />
+
+            <small>
+                <div>
+                    <strong>* PLEASE NOTE:</strong>
+                    Due to regulatory concerns in the US, we have not yet
+                    enabled "off-chain" <strong>order book</strong>
+                    -OR- transaction <strong>relaying</strong> services
+                    for market trading.
+                </div>
+
+                <div class="mt-2">
+                    However, ZeroCache users will <strong>ALWAYS</strong>
+                    be able to utilize the <strong>FULL ZeroDelta DApp</strong>
+                    available via IPFS and/or the Zeronet.
+                </div>
+            </small>
+
+            <button class="btn btn-lg btn-block btn-outline-secondary mt-3" @click="zeroDelta">
+                ZeroDelta on IPFS
+                <font-awesome-icon icon="external-link-alt" class="mx-1" />
+            </button>
+
+            <button class="btn btn-lg btn-block btn-outline-secondary mt-3" @click="zeroDelta">
+                ZeroDelta on Zeronet
+                <font-awesome-icon icon="external-link-alt" class="mx-1" />
+            </button>
         </div>
     </div>
 </template>
@@ -205,6 +232,17 @@ export default {
         },
         updateSource(_source) {
             this.updateExchangeSource(_source)
+        },
+        zeroDelta() {
+            _0vueIdentity.deactivate()
+
+            // FIXME Proxy the ZeroDelta app through P0rtal.
+
+            const name = 'faq'
+            const params = { topic: 'zerodelta' }
+
+            /* Load FAQ. */
+            p0rtal.$router.push({ name, params })
         }
     },
     mounted: function () {

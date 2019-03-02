@@ -184,9 +184,10 @@ export default {
             const token = { t: 'address', v: '0x079F89645eD85b85a475BF2bdc82c82f327f2932' }
             const from = { t: 'address', v: '0xe5Fe2e0Ec02bB85d0655CA6Cf4E23824fAD285DC' }
             const to = { t: 'address', v: '0xb07d84f2c5d8be1f4a440173bc536e0b2ee3b05e' }
-            const tokens = { t: 'uint256', v: '1337' }
-            const staekholder = { t: 'bytes', v: '0x0000000000000000000000000000000000000000' }
-            const staek = { t: 'uint256', v: '0' }
+            const tokens = { t: 'uint256', v: this.txAmount }
+            const staekholder = { t: 'bytes', v: '0x1936712F2Ff24469b41F1E665AB6483e6CaE2035' }
+            // const staekholder = { t: 'bytes', v: '0x0000000000000000000000000000000000000000' }
+            const staek = { t: 'uint256', v: '1337' }
             const expires = { t: 'uint256', v: ttl }
             const nonce = { t: 'uint256', v: moment().unix() } // seconds
 
