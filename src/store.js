@@ -56,7 +56,7 @@ export default new Vuex.Store({
         exchangeSource: '',
 
         /* Initialize (Cache) exchange target. */
-        exchangeTarget: ''
+        exchangeTarget: 'ZeroGold'
     },
     getters: {
         /* Initialize ANAME location of ZeroCache. */
