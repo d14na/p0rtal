@@ -57,7 +57,7 @@ export default {
         },
         gotoProfile() {
             /* Validate authorization. */
-            if (this.account === 0x0) {
+            if (this.account === {}) {
                 /* Set screen id. */
                 this.updateIdentityScreenId('auth')
             } else {
@@ -67,7 +67,7 @@ export default {
         },
         gotoCache() {
             /* Validate authorization. */
-            if (this.account === 0x0) {
+            if (this.account === {}) {
                 /* Set screen id. */
                 this.updateIdentityScreenId('auth')
             } else {

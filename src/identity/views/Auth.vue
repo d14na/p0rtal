@@ -174,9 +174,16 @@ export default {
                 /* Set screen id. */
                 this.updateEmail(this.email)
 
+                const web3 = require('web3')
+
                 /* Initilize private key. */
                 const pk = web3.utils.soliditySha3(this.email)
                 console.log('EMAIL -> PK', this.email, pk)
+
+                let messageBytes = ethers.utils.toUtf8Bytes(this.email);
+                console.log('EMAIL (messageBytes)', messageBytes)
+                const pk2 = ethers.utils.keccak256(messageBytes)
+                console.log('EMAIL (ethers) -> PK', this.email, pk2)
 
                 /* Initialize Shamir's secret. */
                 const shamirSecret = pk.slice(2)

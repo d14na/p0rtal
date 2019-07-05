@@ -9,6 +9,11 @@
 </template>
 
 <script>
+/* Initialize Vuex. */
+import { mapGetters, mapActions } from 'vuex'
+
+import request from 'superagent'
+
 /* Import JQuery. */
 import $ from 'jquery'
 
@@ -29,17 +34,55 @@ export default {
         //
     }),
     methods: {
-        // loadCache() {
-        //     console.log('Start loading cache...')
-        // }
+        ...mapActions([
+            'updateAnameZeroCache'
+        ]),
+        async init () {
+            /* Set data id. */
+            // NOTE: keccak256(`aname.zerodelta`)
+            const dataId = '0xbd7239f4aaac15ef5b656f04994d54293ff22d4aac85bedfcb4b68e502db0497'
+
+            /* Initialize endpoint. */
+            let endpoint = null
+
+            /* Select (http) provider. */
+            if (process.env.NODE_ENV === 'production') {
+                endpoint = `https://db.0net.io/v1/getAddress/${dataId}`
+            } else {
+                endpoint = `https://db-ropsten.0net.io/v1/getAddress/${dataId}`
+            }
+
+            // console.log('ENDPOINT', endpoint)
+
+            /* Make API request. */
+            const response = await request
+                .get(endpoint)
+                .set('accept', 'json')
+                .catch(_error => {
+                    console.error('REQUEST ERROR:', _error)
+                })
+
+            // console.log('ZeroDelta ANAME RESPONSE:', response)
+
+            /* Validate response. */
+            if (response && response.body)  {
+                console.log('ZeroDelta ANAME:', response.body)
+
+                /* Update ANAME ZeroCache address. */
+                this.updateAnameZeroCache(response.body)
+            }
+        }
     },
     mounted: function () {
         console.log('App.vue is mounted.')
+
+        /* Run initialization. */
+        this.init()
     }
 }
 
 /* JQuery is ready! Let's go! */
-$(function () {
+$(async function () {
     // return
     // console.log('load sliiide!');
 

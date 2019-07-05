@@ -12,8 +12,7 @@ export default new Vuex.Store({
          **********************************************************************/
 
         /* Initialize ANAME location of ZeroCache. */
-        // FIXME Let's pull this value from `db.0net.io -> aname.zerocache`.
-        anameZeroCache: '0x565d0859a620aE99052Cc44dDe74b199F13A3433',
+        anameZeroCache: '0x0000000000000000000000000000000000000000',
 
         /***********************************************************************
          * APPLICATION
@@ -34,7 +33,7 @@ export default new Vuex.Store({
          **********************************************************************/
 
         /* Initialize address (empty Ethereum address). */
-        address: 0x0,
+        address: '0x0000000000000000000000000000000000000000',
 
         /* Initialize account. */
         account: {},
@@ -56,7 +55,7 @@ export default new Vuex.Store({
         exchangeSource: '',
 
         /* Initialize (Cache) exchange target. */
-        exchangeTarget: 'ZeroGold'
+        exchangeTarget: '0GOLD'
     },
     getters: {
         /* Initialize ANAME location of ZeroCache. */
@@ -84,6 +83,9 @@ export default new Vuex.Store({
         exchangeTarget: _state => _state.exchangeTarget
     },
     actions: {
+        /* Request zero cache address update. */
+        updateAnameZeroCache: ({ commit }, _zeroCache) => commit('UPDATE_ANAME_ZEROCACHE', _zeroCache),
+
         /* Request stage screen id update. */
         updateStageScreenId: ({ commit }, _screenId) => commit('UPDATE_STAGE_SCREEN_ID', _screenId),
 
@@ -106,6 +108,11 @@ export default new Vuex.Store({
         updateExchangeTarget: ({ commit }, _exchangeTarget) => commit('UPDATE_EXCHANGE_TARGET', _exchangeTarget)
     },
     mutations: {
+        /* Update stage screen id. */
+        UPDATE_ANAME_ZEROCACHE (_state, _zeroCache) {
+            _state.anameZeroCache = _zeroCache
+        },
+
         /* Update stage screen id. */
         UPDATE_STAGE_SCREEN_ID (_state, _screenId) {
             _state.stageScreenId = _screenId

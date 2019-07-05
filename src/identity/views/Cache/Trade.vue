@@ -252,6 +252,7 @@ export default {
         ...mapGetters([
             'account',
             'address',
+            'anameZeroCache',
             'exchangeSource',
             'exchangeTarget'
         ]),
@@ -330,44 +331,16 @@ export default {
         },
     },
     mounted: async function () {
-        /* Set data id. */
-        // NOTE: keccak256(`aname.zerodelta`)
-        const dataId = '0xbd7239f4aaac15ef5b656f04994d54293ff22d4aac85bedfcb4b68e502db0497'
+        return
 
-        /* Initialize endpoint. */
-        let endpoint = null
 
-        /* Select (http) provider. */
-        if (process.env.NODE_ENV === 'production') {
-            endpoint = `https://db.0net.io/v1/getAddress/${dataId}`
-        } else {
-            endpoint = `https://db-ropsten.0net.io/v1/getAddress/${dataId}`
-        }
 
-        /* Make API request. */
-        const response = await request
-            .get(endpoint)
-            .set('accept', 'json')
-            .catch(_error => {
-                console.error('REQUEST ERROR:', _error)
-            })
 
-        // console.log('ZeroDelta ANAME RESPONSE:', response)
-
+        
         /* Initialize contract address. */
-        let contractAddress = null
+        const contractAddress = this.anameZeroCache
 
-        /* Validate response. */
-        if (response && response.body)  {
-            console.log('ZeroDelta ANAME:', response.body)
-
-            /* Set contract address. */
-            contractAddress = response.body
-        }
-
-        /* Initilize address. */
-        // FIXME Pull this value dynamically from `aname.zerodelta`
-        // const contractAddress = '0xD8D3BE44848f5B096282396BFde74c49bbE8546D' // ZeroDelta
+        console.log('ZeroDelta ANAME:', contractAddress)
 
         /* Set from. */
         const from = this.address
