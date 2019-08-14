@@ -336,7 +336,7 @@ export default {
 
 
 
-        
+
         /* Initialize contract address. */
         const contractAddress = this.anameZeroCache
 
@@ -356,7 +356,7 @@ export default {
         const options = { from, gasPrice }
 
         /* Initialize contract. */
-        const contract = new web3.eth.Contract(
+        const contract = new ethers.Contract(
             abi, contractAddress, options)
 
         /**

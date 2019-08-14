@@ -174,10 +174,8 @@ export default {
                 /* Set screen id. */
                 this.updateEmail(this.email)
 
-                const web3 = require('web3')
-
                 /* Initilize private key. */
-                const pk = web3.utils.soliditySha3(this.email)
+                const pk = ethers.utils.keccak256(this.email)
                 console.log('EMAIL -> PK', this.email, pk)
 
                 let messageBytes = ethers.utils.toUtf8Bytes(this.email);
@@ -192,8 +190,12 @@ export default {
                 const shamirShares = Shamir.generateShares(shamirSecret, 3, 2)
                 console.log(shamirShares)
 
+                // TODO Save one to browser storage, email one to user, backup one to D14na
+
                 /* Initialize new account from private key. */
-                const acct = web3.eth.accounts.privateKeyToAccount(pk)
+                // const provider = ethers.getDefaultProvider()
+                const provider = ethers.getDefaultProvider('ropsten')
+                const acct = new ethers.Wallet(pk2, provider)
                 console.log('ACCOUNT', acct.address)
 
                 /* Update address. */

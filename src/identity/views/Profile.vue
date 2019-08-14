@@ -46,6 +46,13 @@
                     </span>
                 </li>
 
+                <li class="nav-item click-item" @click="loadcache">
+                    <span class="nav-link">
+                        <font-awesome-icon icon="hand-holding-usd" size="lg" class="text-info mr-2" />
+                        Load ZeroCache
+                    </span>
+                </li>
+
                 <li class="nav-item click-item" @click="signout">
                     <span class="nav-link">
                         <font-awesome-icon icon="sign-out-alt" size="lg" class="text-info mr-2" />
@@ -151,6 +158,11 @@ export default {
         },
         promote() {
             console.log('Promote the Zeronet')
+        },
+        loadcache() {
+            console.log('let us load some cash')
+            console.log(this.account)
+            console.log('Address', this.account.address)
         },
         updatePhoto() {
             console.log('Update photo')
