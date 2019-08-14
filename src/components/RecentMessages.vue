@@ -8,7 +8,7 @@
         <div class="list-group list-group-flush">
             <div class="list-group-item">
                 <div class="media">
-                    <img src="@/assets/img/img1.jpg" alt="">
+                    <img src="@/assets/img/dev/img1.jpg" alt="">
                     <div class="media-body">
                         <h6>Katherine Lumaad</h6>
                         <p>an hour ago</p>
@@ -19,7 +19,7 @@
 
             <div class="list-group-item">
                 <div class="media">
-                    <img src="@/assets/img/img2.jpg" alt="">
+                    <img src="@/assets/img/dev/img2.jpg" alt="">
                     <div class="media-body">
                         <h6>Mary Grace Ceballos</h6>
                         <p>2 hours ago</p>
@@ -30,7 +30,7 @@
 
             <div class="list-group-item">
                 <div class="media">
-                    <img src="@/assets/img/img4.jpg" alt="">
+                    <img src="@/assets/img/dev/img4.jpg" alt="">
                     <div class="media-body">
                         <h6>Rowella Sombrio</h6>
                         <p>3 hours ago</p>

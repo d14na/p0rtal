@@ -6,7 +6,7 @@
 
         <div class="card-body pd-20">
             <div class="d-flex justify-content-center mg-b-30">
-                <img src="@/assets/img/zerogold.png" class="wd-100 ht-100" alt="">
+                <img src="@/assets/img/tokens/0GOLD.png" class="wd-100 ht-100" alt="">
             </div>
 
             <h6 class="tx-md-20 tx-inverse mg-b-20">ZeroGold</h6>

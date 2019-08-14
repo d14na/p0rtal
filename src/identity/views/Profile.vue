@@ -11,7 +11,7 @@
 
             <div class="card-contact mg-b-20">
                 <div class="tx-center">
-                    <img src="@/assets/img/img12.jpg" class="card-img click-item" alt="" @click="updatePhoto">
+                    <img src="@/assets/img/dev/img12.jpg" class="card-img click-item" alt="" @click="updatePhoto">
 
                     <h5 class="mg-t-10 mg-b-5">Londynn Lee</h5>
                     <p>Product Director</p>
@@ -83,7 +83,7 @@
 
                     <div class="media-list">
                         <div class="media">
-                            <img src="@/assets/img/img5.jpg" alt="">
+                            <img src="@/assets/img/dev/img5.jpg" alt="">
                             <div class="media-body">
                                 <a href="javascript://">Amber Heard</a>
                                 <p>Software Engineer</p>
@@ -92,7 +92,7 @@
                         </div>
 
                         <div class="media">
-                            <img src="@/assets/img/img6.jpg" alt="">
+                            <img src="@/assets/img/dev/img6.jpg" alt="">
                             <div class="media-body">
                                 <a href="javascript://">Richard Salomon</a>
                                 <p>Architect</p>
@@ -101,7 +101,7 @@
                         </div>
 
                         <div class="media">
-                            <img src="@/assets/img/img13.jpg" alt="">
+                            <img src="@/assets/img/dev/img13.jpg" alt="">
                             <div class="media-body">
                                 <a href="javascript://">Warren Vito</a>
                                 <p>Sales Representative</p>
@@ -110,7 +110,7 @@
                         </div>
 
                         <div class="media">
-                            <img src="@/assets/img/img12.jpg" alt="">
+                            <img src="@/assets/img/dev/img12.jpg" alt="">
                             <div class="media-body">
                                 <a href="javascript://">Charlene Plateros</a>
                                 <p>Sales Representative</p>
@@ -119,7 +119,7 @@
                         </div>
 
                         <div class="media">
-                            <img src="@/assets/img/img11.jpg" alt="">
+                            <img src="@/assets/img/dev/img11.jpg" alt="">
                             <div class="media-body">
                                 <a href="javascript://">Allan Palban</a>
                                 <p>Sales Representative</p>

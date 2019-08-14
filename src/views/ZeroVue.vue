@@ -36,21 +36,23 @@
                 <div class="col-lg-6 mg-t-10 mg-lg-t-0 order-lg-2">
 
                     <div class="card card-blog-overlay">
-                        <img class="img-fit-cover" src="@/assets/img/img26.jpg" alt="Image">
+                        <img class="img-fit-cover" src="@/assets/img/news/hong-kong.jpg" alt="Image">
 
                         <div class="blog-content-wrapper">
                             <div class="blog-content">
-                                <p class="blog-category tx-primary">Travel</p>
                                 <h3 class="blog-title"><a href="javascript://">
-                                    The Difference Between Streets, Boulevards, Avenues, and Other Roads</a></h3>
+                                    A guide to collective and individual tactics being used in the uprising that has been growing in the streets of Hong Kong against the Extradition Bill.</a></h3>
                             </div>
                         </div>
 
                         <div class="card-footer">
-                            <span class="mg-r-5">Mar 25, 2017</span>
+                            <span class="mg-r-5">August 13, 2019</span>
+
                             <a href="javascript://" class="mg-r-10"><i class="fa fa-heart-o mg-r-5"></i> 23 Likes</a>
+
                             <a href="javascript://"><i class="fa fa-comment-o mg-r-5"></i> 4 Comments</a>
-                            <span>By: <a href="javascript://" class="tx-white-8 hover-white">Katherine Pechon</a></span>
+
+                            <span>By: <a href="javascript://" class="tx-white-8 hover-white">Anonymous Contributor</a></span>
                         </div>
                     </div>
 
@@ -61,15 +63,20 @@
                         <div class="row no-gutters flex-row-reverse">
                             <div class="col-md-5 col-lg-6 col-xl-5">
                                 <figure>
-                                    <img src="@/assets/img/img20.jpg" class="img-fit-cover" alt="">
+                                    <img src="@/assets/img/news/tom-manning.jpg" class="img-fit-cover" alt="">
                                 </figure>
                             </div>
 
                             <div class="col-md-7 col-lg-6 col-xl-7">
-                                <p class="blog-category tx-success">Science</p>
-                                <h5 class="blog-title"><a href="javascript://">Five Actual Facts About the Science of Dreams</a></h5>
-                                <p class="blog-text">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. Nascetur ridiculus mus. Donec quam felis, ultricies nec...</p>
-                                <span class="blog-date">Mar 11, 2017, 2:30pm</span>
+                                <p class="blog-category tx-success">Editorial</p>
+
+                                <h5 class="blog-title"><a href="javascript://">Statement on Passing of Tom Manning</a></h5>
+
+                                <p class="blog-text">
+                                    The following is a statement on the passing of political prisoner, Tom Manning. by Ray Luc LevasseurTom Manning's death on July 30 has me in the grip of an emotional riptide. I feel like part of me died with him.Tom was imprisoned at USP-Hazelton, WV at the time of his...
+                                </p>
+
+                                <span class="blog-date">August 2, 2019</span>
                             </div>
                         </div>
                     </div>
