@@ -2,9 +2,9 @@
     <div class="card card-body pd-20 mg-t-10">
         <h6 class="slim-card-title mg-b-20 text-center">Who's Got ZeroLIT? <small class="text-muted">last 24hrs</small></h6>
 
-        <div class="mg-b-25">
+        <!-- <div class="mg-b-25">
             <span class="peity-donut" data-peity='{ "fill": ["#da3749","#2586e4","#e6428c","#6f47be","#f2982e","#acacac"], "height": 200, "width": "100%" }'>92,57,33,15,6,46</span>
-        </div>
+        </div> -->
 
         <div class="d-flex align-items-center">
             <span class="square-10 bg-danger rounded-circle"></span>

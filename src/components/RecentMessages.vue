@@ -8,27 +8,20 @@
         <div class="list-group list-group-flush">
             <div class="list-group-item">
                 <div class="media">
-                    <img src="@/assets/img/dev/img1.jpg" alt="">
+                    <img src="@/assets/img/diana-queen.jpg" alt="">
                     <div class="media-body">
-                        <h6>Katherine Lumaad</h6>
+                        <h6>Diana Queen</h6>
                         <p>an hour ago</p>
                     </div>
                 </div>
-                <p class="msg">The European languages are members of the same family. Their separate existence is a myth...</p>
+
+                <p class="msg">
+                    Hi, welcome to P0rtal! My name is Diana.
+                    I run things around here, so if there's anything you need, just ask!
+                </p>
             </div>
 
-            <div class="list-group-item">
-                <div class="media">
-                    <img src="@/assets/img/dev/img2.jpg" alt="">
-                    <div class="media-body">
-                        <h6>Mary Grace Ceballos</h6>
-                        <p>2 hours ago</p>
-                    </div>
-                </div>
-                <p class="msg">The European languages are members of the same family. Their separate existence is a myth...</p>
-            </div>
-
-            <div class="list-group-item">
+            <!-- <div class="list-group-item">
                 <div class="media">
                     <img src="@/assets/img/dev/img4.jpg" alt="">
                     <div class="media-body">
@@ -37,7 +30,8 @@
                     </div>
                 </div>
                 <p class="msg">The European languages are members of the same family. Their separate existence is a myth...</p>
-            </div>
+            </div> -->
+
         </div>
 
         <div class="card-footer">

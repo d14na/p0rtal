@@ -246,6 +246,7 @@ const App = new ZeroApp()
  * So let's GO!
  */
 $(async function() {
+    return
     // showing 2nd level sub menu while hiding others
     $('.sidebar-nav-link').on('click', function(e) {
         var subMenu = $(this).next()

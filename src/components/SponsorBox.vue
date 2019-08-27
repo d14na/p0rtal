@@ -9,10 +9,10 @@
                 <img src="@/assets/img/tokens/0GOLD.png" class="wd-100 ht-100" alt="">
             </div>
 
-            <h6 class="tx-md-20 tx-inverse mg-b-20">ZeroGold</h6>
+            <h6 class="tx-md-20 tx-inverse mg-b-20">Zero₵a¢he</h6>
 
             <p>
-                Empowering a <u>fresh</u> generation of entreprenuers with the means to <strong>GROW</strong> their own DApps and <strong>HODL</strong> their own Wealth.
+                Empowering you to <strong>STAEK</strong> your own claim and <strong>HODL</strong> your own wealth.
             </p>
 
             <a href="/zerogold.bit" class="btn btn-primary btn-block">Learn More</a>

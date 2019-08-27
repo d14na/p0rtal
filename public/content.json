@@ -5,9 +5,15 @@
  "description": "The Zer0net starts here! An 0PEN community empowering ALL of US to trust in EVERYone over AnyONE.",
  "favicon": "img/favicon.png",
  "files": {},
- "ignore": "(\\.git|lib|templates)",
+ "ignore": "(data/users/.*)",
+ "includes": {
+  "data/users/content.json": {
+   "signers": [],
+   "signers_required": 1
+  }
+ },
  "inner_path": "content.json",
- "modified": 1541084310,
+ "modified": 1800000000,
  "postmessage_nonce_security": true,
  "signers_sign": "Gz2wnMFO/692AfiPordVsqtNwmGJq2/poqO8U5TPzd7/U475FL86l+H6t0/an7jt6LWNIRrFN5XVD+MxP6TXyss=",
  "signs": {

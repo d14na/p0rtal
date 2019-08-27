@@ -1,10 +1,10 @@
 <template>
     <div class="card card-carousel mg-t-10">
-        <div id="carousel2" class="carousel slide" data-ride="carousel">
+        <div id="live-feed" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carousel2" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel2" data-slide-to="1"></li>
-                <li data-target="#carousel2" data-slide-to="2"></li>
+                <li data-target="#live-feed" data-slide-to="0" class="active"></li>
+                <li data-target="#live-feed" data-slide-to="1"></li>
+                <li data-target="#live-feed" data-slide-to="2"></li>
             </ol>
 
             <div class="carousel-inner" role="listbox">
@@ -17,8 +17,8 @@
                         </div>
 
                         <div>
-                            <p class="carousel-item-label">Recent Article</p>
-                            <h5 class="carousel-item-title">20 Best Travel Tips After 5 Years Of Traveling The World</h5>
+                            <p class="carousel-item-label">18 minutes ago on ZeroTalk</p>
+                            <h5 class="carousel-item-title">Any licensed hams in the northeast US operating on 2m packet?</h5>
                             <nav class="nav flex-row">
                                 <a href="javascript://">12K+ Views</a>
                                 <a href="javascript://">234 Shares</a>
@@ -36,12 +36,12 @@
                             <a href="javascript://"><i class="icon ion-md-more tx-20"></i></a>
                         </div>
                         <div>
-                            <p class="carousel-item-label">Recent Article</p>
-                            <h5 class="carousel-item-title">How I Flew Around the World in Business Class for $1,340</h5>
+                            <p class="carousel-item-label">3 hours ago on ZeroTalk</p>
+                            <h5 class="carousel-item-title">My Minecraft Dolphins died again, after 3 days</h5>
                             <nav class="nav flex-row">
-                                <a href="javascript://">Edit</a>
-                                <a href="javascript://">Unpublish</a>
-                                <a href="javascript://">Delete</a>
+                                <a href="javascript://">6K+ Views</a>
+                                <a href="javascript://">112 Shares</a>
+                                <a href="javascript://">21 Comments</a>
                             </nav>
                         </div>
                     </div>
@@ -55,12 +55,12 @@
                             <a href="javascript://"><i class="icon ion-md-more tx-20"></i></a>
                         </div>
                         <div>
-                            <p class="carousel-item-label">Recent Article</p>
-                            <h5 class="carousel-item-title">10 Reasons Why Travel Makes You a Happier Person</h5>
+                            <p class="carousel-item-label">7 hours ago on ZeroTalk</p>
+                            <h5 class="carousel-item-title">How to make the app written in Python2or3 for Android?</h5>
                             <nav class="nav flex-row">
-                                <a href="javascript://">Edit</a>
-                                <a href="javascript://">Unpublish</a>
-                                <a href="javascript://">Delete</a>
+                                <a href="javascript://">3K+ Views</a>
+                                <a href="javascript://">61 Shares</a>
+                                <a href="javascript://">10 Comments</a>
                             </nav>
                         </div>
                     </div>

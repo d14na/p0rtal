@@ -4,7 +4,8 @@
         <p>Last activity was 1 hour ago</p>
 
         <div class="media-list">
-            <div class="media">
+
+            <!-- <div class="media">
                 <div class="activity-icon bg-primary">
                     <i class="icon ion-stats-bars"></i>
                 </div>
@@ -14,7 +15,7 @@
                     <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor.</p>
                     <span>2 hours ago</span>
                 </div>
-            </div>
+            </div> -->
 
             <div class="media">
                 <div class="activity-icon bg-success">
@@ -23,12 +24,12 @@
 
                 <div class="media-body">
                     <h6>Achievement Unlocked</h6>
-                    <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor.</p>
+                    <p>You've discovered the #1 zite on the Zeronet.</p>
                     <span>2 hours ago</span>
                 </div>
             </div>
 
-            <div class="media">
+            <!-- <div class="media">
                 <div class="activity-icon bg-purple">
                     <i class="icon ion-image"></i>
                 </div>
@@ -38,7 +39,8 @@
                     <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor.</p>
                     <span>2 hours ago</span>
                 </div>
-            </div>
+            </div> -->
+
         </div>
     </div>
 </template>

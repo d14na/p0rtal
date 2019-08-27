@@ -69,7 +69,103 @@ export default {
         },
         openSettings() {
             console.log('open activity settings')
+
+            App.cmd('userPublickey', {}, (_results) => {
+                console.log('Public key', _results)
+
+                const decoded = Buffer.from(_results, 'base64')
+                console.log('Decoded', decoded.toString('hex'))
+            })
+
+            this.authAsZeroID(console.log.bind(console))
+
+            this.addQuestion('What\'s nofish\'s name?', ['nofish', 'Tomas', 'Jack'], console.log.bind(console))
+        },
+        readFile (file, callback) {
+            App.cmd('fileGet', [file, false], callback);
+        },
+        writeFile (file, content, callback) {
+            App.cmd('fileWrite', [file, this.base64Encode(content)], callback);
+        },
+        base64Encode (content) {
+            content = encodeURIComponent(content); // Split to bytes in % notation
+            content = unescape(content); // Join % notation as bytes (not as chars)
+
+            return btoa(content);
+        },
+        authAsZeroID (callback) {
+            App.cmd('siteInfo', [], function(siteInfo) {
+                // If logged in, return object with username and public key (address)
+                if (siteInfo.cert_user_id) {
+                    const user = siteInfo.cert_user_id
+                    const address = siteInfo.auth_address
+
+                    return callback({ user, address })
+                }
+
+                // Open authorization window and allow zeroid.bit
+                App.cmd('certSelect', {
+                    accepted_domains: ['kaffie.bit', 'kxoid.bit', 'nametag.bit', 'zeroid.bit']
+                }, function() {
+                    App.cmd('siteInfo', [], function(siteInfo) {
+                        // If logged in, return object with username and public key (address),
+                        // else return false
+                        if (siteInfo.cert_user_id) {
+                            const user = siteInfo.cert_user_id
+                            const address = siteInfo.auth_address
+
+                            callback({ user, address })
+                        } else {
+                            callback(false)
+                        }
+                    })
+                })
+            })
+        },
+        addQuestion (question, answers, callback) {
+            this.authAsZeroID ((user) => {
+                // User rejected to authorizate
+                if(!user) {
+                    return callback(false)
+                }
+
+                this.readFile('data/users/' + user.address + '/data.json', (content) => {
+                    content = content || ''
+
+                    // Parse JSON
+                    try {
+                        content = JSON.parse(content)
+                    } catch(e) {
+                        content = {
+                            questions: [],
+                            answers: {},
+                            next_question_id: 0
+                        }
+                    }
+
+                    var id = content.next_question_id++
+
+                    content.questions.push({
+                        id,
+                        question,
+                        answers,
+                        date_added: Math.floor(Date.now() / 1000)
+                    })
+
+                    /* Format the JSON (for file display). */
+                    content = JSON.stringify(content, null, 4)
+
+                    this.writeFile('data/users/' + user.address + '/data.json', content, () => {
+                        App.cmd('sitePublish', {
+                            inner_path: 'data/users/' + user.address + '/content.json'
+                        }, function() {
+                            callback(id)
+                        })
+                    })
+                })
+            })
         }
+
     }
 }
 </script>

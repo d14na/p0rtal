@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-md-6 col-lg-3 mg-t-10 mg-md-t-0 order-lg-3">
-                    <TrendingStories />
+                    <TrendingTopics />
                     <ZeroLit />
                     <SponsorBox />
                     <Feedback />
@@ -57,7 +57,7 @@
                     </div>
 
                     <NewTopic />
-                    <Carousel />
+                    <ZeroFeed />
 
                     <div class="card card-blog-split mg-t-10">
                         <div class="row no-gutters flex-row-reverse">
@@ -99,7 +99,7 @@ import LinksBar from '@/components/LinksBar.vue'
 import RecentMessages from '@/components/RecentMessages.vue'
 
 /* Import TRENDING STORIES. */
-import TrendingStories from '@/components/TrendingStories.vue'
+import TrendingTopics from '@/components/TrendingTopics.vue'
 
 /* Import SPONSOR BOX. */
 import SponsorBox from '@/components/SponsorBox.vue'
@@ -110,8 +110,8 @@ import Feedback from '@/components/Feedback.vue'
 /* Import NEW TOPIC. */
 import NewTopic from '@/components/NewTopic.vue'
 
-/* Import CAROUSEL. */
-import Carousel from '@/components/Carousel.vue'
+/* Import ZEROFEED. */
+import ZeroFeed from '@/components/ZeroFeed.vue'
 
 /* Import ZEROEFFECT. */
 import ZeroEffect from '@/components/ZeroEffect.vue'
@@ -146,11 +146,11 @@ const components = {
     NavBar,
     LinksBar,
     RecentMessages,
-    TrendingStories,
+    TrendingTopics,
     SponsorBox,
     Feedback,
     NewTopic,
-    Carousel,
+    ZeroFeed,
     ModalAdminPermission,
     ZeroEffect,
     ZeroLife,

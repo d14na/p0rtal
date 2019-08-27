@@ -3,18 +3,26 @@
  "files": {},
  "ignore": ".*",
  "inner_path": "data/users/content.json",
- "modified": 1539226502,
+ "modified": 1800000000,
  "signs": {
-  "1FXm1kGGhqXyWrJvmVBZw3MKCKnWj9qs53": "G2Yd7LgqrGl5nMGkXTVNOJ3yyYZfLNKq1s6opM4XFYfzbRKrL0l+4OjIvshvXL4Bv1+AMde2lmkcfe4kFNTFFPA="
+  "1PoRTALoun8Y69nSZ5aye9Q87GGrg7EvRc": "G9v8C9leNyALJ3XuwEcC03tzoHtQSfdiiNRb+GT65h+tAw5xEpkSSkT0CVJxGLxaZVXBw6Zags34GApak/KNSrY="
  },
  "user_contents": {
   "cert_signers": {
    "kaffie.bit": ["1KH5BdNnqxh2KRWMMT8wUXzUgz4vVQ4S8p"],
+   "kxoid.bit": ["12F5SvxoPR128aiudte78h8pY7mobroG6V"],
    "nametag.bit": ["1NAMETAGa1cYwE8QsAFz4oqNt1KKGA2SFC"],
    "zeroid.bit": ["1iD5ZQJMNXu43w1qLB8sfdHVKppVMduGz"]
   },
+  "content_inner_path": "data/users/content.json",
+  "optional": null,
   "permission_rules": {
    ".*@kaffie.bit": {
+    "files_allowed": "data.json",
+    "files_allowed_optional": ".+\\.(gif,jpg,png,mp4|ogg|webm)(.piecemap.msgpack)?",
+    "max_size": 300000
+   },
+   ".*@kxoid.bit": {
     "files_allowed": "data.json",
     "files_allowed_optional": ".+\\.(gif,jpg,png,mp4|ogg|webm)(.piecemap.msgpack)?",
     "max_size": 300000
@@ -32,8 +40,9 @@
    "bitmsg/.*@nametag.bit": {"max_size": 1000000}
   },
   "permissions": {
-      "bad@nametag.bit": false,
-      "d14na@nametag.bit": {"max_size": 10000000}
-  }
+   "bad@nametag.bit": false,
+   "d14na@nametag.bit": {"max_size": 10000000}
+  },
+  "relative_path": "content.json"
  }
 }

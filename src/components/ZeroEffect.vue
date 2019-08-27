@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card-body pd-b-0">
-            <h6 class="slim-card-title">My ZeroEffect Summary</h6>
+            <h6 class="slim-card-title">My ZeroEffect Level</h6>
 
             <h1 class="tx-lato tx-purple">23,360</h1>
 
@@ -14,13 +14,9 @@
 
 <script>
 export default {
-    name: 'ZeroEffect',
-    // props: {
-    //     msg: String
-    // }
+    //
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>
